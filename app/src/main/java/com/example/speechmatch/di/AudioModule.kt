@@ -14,13 +14,14 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 abstract class AudioModule {
 
+    // Mikrofon Motoru Sözleşme Köprüsü
     @Binds
     @Singleton
     abstract fun bindVoiceToTextParser(
         parser: VoiceToTextParserImpl
     ): VoiceToTextParser
 
-    // Yeni eklenen ajanımızın köprüsü
+    // Yankı Engelleyici Ajan Sözleşme Köprüsü
     @Binds
     @Singleton
     abstract fun bindHeadsetStateObserver(

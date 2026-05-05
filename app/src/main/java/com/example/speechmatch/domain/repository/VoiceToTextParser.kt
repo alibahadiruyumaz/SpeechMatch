@@ -2,25 +2,18 @@ package com.example.speechmatch.domain.repository
 
 import kotlinx.coroutines.flow.StateFlow
 
-// Bu arayüz, Android'in mikrofon sensörünün ne yapması gerektiğini tanımlayan SÖZLEŞMEDİR.
+// 1. Ekranların ve ViewModel'in donanımı yönetmek için kullanacağı Sözleşme (Interface)
 interface VoiceToTextParser {
-
-    // Mikrofonun anlık durumunu tutacak asenkron bir akış (Flow)
-    val state: StateFlow<VoiceToTextParserState>
-
-    // Dinlemeyi başlatma emri
-    fun startListening(languageCode: String = "en-US")
-
-    // Dinlemeyi zorla durdurma emri
+    val state: StateFlow<VoiceParserState>
+    fun startListening(languageCode: String)
     fun stopListening()
-
-    // Uygulama arka plana atıldığında sensörü RAM'den tamamen silme emri
     fun destroy()
 }
 
-// Mikrofonun anlık olarak bulunabileceği durumlar (Sonlu Durum Makinesi - FSM)
-data class VoiceToTextParserState(
-    val spokenText: String = "",       // Kullanıcının ağzından dökülen kelimeler
-    val isSpeaking: Boolean = false,   // O an konuşuyor mu?
-    val error: String? = null          // Çevrimdışı paket yoksa veya hata varsa
+// 2. Sözleşmenin veri paketi: Mikrofonun anlık durumunu tutan Veri Sınıfı (Data Class)
+// DİKKAT: İsim VoiceParserState olarak sabitlendi.
+data class VoiceParserState(
+    val spokenText: String = "",
+    val isSpeaking: Boolean = false,
+    val error: String? = null
 )

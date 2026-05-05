@@ -1,65 +1,64 @@
 package com.example.speechmatch.data.recognizer
 
-import android.content.BroadcastReceiver
 import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
 import android.media.AudioDeviceInfo
 import android.media.AudioManager
+import android.os.Handler
+import android.os.Looper
 import com.example.speechmatch.domain.repository.HeadsetStateObserver
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class HeadsetStateObserverImpl @Inject constructor(
     @ApplicationContext private val context: Context
 ) : HeadsetStateObserver {
 
-    private val _isHeadsetConnected = MutableStateFlow(false)
-    override val isHeadsetConnected = _isHeadsetConnected.asStateFlow()
-
     private val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
 
-    private val receiver = object : BroadcastReceiver() {
-        override fun onReceive(context: Context?, intent: Intent?) {
-            // Bir donanım değişikliği olduğunda modern metodu tetikle
-            checkCurrentHeadsetState()
+    // Uygulama ilk açıldığında donanım durumunu hemen kontrol ederek başlarız
+    private val _isHeadsetConnected = MutableStateFlow(checkCurrentAudioDevice())
+    override val isHeadsetConnected: StateFlow<Boolean> = _isHeadsetConnected.asStateFlow()
+
+    // Donanım değişikliklerini sürücü seviyesinde yakalayan modern sistem kancası
+    private val audioDeviceCallback = object : android.media.AudioDeviceCallback() {
+        override fun onAudioDevicesAdded(addedDevices: Array<out AudioDeviceInfo>?) {
+            _isHeadsetConnected.value = checkCurrentAudioDevice()
+        }
+
+        override fun onAudioDevicesRemoved(removedDevices: Array<out AudioDeviceInfo>?) {
+            _isHeadsetConnected.value = checkCurrentAudioDevice()
         }
     }
 
     override fun startObserving() {
-        checkCurrentHeadsetState()
-
-        // Kablo takılmasını veya Bluetooth ses yönlendirme değişikliklerini dinle
-        val filter = IntentFilter().apply {
-            addAction(Intent.ACTION_HEADSET_PLUG)
-            addAction(AudioManager.ACTION_AUDIO_BECOMING_NOISY) // Kulaklık aniden çıkarsa tetiklenir
-        }
-        context.registerReceiver(receiver, filter)
+        // Main Looper üzerinden sistem servislerine kayıt oluyoruz
+        audioManager.registerAudioDeviceCallback(audioDeviceCallback, Handler(Looper.getMainLooper()))
+        // Mevcut durumu Flow şelalesine pompala
+        _isHeadsetConnected.value = checkCurrentAudioDevice()
     }
 
     override fun stopObserving() {
-        try {
-            context.unregisterReceiver(receiver)
-        } catch (e: Exception) {
-            // Ajan zaten yoksa çökmeyi engelle
-        }
+        // Bellek sızıntısını önlemek için takibi bırakıyoruz
+        audioManager.unregisterAudioDeviceCallback(audioDeviceCallback)
     }
 
-    // Modern API ile tüm ses çıkış cihazlarını tarayan fonksiyon
-    private fun checkCurrentHeadsetState() {
-        // Cihaza bağlı olan tüm ses çıkış donanımlarını listele
+    /**
+     * ALGORİTMİK TARAMA: Cihazın tüm aktif çıkış portlarını analiz eder.
+     * Bluetooth (A2DP/SCO), USB-C ve Analog Jack birimlerini kapsar.
+     */
+    private fun checkCurrentAudioDevice(): Boolean {
         val devices = audioManager.getDevices(AudioManager.GET_DEVICES_OUTPUTS)
-
-        // Listenin içinde bizim işimize yarayan bir kulaklık türü var mı diye bak
-        val hasHeadset = devices.any { device ->
-            device.type == AudioDeviceInfo.TYPE_WIRED_HEADSET ||     // Mikrofonlu Jak
-                    device.type == AudioDeviceInfo.TYPE_WIRED_HEADPHONES ||  // Mikrofonsuz Jak
-                    device.type == AudioDeviceInfo.TYPE_BLUETOOTH_A2DP ||    // Standart Bluetooth
-                    device.type == AudioDeviceInfo.TYPE_USB_HEADSET          // Yeni nesil USB-C kulaklıklar
+        return devices.any { device ->
+            device.type == AudioDeviceInfo.TYPE_BLUETOOTH_A2DP ||
+                    device.type == AudioDeviceInfo.TYPE_BLUETOOTH_SCO ||
+                    device.type == AudioDeviceInfo.TYPE_WIRED_HEADSET ||
+                    device.type == AudioDeviceInfo.TYPE_WIRED_HEADPHONES ||
+                    device.type == AudioDeviceInfo.TYPE_USB_HEADSET
         }
-
-        _isHeadsetConnected.value = hasHeadset
     }
 }

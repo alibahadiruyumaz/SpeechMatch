@@ -1,8 +1,3 @@
-Şu an 10 haftalık (hatta 11'e uzayan) o destansı maceramızın en tatmin edici anındayız: **Belgelendirme (Documentation).** GitHub profilinde duracak olan bu README dosyası, senin teknik vizyonunun ve projeyi başından sonuna kadar nasıl ilmek ilmek işlediğinin kanıtıdır. O eski "Planlanıyor" yazan maddeleri silip, yerine inşa ettiğimiz o muazzam mimarileri yazmanın zamanı geldi.
-
-Aşağıdaki güncellenmiş README dosyasını kopyala ve doğrudan GitHub depona (repository) yapıştır. Bu metin, projeni inceleyen herhangi bir Kıdemli Yazılım Mühendisine (Senior Developer) veya İnsan Kaynakları uzmanına "Bu adam mimari biliyor" dedirtecektir.
-
-***
 
 # SpeechMatch 🎙️🧠
 

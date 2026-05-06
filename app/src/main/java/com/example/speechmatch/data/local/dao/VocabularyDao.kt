@@ -26,8 +26,10 @@ interface VocabularyDao {
     // Hem de SM-2 algoritmasına göre tekrar vakti gelmiş kelimeleri getirir.
     @Query("""
         SELECT v.* FROM Vocabulary_Table v 
+        INNER JOIN User_Profile u ON 1=1
         LEFT JOIN Review_Log r ON v.id = r.vocab_id 
-        WHERE (r.next_review_date IS NULL OR r.next_review_date <= :currentTimeMillis) 
+        WHERE v.cefrLevel <= u.currentLevel 
+        AND (r.next_review_date IS NULL OR r.next_review_date <= :currentTimeMillis)
         AND v.is_archived = 0
     """)
     suspend fun getWordsToReview(currentTimeMillis: Long): List<VocabularyEntity>

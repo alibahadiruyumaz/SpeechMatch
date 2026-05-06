@@ -25,8 +25,8 @@ data class VocabularyEntity(
     @ColumnInfo(name = "target_phoneme")
     val targetPhoneme: String,
 
-    @ColumnInfo(name = "difficulty_level")
-    val difficultyLevel: String,
+    @ColumnInfo(name = "cefrLevel")
+    val cefrLevel: String, // "A1", "A2", "B1" vb.
 
     @ColumnInfo(name = "minimal_pair_id", index = true)
     val minimalPairId: Int? = null,

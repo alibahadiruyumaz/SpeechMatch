@@ -1,0 +1,7802 @@
+[
+  {
+    "text": "Approach",
+    "targetPhoneme": "ah0 p r ow1 ch ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1016
+  },
+  {
+    "text": "Analysis",
+    "targetPhoneme": "ah0 n ae1 l ah0 s ah0 s ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1026
+  },
+  {
+    "text": "Black",
+    "targetPhoneme": "b l ae1 k ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1072
+  },
+  {
+    "text": "Control",
+    "targetPhoneme": "k ah0 n t r ow1 l ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1122
+  },
+  {
+    "text": "Common",
+    "targetPhoneme": "k aa1 m ah0 n ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1140
+  },
+  {
+    "text": "Direct",
+    "targetPhoneme": "d er0 eh1 k t ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1190
+  },
+  {
+    "text": "Force",
+    "targetPhoneme": "f ao1 r s ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1269
+  },
+  {
+    "text": "Form",
+    "targetPhoneme": "f ao1 r m ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1275
+  },
+  {
+    "text": "Foreign",
+    "targetPhoneme": "f ao1 r ah0 n ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1282
+  },
+  {
+    "text": "Face",
+    "targetPhoneme": "f ey1 s ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1295
+  },
+  {
+    "text": "Great",
+    "targetPhoneme": "g r ey1 t ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1326
+  },
+  {
+    "text": "Group",
+    "targetPhoneme": "g r uw1 p ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1331
+  },
+  {
+    "text": "Hard",
+    "targetPhoneme": "hh aa1 r d ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1360
+  },
+  {
+    "text": "Have",
+    "targetPhoneme": "hh ae1 v ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1372
+  },
+  {
+    "text": "Just",
+    "targetPhoneme": "jh ah1 s t ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1463
+  },
+  {
+    "text": "Job",
+    "targetPhoneme": "jh aa1 b ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1485
+  },
+  {
+    "text": "Knowledge",
+    "targetPhoneme": "n aa1 l ah0 jh ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1501
+  },
+  {
+    "text": "Kind",
+    "targetPhoneme": "k ay1 n d ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1504
+  },
+  {
+    "text": "Key",
+    "targetPhoneme": "k iy1 ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1507
+  },
+  {
+    "text": "Keep",
+    "targetPhoneme": "k iy1 p ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1517
+  },
+  {
+    "text": "Know",
+    "targetPhoneme": "n ow1 ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1537
+  },
+  {
+    "text": "Large",
+    "targetPhoneme": "l aa1 r jh ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1583
+  },
+  {
+    "text": "Land",
+    "targetPhoneme": "l ae1 n d ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1595
+  },
+  {
+    "text": "Mean",
+    "targetPhoneme": "m iy1 n ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1608
+  },
+  {
+    "text": "Need",
+    "targetPhoneme": "n iy1 d ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1678
+  },
+  {
+    "text": "Necessary",
+    "targetPhoneme": "n eh1 s ah0 s eh0 r iy0 ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1688
+  },
+  {
+    "text": "Order",
+    "targetPhoneme": "ao1 r d er0 ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1712
+  },
+  {
+    "text": "Open",
+    "targetPhoneme": "ow1 p ah0 n ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1728
+  },
+  {
+    "text": "Organization",
+    "targetPhoneme": "ao0 r g ah0 n ah0 z ey1 sh ah0 n ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1736
+  },
+  {
+    "text": "Original",
+    "targetPhoneme": "er0 ih1 jh ah0 n ah0 l ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1743
+  },
+  {
+    "text": "Power",
+    "targetPhoneme": "p aw1 er0 ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1754
+  },
+  {
+    "text": "Positive",
+    "targetPhoneme": "p aa1 z ah0 t ih0 v ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1760
+  },
+  {
+    "text": "Place",
+    "targetPhoneme": "p l ey1 s ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1767
+  },
+  {
+    "text": "Point",
+    "targetPhoneme": "p oy1 n t ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1769
+  },
+  {
+    "text": "Position",
+    "targetPhoneme": "p ah0 z ih1 sh ah0 n ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1774
+  },
+  {
+    "text": "Play",
+    "targetPhoneme": "p l ey1 ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1783
+  },
+  {
+    "text": "Potential",
+    "targetPhoneme": "p ah0 t eh1 n sh ah0 l ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1792
+  },
+  {
+    "text": "Quality",
+    "targetPhoneme": "k w aa1 l ah0 t iy0 ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1814
+  },
+  {
+    "text": "Question",
+    "targetPhoneme": "k w eh1 s ch ah0 n ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1825
+  },
+  {
+    "text": "Top",
+    "targetPhoneme": "t aa1 p ",
+    "cefrLevel": "A1",
+    "minimalPairId": 1981
+  },
+  {
+    "text": "Understanding",
+    "targetPhoneme": "ah0 n d er0 s t ae1 n d ih0 ng ",
+    "cefrLevel": "A1",
+    "minimalPairId": 2006
+  },
+  {
+    "text": "Understand",
+    "targetPhoneme": "ah0 n d er0 s t ae1 n d ",
+    "cefrLevel": "A1",
+    "minimalPairId": 2019
+  },
+  {
+    "text": "Union",
+    "targetPhoneme": "y uw1 n y ah0 n ",
+    "cefrLevel": "A1",
+    "minimalPairId": 2029
+  },
+  {
+    "text": "Want",
+    "targetPhoneme": "w aa1 n t ",
+    "cefrLevel": "A1",
+    "minimalPairId": 2122
+  },
+  {
+    "text": "Yet",
+    "targetPhoneme": "y eh1 t ",
+    "cefrLevel": "A1",
+    "minimalPairId": 2203
+  },
+  {
+    "text": "Yes",
+    "targetPhoneme": "y eh1 s ",
+    "cefrLevel": "A1",
+    "minimalPairId": 2226
+  },
+  {
+    "text": "You",
+    "targetPhoneme": "y uw1 ",
+    "cefrLevel": "A1",
+    "minimalPairId": 2246
+  },
+  {
+    "text": "Apply",
+    "targetPhoneme": "ah0 p l ay1 ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1031
+  },
+  {
+    "text": "Appropriate",
+    "targetPhoneme": "ah0 p r ow1 p r iy0 ah0 t ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1032
+  },
+  {
+    "text": "Beautiful",
+    "targetPhoneme": "b y uw1 t ah0 f ah0 l ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1057
+  },
+  {
+    "text": "Blue",
+    "targetPhoneme": "b l uw1 ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1066
+  },
+  {
+    "text": "Belief",
+    "targetPhoneme": "b ih0 l iy1 f ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1097
+  },
+  {
+    "text": "Content",
+    "targetPhoneme": "k aa1 n t eh0 n t ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1109
+  },
+  {
+    "text": "Concept",
+    "targetPhoneme": "k aa1 n s eh0 p t ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1127
+  },
+  {
+    "text": "Contemporary",
+    "targetPhoneme": "k ah0 n t eh1 m p er0 eh0 r iy0 ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1129
+  },
+  {
+    "text": "Concern",
+    "targetPhoneme": "k ah0 n s er1 n ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1138
+  },
+  {
+    "text": "Conflict",
+    "targetPhoneme": "k aa1 n f l ih0 k t ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1142
+  },
+  {
+    "text": "Essential",
+    "targetPhoneme": "ih0 s eh1 n sh ah0 l ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1207
+  },
+  {
+    "text": "Focus",
+    "targetPhoneme": "f ow1 k ah0 s ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1272
+  },
+  {
+    "text": "Fear",
+    "targetPhoneme": "f ih1 r ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1273
+  },
+  {
+    "text": "Feeling",
+    "targetPhoneme": "f iy1 l ih0 ng ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1287
+  },
+  {
+    "text": "Happy",
+    "targetPhoneme": "hh ae1 p iy0 ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1376
+  },
+  {
+    "text": "Indicate",
+    "targetPhoneme": "ih1 n d ah0 k ey0 t ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1430
+  },
+  {
+    "text": "Joint",
+    "targetPhoneme": "jh oy1 n t ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1462
+  },
+  {
+    "text": "Medium",
+    "targetPhoneme": "m iy1 d iy0 ah0 m ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1631
+  },
+  {
+    "text": "Mental",
+    "targetPhoneme": "m eh1 n t ah0 l ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1634
+  },
+  {
+    "text": "Nevertheless",
+    "targetPhoneme": "n eh0 v er0 dh ah0 l eh1 s ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1652
+  },
+  {
+    "text": "Novel",
+    "targetPhoneme": "n aa1 v ah0 l ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1662
+  },
+  {
+    "text": "Noted",
+    "targetPhoneme": "n ow1 t ah0 d ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1694
+  },
+  {
+    "text": "Objective",
+    "targetPhoneme": "ah0 b jh eh1 k t ih0 v ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1707
+  },
+  {
+    "text": "Obvious",
+    "targetPhoneme": "aa1 b v iy0 ah0 s ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1724
+  },
+  {
+    "text": "Obtain",
+    "targetPhoneme": "ah0 b t ey1 n ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1744
+  },
+  {
+    "text": "Powerful",
+    "targetPhoneme": "p aw1 er0 f ah0 l ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1765
+  },
+  {
+    "text": "Post",
+    "targetPhoneme": "p ow1 s t ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1791
+  },
+  {
+    "text": "Regard",
+    "targetPhoneme": "r ah0 g aa1 r d ",
+    "cefrLevel": "A2",
+    "minimalPairId": 1858
+  },
+  {
+    "text": "Unit",
+    "targetPhoneme": "y uw1 n ah0 t ",
+    "cefrLevel": "A2",
+    "minimalPairId": 2023
+  },
+  {
+    "text": "Wish",
+    "targetPhoneme": "w ih1 sh ",
+    "cefrLevel": "A2",
+    "minimalPairId": 2134
+  },
+  {
+    "text": "Wave",
+    "targetPhoneme": "w ey1 v ",
+    "cefrLevel": "A2",
+    "minimalPairId": 2136
+  },
+  {
+    "text": "Will",
+    "targetPhoneme": "w ih1 l ",
+    "cefrLevel": "A2",
+    "minimalPairId": 2140
+  },
+  {
+    "text": "Anxiety",
+    "targetPhoneme": "ae0 ng z ay1 ah0 t iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1014
+  },
+  {
+    "text": "Apparent",
+    "targetPhoneme": "ah0 p eh1 r ah0 n t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1020
+  },
+  {
+    "text": "Anxious",
+    "targetPhoneme": "ae1 ng k sh ah0 s ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1033
+  },
+  {
+    "text": "Anger",
+    "targetPhoneme": "ae1 ng g er0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1047
+  },
+  {
+    "text": "Bear",
+    "targetPhoneme": "b eh1 r ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1062
+  },
+  {
+    "text": "Blow",
+    "targetPhoneme": "b l ow1 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1067
+  },
+  {
+    "text": "Beam",
+    "targetPhoneme": "b iy1 m ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1071
+  },
+  {
+    "text": "Bearing",
+    "targetPhoneme": "b eh1 r ih0 ng ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1082
+  },
+  {
+    "text": "Comprehensive",
+    "targetPhoneme": "k aa0 m p r iy0 hh eh1 n s ih0 v ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1102
+  },
+  {
+    "text": "Consequently",
+    "targetPhoneme": "k aa1 n s ah0 k w ah0 n t l iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1106
+  },
+  {
+    "text": "Conscious",
+    "targetPhoneme": "k aa1 n sh ah0 s ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1134
+  },
+  {
+    "text": "Contrary",
+    "targetPhoneme": "k aa1 n t r eh0 r iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1136
+  },
+  {
+    "text": "Constitute",
+    "targetPhoneme": "k aa1 n s t ah0 t uw0 t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1137
+  },
+  {
+    "text": "Conduct",
+    "targetPhoneme": "k ah0 n d ah1 k t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1146
+  },
+  {
+    "text": "Composed",
+    "targetPhoneme": "k ah0 m p ow1 z d ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1147
+  },
+  {
+    "text": "Consequence",
+    "targetPhoneme": "k aa1 n s ah0 k w ah0 n s ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1149
+  },
+  {
+    "text": "Discourse",
+    "targetPhoneme": "d ih1 s k ao0 r s ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1153
+  },
+  {
+    "text": "Display",
+    "targetPhoneme": "d ih0 s p l ey1 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1156
+  },
+  {
+    "text": "Divine",
+    "targetPhoneme": "d ih0 v ay1 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1159
+  },
+  {
+    "text": "Distinct",
+    "targetPhoneme": "d ih0 s t ih1 ng k t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1160
+  },
+  {
+    "text": "Diverse",
+    "targetPhoneme": "d ay0 v er1 s ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1182
+  },
+  {
+    "text": "Discharge",
+    "targetPhoneme": "d ih0 s ch aa1 r jh ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1185
+  },
+  {
+    "text": "Discover",
+    "targetPhoneme": "d ih0 s k ah1 v er0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1199
+  },
+  {
+    "text": "Essence",
+    "targetPhoneme": "eh1 s ah0 n s ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1215
+  },
+  {
+    "text": "Encourage",
+    "targetPhoneme": "eh0 n k er1 ih0 jh ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1222
+  },
+  {
+    "text": "Establish",
+    "targetPhoneme": "ih0 s t ae1 b l ih0 sh ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1229
+  },
+  {
+    "text": "Empirical",
+    "targetPhoneme": "eh0 m p ih1 r ih0 k ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1230
+  },
+  {
+    "text": "Fellow",
+    "targetPhoneme": "f eh1 l ow0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1276
+  },
+  {
+    "text": "Foundation",
+    "targetPhoneme": "f aw0 n d ey1 sh ah0 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1281
+  },
+  {
+    "text": "Grave",
+    "targetPhoneme": "g r ey1 v ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1303
+  },
+  {
+    "text": "Grace",
+    "targetPhoneme": "g r ey1 s ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1327
+  },
+  {
+    "text": "Gradually",
+    "targetPhoneme": "g r ae1 jh uw0 ah0 l iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1343
+  },
+  {
+    "text": "Handle",
+    "targetPhoneme": "hh ae1 n d ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1370
+  },
+  {
+    "text": "Habit",
+    "targetPhoneme": "hh ae1 b ah0 t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1384
+  },
+  {
+    "text": "Insight",
+    "targetPhoneme": "ih1 n s ay0 t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1407
+  },
+  {
+    "text": "Intense",
+    "targetPhoneme": "ih0 n t eh1 n s ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1411
+  },
+  {
+    "text": "Inadequate",
+    "targetPhoneme": "ih0 n ae1 d ah0 k w ah0 t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1444
+  },
+  {
+    "text": "Judgment",
+    "targetPhoneme": "jh ah1 jh m ah0 n t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1464
+  },
+  {
+    "text": "Journey",
+    "targetPhoneme": "jh er1 n iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1492
+  },
+  {
+    "text": "Joy",
+    "targetPhoneme": "jh oy1 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1498
+  },
+  {
+    "text": "Judicial",
+    "targetPhoneme": "jh uw0 d ih1 sh ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1499
+  },
+  {
+    "text": "Knowing",
+    "targetPhoneme": "n ow1 ih0 ng ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1531
+  },
+  {
+    "text": "Kill",
+    "targetPhoneme": "k ih1 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1542
+  },
+  {
+    "text": "Mechanism",
+    "targetPhoneme": "m eh1 k ah0 n ih0 z ah0 m ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1636
+  },
+  {
+    "text": "Notion",
+    "targetPhoneme": "n ow1 sh ah0 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1650
+  },
+  {
+    "text": "Noble",
+    "targetPhoneme": "n ow1 b ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1660
+  },
+  {
+    "text": "Noise",
+    "targetPhoneme": "n oy1 z ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1667
+  },
+  {
+    "text": "Neck",
+    "targetPhoneme": "n eh1 k ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1698
+  },
+  {
+    "text": "Optimal",
+    "targetPhoneme": "aa1 p t ah0 m ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1709
+  },
+  {
+    "text": "Observe",
+    "targetPhoneme": "ah0 b z er1 v ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1711
+  },
+  {
+    "text": "Ordinary",
+    "targetPhoneme": "ao1 r d ah0 n eh0 r iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1733
+  },
+  {
+    "text": "Opposition",
+    "targetPhoneme": "aa0 p ah0 z ih1 sh ah0 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1738
+  },
+  {
+    "text": "Plain",
+    "targetPhoneme": "p l ey1 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1768
+  },
+  {
+    "text": "Pleased",
+    "targetPhoneme": "p l iy1 z d ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1770
+  },
+  {
+    "text": "Possess",
+    "targetPhoneme": "p ah0 z eh1 s ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1775
+  },
+  {
+    "text": "Pleasure",
+    "targetPhoneme": "p l eh1 zh er0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1780
+  },
+  {
+    "text": "Pleasant",
+    "targetPhoneme": "p l eh1 z ah0 n t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1781
+  },
+  {
+    "text": "Quiet",
+    "targetPhoneme": "k w ay1 ah0 t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1829
+  },
+  {
+    "text": "Quarter",
+    "targetPhoneme": "k w ao1 r t er0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1840
+  },
+  {
+    "text": "Queen",
+    "targetPhoneme": "k w iy1 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1843
+  },
+  {
+    "text": "Quantity",
+    "targetPhoneme": "k w aa1 n t ah0 t iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1847
+  },
+  {
+    "text": "Quietly",
+    "targetPhoneme": "k w ay1 ah0 t l iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1849
+  },
+  {
+    "text": "Remarkable",
+    "targetPhoneme": "r ih0 m aa1 r k ah0 b ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1865
+  },
+  {
+    "text": "Reserved",
+    "targetPhoneme": "r ih0 z er1 v d ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1871
+  },
+  {
+    "text": "Recognition",
+    "targetPhoneme": "r eh0 k ah0 g n ih1 sh ah0 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1886
+  },
+  {
+    "text": "Resolution",
+    "targetPhoneme": "r eh0 z ah0 l uw1 sh ah0 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1898
+  },
+  {
+    "text": "Reveal",
+    "targetPhoneme": "r ih0 v iy1 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1899
+  },
+  {
+    "text": "Sacred",
+    "targetPhoneme": "s ey1 k r ah0 d ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1914
+  },
+  {
+    "text": "Sad",
+    "targetPhoneme": "s ae1 d ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1926
+  },
+  {
+    "text": "Satisfaction",
+    "targetPhoneme": "s ae0 t ah0 s f ae1 k sh ah0 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1927
+  },
+  {
+    "text": "Solid",
+    "targetPhoneme": "s aa1 l ah0 d ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1943
+  },
+  {
+    "text": "Touch",
+    "targetPhoneme": "t ah1 ch ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1958
+  },
+  {
+    "text": "Temporal",
+    "targetPhoneme": "t eh1 m p er0 ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1959
+  },
+  {
+    "text": "Tone",
+    "targetPhoneme": "t ow1 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1969
+  },
+  {
+    "text": "Tool",
+    "targetPhoneme": "t uw1 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1978
+  },
+  {
+    "text": "Temple",
+    "targetPhoneme": "t eh1 m p ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1990
+  },
+  {
+    "text": "Tension",
+    "targetPhoneme": "t eh1 n sh ah0 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1991
+  },
+  {
+    "text": "Tower",
+    "targetPhoneme": "t aw1 er0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 1995
+  },
+  {
+    "text": "Unusual",
+    "targetPhoneme": "ah0 n y uw1 zh uw0 ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2010
+  },
+  {
+    "text": "Unique",
+    "targetPhoneme": "y uw0 n iy1 k ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2015
+  },
+  {
+    "text": "Unity",
+    "targetPhoneme": "y uw1 n ah0 t iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2021
+  },
+  {
+    "text": "Uncertainty",
+    "targetPhoneme": "ah0 n s er1 t ah0 n t iy0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2024
+  },
+  {
+    "text": "Virtue",
+    "targetPhoneme": "v er1 ch uw0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2068
+  },
+  {
+    "text": "Vital",
+    "targetPhoneme": "v ay1 t ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2083
+  },
+  {
+    "text": "Vast",
+    "targetPhoneme": "v ae1 s t ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2091
+  },
+  {
+    "text": "Valuable",
+    "targetPhoneme": "v ae1 l y ah0 b ah0 l ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2098
+  },
+  {
+    "text": "Ward",
+    "targetPhoneme": "w ao1 r d ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2102
+  },
+  {
+    "text": "Wild",
+    "targetPhoneme": "w ay1 l d ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2106
+  },
+  {
+    "text": "Warm",
+    "targetPhoneme": "w ao1 r m ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2112
+  },
+  {
+    "text": "Wisdom",
+    "targetPhoneme": "w ih1 z d ah0 m ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2133
+  },
+  {
+    "text": "Wise",
+    "targetPhoneme": "w ay1 z ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2147
+  },
+  {
+    "text": "Yield",
+    "targetPhoneme": "y iy1 l d ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2201
+  },
+  {
+    "text": "Yellow",
+    "targetPhoneme": "y eh1 l ow0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2224
+  },
+  {
+    "text": "Youth",
+    "targetPhoneme": "y uw1 th ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2225
+  },
+  {
+    "text": "Zone",
+    "targetPhoneme": "z ow1 n ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2270
+  },
+  {
+    "text": "Zero",
+    "targetPhoneme": "z ih1 r ow0 ",
+    "cefrLevel": "B1",
+    "minimalPairId": 2271
+  },
+  {
+    "text": "Analogous",
+    "targetPhoneme": "ah0 n ae1 l ah0 g ah0 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1007
+  },
+  {
+    "text": "Anticipation",
+    "targetPhoneme": "ae0 n t ih0 s ah0 p ey1 sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1015
+  },
+  {
+    "text": "Appealing",
+    "targetPhoneme": "ah0 p iy1 l ih0 ng ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1023
+  },
+  {
+    "text": "Anchor",
+    "targetPhoneme": "ae1 ng k er0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1025
+  },
+  {
+    "text": "Analyze",
+    "targetPhoneme": "ae1 n ah0 l ay0 z ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1027
+  },
+  {
+    "text": "Analogy",
+    "targetPhoneme": "ah0 n ae1 l ah0 jh iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1030
+  },
+  {
+    "text": "Apparatus",
+    "targetPhoneme": "ae0 p er0 ae1 t ah0 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1048
+  },
+  {
+    "text": "Appreciate",
+    "targetPhoneme": "ah0 p r iy1 sh iy0 ey0 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1049
+  },
+  {
+    "text": "Benign",
+    "targetPhoneme": "b ih0 n ay1 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1063
+  },
+  {
+    "text": "Beneficial",
+    "targetPhoneme": "b eh0 n ah0 f ih1 sh ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1069
+  },
+  {
+    "text": "Blast",
+    "targetPhoneme": "b l ae1 s t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1081
+  },
+  {
+    "text": "Bloom",
+    "targetPhoneme": "b l uw1 m ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1084
+  },
+  {
+    "text": "Beast",
+    "targetPhoneme": "b iy1 s t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1090
+  },
+  {
+    "text": "Conspicuous",
+    "targetPhoneme": "k ah0 n s p ih1 k y uw0 ah0 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1100
+  },
+  {
+    "text": "Contempt",
+    "targetPhoneme": "k ah0 n t eh1 m p t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1101
+  },
+  {
+    "text": "Convey",
+    "targetPhoneme": "k ah0 n v ey1 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1104
+  },
+  {
+    "text": "Conversely",
+    "targetPhoneme": "k aa1 n v er0 s l iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1108
+  },
+  {
+    "text": "Conviction",
+    "targetPhoneme": "k ah0 n v ih1 k sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1119
+  },
+  {
+    "text": "Compelling",
+    "targetPhoneme": "k ah0 m p eh1 l ih0 ng ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1121
+  },
+  {
+    "text": "Contingent",
+    "targetPhoneme": "k ah0 n t ih1 n jh ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1133
+  },
+  {
+    "text": "Contention",
+    "targetPhoneme": "k ah0 n t eh1 n sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1135
+  },
+  {
+    "text": "Compelled",
+    "targetPhoneme": "k ah0 m p eh1 l d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1145
+  },
+  {
+    "text": "Disposition",
+    "targetPhoneme": "d ih0 s p ah0 z ih1 sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1154
+  },
+  {
+    "text": "Dispute",
+    "targetPhoneme": "d ih0 s p y uw1 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1165
+  },
+  {
+    "text": "Distress",
+    "targetPhoneme": "d ih0 s t r eh1 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1168
+  },
+  {
+    "text": "Distinctive",
+    "targetPhoneme": "d ih0 s t ih1 ng k t ih0 v ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1173
+  },
+  {
+    "text": "Dilemma",
+    "targetPhoneme": "d ih0 l eh1 m ah0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1195
+  },
+  {
+    "text": "Dim",
+    "targetPhoneme": "d ih1 m ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1197
+  },
+  {
+    "text": "Dirty",
+    "targetPhoneme": "d er1 t iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1198
+  },
+  {
+    "text": "Eminent",
+    "targetPhoneme": "eh1 m ah0 n ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1200
+  },
+  {
+    "text": "Enhance",
+    "targetPhoneme": "eh0 n hh ae1 n s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1213
+  },
+  {
+    "text": "Enthusiasm",
+    "targetPhoneme": "ih0 n th uw1 z iy0 ae0 z ah0 m ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1216
+  },
+  {
+    "text": "Emphasize",
+    "targetPhoneme": "eh1 m f ah0 s ay0 z ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1226
+  },
+  {
+    "text": "Embrace",
+    "targetPhoneme": "eh0 m b r ey1 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1232
+  },
+  {
+    "text": "Employ",
+    "targetPhoneme": "eh0 m p l oy1 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1233
+  },
+  {
+    "text": "Enthusiastic",
+    "targetPhoneme": "ih0 n th uw0 z iy0 ae1 s t ih0 k ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1235
+  },
+  {
+    "text": "Elegant",
+    "targetPhoneme": "eh1 l ah0 g ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1238
+  },
+  {
+    "text": "Esteem",
+    "targetPhoneme": "ah0 s t iy1 m ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1241
+  },
+  {
+    "text": "Entity",
+    "targetPhoneme": "eh1 n t ah0 t iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1242
+  },
+  {
+    "text": "Endure",
+    "targetPhoneme": "eh0 n d y uh1 r ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1243
+  },
+  {
+    "text": "Facilitate",
+    "targetPhoneme": "f ah0 s ih1 l ah0 t ey0 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1254
+  },
+  {
+    "text": "Formidable",
+    "targetPhoneme": "f ao1 r m ah0 d ah0 b ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1261
+  },
+  {
+    "text": "Foremost",
+    "targetPhoneme": "f ao1 r m ow0 s t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1263
+  },
+  {
+    "text": "Feasible",
+    "targetPhoneme": "f iy1 z ah0 b ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1267
+  },
+  {
+    "text": "Fellowship",
+    "targetPhoneme": "f eh1 l ow0 sh ih0 p ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1268
+  },
+  {
+    "text": "Fond",
+    "targetPhoneme": "f aa1 n d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1271
+  },
+  {
+    "text": "Forthcoming",
+    "targetPhoneme": "f ao1 r th k ah1 m ih0 ng ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1290
+  },
+  {
+    "text": "Forum",
+    "targetPhoneme": "f ao1 r ah0 m ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1292
+  },
+  {
+    "text": "Grasp",
+    "targetPhoneme": "g r ae1 s p ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1314
+  },
+  {
+    "text": "Glorious",
+    "targetPhoneme": "g l ao1 r iy0 ah0 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1316
+  },
+  {
+    "text": "Grief",
+    "targetPhoneme": "g r iy1 f ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1322
+  },
+  {
+    "text": "Glimpse",
+    "targetPhoneme": "g l ih1 m p s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1323
+  },
+  {
+    "text": "Glance",
+    "targetPhoneme": "g l ae1 n s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1324
+  },
+  {
+    "text": "Grove",
+    "targetPhoneme": "g r ow1 v ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1340
+  },
+  {
+    "text": "Grip",
+    "targetPhoneme": "g r ih1 p ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1346
+  },
+  {
+    "text": "Halt",
+    "targetPhoneme": "hh ao1 l t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1354
+  },
+  {
+    "text": "Haven",
+    "targetPhoneme": "hh ey1 v ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1361
+  },
+  {
+    "text": "Harmony",
+    "targetPhoneme": "hh aa1 r m ah0 n iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1362
+  },
+  {
+    "text": "Harmful",
+    "targetPhoneme": "hh aa1 r m f ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1367
+  },
+  {
+    "text": "Harsh",
+    "targetPhoneme": "hh aa1 r sh ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1369
+  },
+  {
+    "text": "Harbor",
+    "targetPhoneme": "hh aa1 r b er0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1375
+  },
+  {
+    "text": "Hazardous",
+    "targetPhoneme": "hh ae1 z er0 d ah0 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1381
+  },
+  {
+    "text": "Hazard",
+    "targetPhoneme": "hh ae1 z er0 d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1385
+  },
+  {
+    "text": "Harvest",
+    "targetPhoneme": "hh aa1 r v ah0 s t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1386
+  },
+  {
+    "text": "Hatred",
+    "targetPhoneme": "hh ey1 t r ah0 d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1387
+  },
+  {
+    "text": "Hamlet",
+    "targetPhoneme": "hh ae1 m l ah0 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1391
+  },
+  {
+    "text": "Handsome",
+    "targetPhoneme": "hh ae1 n s ah0 m ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1393
+  },
+  {
+    "text": "Indifferent",
+    "targetPhoneme": "ih0 n d ih1 f r ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1400
+  },
+  {
+    "text": "Intrinsic",
+    "targetPhoneme": "ih0 n t r ih1 n s ih0 k ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1403
+  },
+  {
+    "text": "Integrity",
+    "targetPhoneme": "ih0 n t eh1 g r ah0 t iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1404
+  },
+  {
+    "text": "Induce",
+    "targetPhoneme": "ih0 n d uw1 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1415
+  },
+  {
+    "text": "Intimate",
+    "targetPhoneme": "ih1 n t ah0 m ah0 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1422
+  },
+  {
+    "text": "Inclination",
+    "targetPhoneme": "ih0 n k l ah0 n ey1 sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1425
+  },
+  {
+    "text": "Indifference",
+    "targetPhoneme": "ih0 n d ih1 f er0 ah0 n s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1428
+  },
+  {
+    "text": "Indispensable",
+    "targetPhoneme": "ih0 n d ih0 s p eh1 n s ah0 b ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1429
+  },
+  {
+    "text": "Inevitably",
+    "targetPhoneme": "ih0 n eh1 v ah0 t ah0 b l iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1437
+  },
+  {
+    "text": "Integral",
+    "targetPhoneme": "ih1 n t ah0 g r ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1438
+  },
+  {
+    "text": "Incorporate",
+    "targetPhoneme": "ih0 n k ao1 r p er0 ey0 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1439
+  },
+  {
+    "text": "Intelligent",
+    "targetPhoneme": "ih0 n t eh1 l ah0 jh ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1446
+  },
+  {
+    "text": "Intuitive",
+    "targetPhoneme": "ih0 n t uw1 ah0 t ih0 v ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1447
+  },
+  {
+    "text": "Juvenile",
+    "targetPhoneme": "jh uw1 v ah0 n ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1473
+  },
+  {
+    "text": "Jump",
+    "targetPhoneme": "jh ah1 m p ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1480
+  },
+  {
+    "text": "Justification",
+    "targetPhoneme": "jh ah0 s t ah0 f ah0 k ey1 sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1481
+  },
+  {
+    "text": "Junction",
+    "targetPhoneme": "jh ah1 ng k sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1482
+  },
+  {
+    "text": "Joke",
+    "targetPhoneme": "jh ow1 k ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1483
+  },
+  {
+    "text": "Keen",
+    "targetPhoneme": "k iy1 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1500
+  },
+  {
+    "text": "Kinship",
+    "targetPhoneme": "k ih1 n sh ih0 p ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1502
+  },
+  {
+    "text": "Knight",
+    "targetPhoneme": "n ay1 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1518
+  },
+  {
+    "text": "Kin",
+    "targetPhoneme": "k ih1 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1519
+  },
+  {
+    "text": "Kinetic",
+    "targetPhoneme": "k ah0 n eh1 t ih0 k ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1527
+  },
+  {
+    "text": "Knock",
+    "targetPhoneme": "n aa1 k ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1530
+  },
+  {
+    "text": "Kick",
+    "targetPhoneme": "k ih1 k ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1535
+  },
+  {
+    "text": "Ken",
+    "targetPhoneme": "k eh1 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1543
+  },
+  {
+    "text": "Kindness",
+    "targetPhoneme": "k ay1 n d n ah0 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1546
+  },
+  {
+    "text": "Latent",
+    "targetPhoneme": "l ey1 t ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1576
+  },
+  {
+    "text": "Lap",
+    "targetPhoneme": "l ae1 p ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1581
+  },
+  {
+    "text": "Melancholy",
+    "targetPhoneme": "m eh1 l ah0 n k aa0 l iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1600
+  },
+  {
+    "text": "Merit",
+    "targetPhoneme": "m eh1 r ah0 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1612
+  },
+  {
+    "text": "Metaphysical",
+    "targetPhoneme": "m eh0 t ah0 f ih1 z ih0 k ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1613
+  },
+  {
+    "text": "Malignant",
+    "targetPhoneme": "m ah0 l ih1 g n ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1615
+  },
+  {
+    "text": "Methodology",
+    "targetPhoneme": "m eh0 th ah0 d aa1 l ah0 jh iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1639
+  },
+  {
+    "text": "Meaningful",
+    "targetPhoneme": "m iy1 n ih0 ng f ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1645
+  },
+  {
+    "text": "Nonetheless",
+    "targetPhoneme": "n ah0 n dh ah0 l eh1 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1651
+  },
+  {
+    "text": "Notwithstanding",
+    "targetPhoneme": "n aa0 t w ih0 th s t ae1 n d ih0 ng ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1653
+  },
+  {
+    "text": "Neglect",
+    "targetPhoneme": "n ah0 g l eh1 k t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1666
+  },
+  {
+    "text": "Notable",
+    "targetPhoneme": "n ow1 t ah0 b ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1669
+  },
+  {
+    "text": "Negligible",
+    "targetPhoneme": "n eh1 g l ah0 jh ah0 b ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1676
+  },
+  {
+    "text": "Nominal",
+    "targetPhoneme": "n aa1 m ah0 n ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1679
+  },
+  {
+    "text": "Neglected",
+    "targetPhoneme": "n ah0 g l eh1 k t ah0 d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1690
+  },
+  {
+    "text": "Nest",
+    "targetPhoneme": "n eh1 s t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1692
+  },
+  {
+    "text": "Obscure",
+    "targetPhoneme": "ah0 b s k y uh1 r ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1701
+  },
+  {
+    "text": "Overt",
+    "targetPhoneme": "ow0 v er1 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1713
+  },
+  {
+    "text": "Obliged",
+    "targetPhoneme": "ah0 b l ay1 jh d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1721
+  },
+  {
+    "text": "Operative",
+    "targetPhoneme": "aa1 p er0 ah0 t ih0 v ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1723
+  },
+  {
+    "text": "Overlooked",
+    "targetPhoneme": "ow1 v er0 l uh0 k t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1742
+  },
+  {
+    "text": "Oppression",
+    "targetPhoneme": "ah0 p r eh1 sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1746
+  },
+  {
+    "text": "Potent",
+    "targetPhoneme": "p ow1 t ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1753
+  },
+  {
+    "text": "Pose",
+    "targetPhoneme": "p ow1 z ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1778
+  },
+  {
+    "text": "Posture",
+    "targetPhoneme": "p aa1 s ch er0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1787
+  },
+  {
+    "text": "Plausible",
+    "targetPhoneme": "p l ao1 z ah0 b ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1790
+  },
+  {
+    "text": "Query",
+    "targetPhoneme": "k w ih1 r iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1807
+  },
+  {
+    "text": "Quest",
+    "targetPhoneme": "k w eh1 s t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1809
+  },
+  {
+    "text": "Questioning",
+    "targetPhoneme": "k w eh1 s ch ah0 n ih0 ng ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1834
+  },
+  {
+    "text": "Questionable",
+    "targetPhoneme": "k w eh1 s ch ah0 n ah0 b ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1841
+  },
+  {
+    "text": "Resentment",
+    "targetPhoneme": "r ih0 z eh1 n t m ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1853
+  },
+  {
+    "text": "Render",
+    "targetPhoneme": "r eh1 n d er0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1855
+  },
+  {
+    "text": "Resolve",
+    "targetPhoneme": "r iy0 z aa1 l v ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1857
+  },
+  {
+    "text": "Refined",
+    "targetPhoneme": "r ah0 f ay1 n d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1864
+  },
+  {
+    "text": "Remarked",
+    "targetPhoneme": "r ih0 m aa1 r k t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1876
+  },
+  {
+    "text": "Retain",
+    "targetPhoneme": "r ih0 t ey1 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1890
+  },
+  {
+    "text": "Remark",
+    "targetPhoneme": "r ih0 m aa1 r k ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1891
+  },
+  {
+    "text": "Revelation",
+    "targetPhoneme": "r eh0 v ah0 l ey1 sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1892
+  },
+  {
+    "text": "Resonance",
+    "targetPhoneme": "r eh1 z ah0 n ah0 n s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1895
+  },
+  {
+    "text": "Solemn",
+    "targetPhoneme": "s aa1 l ah0 m ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1901
+  },
+  {
+    "text": "Sanctuary",
+    "targetPhoneme": "s ae1 ng k ch uw0 eh0 r iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1912
+  },
+  {
+    "text": "Sage",
+    "targetPhoneme": "s ey1 jh ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1913
+  },
+  {
+    "text": "Solitary",
+    "targetPhoneme": "s aa1 l ah0 t eh0 r iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1915
+  },
+  {
+    "text": "Savage",
+    "targetPhoneme": "s ae1 v ah0 jh ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1917
+  },
+  {
+    "text": "Salvation",
+    "targetPhoneme": "s ae0 l v ey1 sh ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1935
+  },
+  {
+    "text": "Saturated",
+    "targetPhoneme": "s ae1 ch er0 ey0 t ah0 d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1949
+  },
+  {
+    "text": "Tender",
+    "targetPhoneme": "t eh1 n d er0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1952
+  },
+  {
+    "text": "Temper",
+    "targetPhoneme": "t eh1 m p er0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1961
+  },
+  {
+    "text": "Token",
+    "targetPhoneme": "t ow1 k ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1964
+  },
+  {
+    "text": "Tough",
+    "targetPhoneme": "t ah1 f ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1967
+  },
+  {
+    "text": "Tense",
+    "targetPhoneme": "t eh1 n s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1971
+  },
+  {
+    "text": "Temperament",
+    "targetPhoneme": "t eh1 m p r ah0 m ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1972
+  },
+  {
+    "text": "Tolerance",
+    "targetPhoneme": "t aa1 l er0 ah0 n s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 1992
+  },
+  {
+    "text": "Uneasy",
+    "targetPhoneme": "ah0 n iy1 z iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2001
+  },
+  {
+    "text": "Uncertain",
+    "targetPhoneme": "ah0 n s er1 t ah0 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2017
+  },
+  {
+    "text": "Unfortunate",
+    "targetPhoneme": "ah0 n f ao1 r ch ah0 n ah0 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2030
+  },
+  {
+    "text": "Unstable",
+    "targetPhoneme": "ah0 n s t ey1 b ah0 l ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2032
+  },
+  {
+    "text": "Unpleasant",
+    "targetPhoneme": "ah0 n p l eh1 z ah0 n t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2034
+  },
+  {
+    "text": "Unconscious",
+    "targetPhoneme": "ah0 n k aa1 n sh ah0 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2042
+  },
+  {
+    "text": "Undertake",
+    "targetPhoneme": "ah1 n d er0 t ey0 k ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2048
+  },
+  {
+    "text": "Unaware",
+    "targetPhoneme": "ah0 n ah0 w eh1 r ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2049
+  },
+  {
+    "text": "Vitality",
+    "targetPhoneme": "v ay0 t ae1 l ah0 t iy0 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2055
+  },
+  {
+    "text": "Vain",
+    "targetPhoneme": "v ey1 n ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2070
+  },
+  {
+    "text": "Vigorous",
+    "targetPhoneme": "v ih1 g er0 ah0 s ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2072
+  },
+  {
+    "text": "Vivid",
+    "targetPhoneme": "v ih1 v ah0 d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2081
+  },
+  {
+    "text": "Wicked",
+    "targetPhoneme": "w ih1 k ah0 d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2108
+  },
+  {
+    "text": "Withdraw",
+    "targetPhoneme": "w ih0 dh d r ao1 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2120
+  },
+  {
+    "text": "Wit",
+    "targetPhoneme": "w ih1 t ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2141
+  },
+  {
+    "text": "Winding",
+    "targetPhoneme": "w ay1 n d ih0 ng ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2149
+  },
+  {
+    "text": "Yielding",
+    "targetPhoneme": "y iy1 l d ih0 ng ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2202
+  },
+  {
+    "text": "Yelled",
+    "targetPhoneme": "y eh1 l d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2208
+  },
+  {
+    "text": "Yeah",
+    "targetPhoneme": "y ae1 ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2217
+  },
+  {
+    "text": "Yielded",
+    "targetPhoneme": "y iy1 l d ah0 d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2219
+  },
+  {
+    "text": "Yard",
+    "targetPhoneme": "y aa1 r d ",
+    "cefrLevel": "B2",
+    "minimalPairId": 2245
+  },
+  {
+    "text": "Anguish",
+    "targetPhoneme": "ae1 ng g w ih0 sh ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1000
+  },
+  {
+    "text": "Apprehension",
+    "targetPhoneme": "ae0 p r ih0 hh eh1 n sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1001
+  },
+  {
+    "text": "Apprehensive",
+    "targetPhoneme": "ae0 p r ih0 hh eh1 n s ih0 v ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1002
+  },
+  {
+    "text": "Animosity",
+    "targetPhoneme": "ae0 n ah0 m aa1 s ah0 t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1003
+  },
+  {
+    "text": "Appalled",
+    "targetPhoneme": "ah0 p ao1 l d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1004
+  },
+  {
+    "text": "Antipathy",
+    "targetPhoneme": "ae0 n t ih1 p ah0 th iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1005
+  },
+  {
+    "text": "Anomaly",
+    "targetPhoneme": "ah0 n aa1 m ah0 l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1012
+  },
+  {
+    "text": "Apparition",
+    "targetPhoneme": "ae0 p er0 ih1 sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1017
+  },
+  {
+    "text": "Appease",
+    "targetPhoneme": "ah0 p iy1 z ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1018
+  },
+  {
+    "text": "Anima",
+    "targetPhoneme": "ae1 n ah0 m ah0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1022
+  },
+  {
+    "text": "Antecedent",
+    "targetPhoneme": "ae0 n t eh1 s ah0 d ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1029
+  },
+  {
+    "text": "Antique",
+    "targetPhoneme": "ae0 n t iy1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1034
+  },
+  {
+    "text": "Antithesis",
+    "targetPhoneme": "ae0 n t ih1 th ah0 s ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1036
+  },
+  {
+    "text": "Anon",
+    "targetPhoneme": "ae0 n ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1037
+  },
+  {
+    "text": "Apparel",
+    "targetPhoneme": "ah0 p ae1 r ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1038
+  },
+  {
+    "text": "Annex",
+    "targetPhoneme": "ae1 n eh0 k s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1039
+  },
+  {
+    "text": "Apprehend",
+    "targetPhoneme": "ae0 p r ih0 hh eh1 n d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1040
+  },
+  {
+    "text": "Ancillary",
+    "targetPhoneme": "ae1 n s ah0 l eh0 r iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1043
+  },
+  {
+    "text": "Anomalous",
+    "targetPhoneme": "ah0 n aa1 m ah0 l ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1044
+  },
+  {
+    "text": "Annoyance",
+    "targetPhoneme": "ah0 n oy1 ah0 n s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1045
+  },
+  {
+    "text": "Benevolent",
+    "targetPhoneme": "b ah0 n eh1 v ah0 l ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1051
+  },
+  {
+    "text": "Bewildered",
+    "targetPhoneme": "b ih0 w ih1 l d er0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1053
+  },
+  {
+    "text": "Bleak",
+    "targetPhoneme": "b l iy1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1054
+  },
+  {
+    "text": "Benevolence",
+    "targetPhoneme": "b ah0 n eh1 v ah0 l ah0 n s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1059
+  },
+  {
+    "text": "Belligerent",
+    "targetPhoneme": "b ah0 l ih1 jh er0 ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1060
+  },
+  {
+    "text": "Bewilderment",
+    "targetPhoneme": "b ih0 w ih1 l d er0 m ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1065
+  },
+  {
+    "text": "Blaze",
+    "targetPhoneme": "b l ey1 z ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1068
+  },
+  {
+    "text": "Blunt",
+    "targetPhoneme": "b l ah1 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1070
+  },
+  {
+    "text": "Blatant",
+    "targetPhoneme": "b l ey1 t ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1074
+  },
+  {
+    "text": "Bereaved",
+    "targetPhoneme": "b er0 iy1 v d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1075
+  },
+  {
+    "text": "Benefactor",
+    "targetPhoneme": "b eh1 n ah0 f ae0 k t er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1087
+  },
+  {
+    "text": "Berth",
+    "targetPhoneme": "b er1 th ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1091
+  },
+  {
+    "text": "Blunder",
+    "targetPhoneme": "b l ah1 n d er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1092
+  },
+  {
+    "text": "Blight",
+    "targetPhoneme": "b l ay1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1098
+  },
+  {
+    "text": "Blossom",
+    "targetPhoneme": "b l aa1 s ah0 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1099
+  },
+  {
+    "text": "Congenial",
+    "targetPhoneme": "k ah0 n jh iy1 n y ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1105
+  },
+  {
+    "text": "Contend",
+    "targetPhoneme": "k ah0 n t eh1 n d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1107
+  },
+  {
+    "text": "Consort",
+    "targetPhoneme": "k ah0 n s ao1 r t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1110
+  },
+  {
+    "text": "Compassionate",
+    "targetPhoneme": "k ah0 m p ae1 sh ah0 n ah0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1111
+  },
+  {
+    "text": "Condemnation",
+    "targetPhoneme": "k aa0 n d ah0 m n ey1 sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1112
+  },
+  {
+    "text": "Conjecture",
+    "targetPhoneme": "k ah0 n jh eh1 k ch er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1113
+  },
+  {
+    "text": "Conceit",
+    "targetPhoneme": "k ah0 n s iy1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1116
+  },
+  {
+    "text": "Complacent",
+    "targetPhoneme": "k ah0 m p l ey1 s ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1117
+  },
+  {
+    "text": "Concede",
+    "targetPhoneme": "k ah0 n s iy1 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1118
+  },
+  {
+    "text": "Compulsion",
+    "targetPhoneme": "k ah0 m p ah1 l sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1120
+  },
+  {
+    "text": "Concord",
+    "targetPhoneme": "k aa1 n k ao0 r d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1124
+  },
+  {
+    "text": "Confounded",
+    "targetPhoneme": "k ah0 n f aw1 n d ih0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1126
+  },
+  {
+    "text": "Compel",
+    "targetPhoneme": "k ah0 m p eh1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1128
+  },
+  {
+    "text": "Contemplate",
+    "targetPhoneme": "k aa1 n t ah0 m p l ey0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1130
+  },
+  {
+    "text": "Conscientious",
+    "targetPhoneme": "k aa0 n sh iy0 eh1 n sh ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1131
+  },
+  {
+    "text": "Compliant",
+    "targetPhoneme": "k ah0 m p l ay1 ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1132
+  },
+  {
+    "text": "Compendium",
+    "targetPhoneme": "k ah0 m p eh1 n d iy0 ah0 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1139
+  },
+  {
+    "text": "Consortium",
+    "targetPhoneme": "k ah0 n s ao1 r sh iy0 ah0 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1141
+  },
+  {
+    "text": "Contentious",
+    "targetPhoneme": "k ah0 n t eh1 n sh ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1144
+  },
+  {
+    "text": "Concurrent",
+    "targetPhoneme": "k ah0 n k er1 ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1148
+  },
+  {
+    "text": "Disdain",
+    "targetPhoneme": "d ih0 s d ey1 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1150
+  },
+  {
+    "text": "Discern",
+    "targetPhoneme": "d ih0 s er1 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1151
+  },
+  {
+    "text": "Discrepancy",
+    "targetPhoneme": "d ih0 s k r eh1 p ah0 n s iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1152
+  },
+  {
+    "text": "Dismayed",
+    "targetPhoneme": "d ih0 s m ey1 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1155
+  },
+  {
+    "text": "Diminutive",
+    "targetPhoneme": "d ih0 m ih1 n y ah0 t ih0 v ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1157
+  },
+  {
+    "text": "Dichotomy",
+    "targetPhoneme": "d ay0 k aa1 t ah0 m iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1158
+  },
+  {
+    "text": "Discernment",
+    "targetPhoneme": "d ih0 s er1 n m ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1161
+  },
+  {
+    "text": "Disregard",
+    "targetPhoneme": "d ih0 s r ih0 g aa1 r d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1163
+  },
+  {
+    "text": "Dismal",
+    "targetPhoneme": "d ih1 z m ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1164
+  },
+  {
+    "text": "Dismay",
+    "targetPhoneme": "d ih0 s m ey1 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1166
+  },
+  {
+    "text": "Diminish",
+    "targetPhoneme": "d ih0 m ih1 n ih0 sh ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1169
+  },
+  {
+    "text": "Discontent",
+    "targetPhoneme": "d ih0 s k ah0 n t eh1 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1170
+  },
+  {
+    "text": "Disparate",
+    "targetPhoneme": "d ih1 s p er0 ih0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1172
+  },
+  {
+    "text": "Diligent",
+    "targetPhoneme": "d ih1 l ih0 jh ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1174
+  },
+  {
+    "text": "Disseminate",
+    "targetPhoneme": "d ih0 s eh1 m ah0 n ey0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1176
+  },
+  {
+    "text": "Disparity",
+    "targetPhoneme": "d ih0 s p eh1 r ah0 t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1178
+  },
+  {
+    "text": "Distraught",
+    "targetPhoneme": "d ih0 s t r ao1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1179
+  },
+  {
+    "text": "Dissonance",
+    "targetPhoneme": "d ih1 s ah0 n ah0 n s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1183
+  },
+  {
+    "text": "Discerning",
+    "targetPhoneme": "d ih0 s er1 n ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1184
+  },
+  {
+    "text": "Dissent",
+    "targetPhoneme": "d ih0 s eh1 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1186
+  },
+  {
+    "text": "Discord",
+    "targetPhoneme": "d ih1 s k ao0 r d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1187
+  },
+  {
+    "text": "Disciple",
+    "targetPhoneme": "d ih0 s ay1 p ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1191
+  },
+  {
+    "text": "Displeased",
+    "targetPhoneme": "d ih0 s p l iy1 z d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1193
+  },
+  {
+    "text": "Dire",
+    "targetPhoneme": "d ay1 r ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1196
+  },
+  {
+    "text": "Esoteric",
+    "targetPhoneme": "eh0 s ah0 t eh1 r ih0 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1201
+  },
+  {
+    "text": "Elucidate",
+    "targetPhoneme": "ih0 l uw1 s ah0 d ey0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1202
+  },
+  {
+    "text": "Enigmatic",
+    "targetPhoneme": "eh0 n ih0 g m ae1 t ih0 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1203
+  },
+  {
+    "text": "Endeavor",
+    "targetPhoneme": "ih0 n d eh1 v er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1204
+  },
+  {
+    "text": "Elicit",
+    "targetPhoneme": "ih0 l ih1 s ih0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1206
+  },
+  {
+    "text": "Elated",
+    "targetPhoneme": "ih0 l ey1 t ah0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1209
+  },
+  {
+    "text": "Enmity",
+    "targetPhoneme": "eh1 n m ah0 t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1210
+  },
+  {
+    "text": "Elusive",
+    "targetPhoneme": "ih0 l uw1 s ih0 v ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1212
+  },
+  {
+    "text": "Empathy",
+    "targetPhoneme": "eh1 m p ah0 th iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1217
+  },
+  {
+    "text": "Eloquent",
+    "targetPhoneme": "eh1 l ah0 k w ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1219
+  },
+  {
+    "text": "Enigma",
+    "targetPhoneme": "ih0 n ih1 g m ah0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1223
+  },
+  {
+    "text": "Emulate",
+    "targetPhoneme": "eh1 m y ah0 l ey0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1234
+  },
+  {
+    "text": "Estrangement",
+    "targetPhoneme": "ih0 s t r ey1 n jh m ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1240
+  },
+  {
+    "text": "Emphatic",
+    "targetPhoneme": "eh0 m f ae1 t ih0 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1245
+  },
+  {
+    "text": "Emblem",
+    "targetPhoneme": "eh1 m b l ah0 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1247
+  },
+  {
+    "text": "Entropy",
+    "targetPhoneme": "eh1 n t r ah0 p iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1249
+  },
+  {
+    "text": "Fervent",
+    "targetPhoneme": "f er1 v ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1251
+  },
+  {
+    "text": "Fervor",
+    "targetPhoneme": "f er1 v er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1252
+  },
+  {
+    "text": "Forlorn",
+    "targetPhoneme": "f er0 l ao1 r n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1253
+  },
+  {
+    "text": "Facile",
+    "targetPhoneme": "f ae1 s ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1255
+  },
+  {
+    "text": "Fortitude",
+    "targetPhoneme": "f ao1 r t ih0 t uw0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1256
+  },
+  {
+    "text": "Felicity",
+    "targetPhoneme": "f ih0 l ih1 s ah0 t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1257
+  },
+  {
+    "text": "Fervently",
+    "targetPhoneme": "f er1 v ah0 n t l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1258
+  },
+  {
+    "text": "Feeble",
+    "targetPhoneme": "f iy1 b ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1260
+  },
+  {
+    "text": "Forsaken",
+    "targetPhoneme": "f ao0 r s ey1 k ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1262
+  },
+  {
+    "text": "Facet",
+    "targetPhoneme": "f ae1 s ah0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1270
+  },
+  {
+    "text": "Folly",
+    "targetPhoneme": "f aa1 l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1277
+  },
+  {
+    "text": "Foliage",
+    "targetPhoneme": "f ow1 l ih0 jh ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1278
+  },
+  {
+    "text": "Forsake",
+    "targetPhoneme": "f ao0 r s ey1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1279
+  },
+  {
+    "text": "Forte",
+    "targetPhoneme": "f ao1 r t ey0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1283
+  },
+  {
+    "text": "Foyer",
+    "targetPhoneme": "f oy1 er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1285
+  },
+  {
+    "text": "Ferocious",
+    "targetPhoneme": "f er0 ow1 sh ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1286
+  },
+  {
+    "text": "Forthwith",
+    "targetPhoneme": "f ao1 r th w ih1 th ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1288
+  },
+  {
+    "text": "Forbidding",
+    "targetPhoneme": "f er0 b ih1 d ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1289
+  },
+  {
+    "text": "Fortuitous",
+    "targetPhoneme": "f ao0 r t uw1 ih0 t ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1294
+  },
+  {
+    "text": "Foul",
+    "targetPhoneme": "f aw1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1298
+  },
+  {
+    "text": "Gallant",
+    "targetPhoneme": "g ae1 l ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1302
+  },
+  {
+    "text": "Grin",
+    "targetPhoneme": "g r ih1 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1305
+  },
+  {
+    "text": "Grim",
+    "targetPhoneme": "g r ih1 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1306
+  },
+  {
+    "text": "Grievous",
+    "targetPhoneme": "g r iy1 v ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1307
+  },
+  {
+    "text": "Groan",
+    "targetPhoneme": "g r ow1 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1308
+  },
+  {
+    "text": "Glare",
+    "targetPhoneme": "g l eh1 r ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1309
+  },
+  {
+    "text": "Gracious",
+    "targetPhoneme": "g r ey1 sh ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1310
+  },
+  {
+    "text": "Gale",
+    "targetPhoneme": "g ey1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1311
+  },
+  {
+    "text": "Gratifying",
+    "targetPhoneme": "g r ae1 t ah0 f ay0 ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1312
+  },
+  {
+    "text": "Gratification",
+    "targetPhoneme": "g r ae0 t ah0 f ah0 k ey1 sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1313
+  },
+  {
+    "text": "Grotesque",
+    "targetPhoneme": "g r ow0 t eh1 s k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1315
+  },
+  {
+    "text": "Gleam",
+    "targetPhoneme": "g l iy1 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1318
+  },
+  {
+    "text": "Gloomy",
+    "targetPhoneme": "g l uw1 m iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1328
+  },
+  {
+    "text": "Glamour",
+    "targetPhoneme": "g l ae1 m er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1330
+  },
+  {
+    "text": "Grandiose",
+    "targetPhoneme": "g r ae0 n d iy0 ow1 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1333
+  },
+  {
+    "text": "Grating",
+    "targetPhoneme": "g r ey1 t ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1335
+  },
+  {
+    "text": "Gall",
+    "targetPhoneme": "g ao1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1337
+  },
+  {
+    "text": "Haze",
+    "targetPhoneme": "hh ey1 z ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1355
+  },
+  {
+    "text": "Haughty",
+    "targetPhoneme": "hh ao1 t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1357
+  },
+  {
+    "text": "Haggard",
+    "targetPhoneme": "hh ae1 g er0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1359
+  },
+  {
+    "text": "Havoc",
+    "targetPhoneme": "hh ae1 v ah0 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1363
+  },
+  {
+    "text": "Harmonious",
+    "targetPhoneme": "hh aa0 r m ow1 n iy0 ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1364
+  },
+  {
+    "text": "Hack",
+    "targetPhoneme": "hh ae1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1371
+  },
+  {
+    "text": "Haunt",
+    "targetPhoneme": "hh ao1 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1373
+  },
+  {
+    "text": "Haste",
+    "targetPhoneme": "hh ey1 s t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1377
+  },
+  {
+    "text": "Halo",
+    "targetPhoneme": "hh ey1 l ow0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1378
+  },
+  {
+    "text": "Habitual",
+    "targetPhoneme": "hh ah0 b ih1 ch uw0 ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1379
+  },
+  {
+    "text": "Hastily",
+    "targetPhoneme": "hh ey1 s t ah0 l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1380
+  },
+  {
+    "text": "Hale",
+    "targetPhoneme": "hh ey1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1382
+  },
+  {
+    "text": "Hardened",
+    "targetPhoneme": "hh aa1 r d ah0 n d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1383
+  },
+  {
+    "text": "Harness",
+    "targetPhoneme": "hh aa1 r n ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1388
+  },
+  {
+    "text": "Hasten",
+    "targetPhoneme": "hh ey1 s ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1390
+  },
+  {
+    "text": "Haphazard",
+    "targetPhoneme": "hh ae0 p hh ae1 z er0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1394
+  },
+  {
+    "text": "Hallmark",
+    "targetPhoneme": "hh aa1 l m aa0 r k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1395
+  },
+  {
+    "text": "Hammered",
+    "targetPhoneme": "hh ae1 m er0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1396
+  },
+  {
+    "text": "Insidious",
+    "targetPhoneme": "ih0 n s ih1 d iy0 ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1401
+  },
+  {
+    "text": "Indignation",
+    "targetPhoneme": "ih0 n d ih0 g n ey1 sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1402
+  },
+  {
+    "text": "Inexorable",
+    "targetPhoneme": "ih0 n eh1 k s er0 ah0 b ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1406
+  },
+  {
+    "text": "Indignant",
+    "targetPhoneme": "ih0 n d ih1 g n ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1410
+  },
+  {
+    "text": "Innate",
+    "targetPhoneme": "ih0 n ey1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1413
+  },
+  {
+    "text": "Incongruous",
+    "targetPhoneme": "ih0 ng k ao1 ng r uw0 ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1414
+  },
+  {
+    "text": "Innocuous",
+    "targetPhoneme": "ih0 n aa1 k y uw0 ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1418
+  },
+  {
+    "text": "Inert",
+    "targetPhoneme": "ih0 n er1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1423
+  },
+  {
+    "text": "Intricate",
+    "targetPhoneme": "ih1 n t r ah0 k ah0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1424
+  },
+  {
+    "text": "Inadvertently",
+    "targetPhoneme": "ih0 n ah0 d v er1 t ah0 n t l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1426
+  },
+  {
+    "text": "Incessant",
+    "targetPhoneme": "ih0 n s eh1 s ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1432
+  },
+  {
+    "text": "Indistinct",
+    "targetPhoneme": "ih0 n d ih0 s t ih1 ng k t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1433
+  },
+  {
+    "text": "Intriguing",
+    "targetPhoneme": "ih0 n t r iy1 g ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1440
+  },
+  {
+    "text": "Inertia",
+    "targetPhoneme": "ih0 n er1 sh ah0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1441
+  },
+  {
+    "text": "Indulgence",
+    "targetPhoneme": "ih0 n d ah1 l jh ah0 n s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1443
+  },
+  {
+    "text": "Indulgent",
+    "targetPhoneme": "ih0 n d ah1 l jh ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1445
+  },
+  {
+    "text": "Incomprehensible",
+    "targetPhoneme": "ih0 ng k aa0 m p r ah0 hh eh1 n s ih0 b ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1449
+  },
+  {
+    "text": "Jerk",
+    "targetPhoneme": "jh er1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1451
+  },
+  {
+    "text": "Judicious",
+    "targetPhoneme": "jh uw0 d ih1 sh ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1452
+  },
+  {
+    "text": "Juxtaposition",
+    "targetPhoneme": "jh ah0 k s t ah0 p ah0 z ih1 sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1454
+  },
+  {
+    "text": "Joyful",
+    "targetPhoneme": "jh oy1 f ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1458
+  },
+  {
+    "text": "Jest",
+    "targetPhoneme": "jh eh1 s t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1467
+  },
+  {
+    "text": "Joyous",
+    "targetPhoneme": "jh oy1 ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1469
+  },
+  {
+    "text": "Jade",
+    "targetPhoneme": "jh ey1 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1471
+  },
+  {
+    "text": "Jeopardize",
+    "targetPhoneme": "jh eh1 p er0 d ay0 z ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1477
+  },
+  {
+    "text": "Juncture",
+    "targetPhoneme": "jh ah1 ng k ch er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1486
+  },
+  {
+    "text": "Jargon",
+    "targetPhoneme": "jh aa1 r g ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1491
+  },
+  {
+    "text": "Jubilee",
+    "targetPhoneme": "jh uw1 b ah0 l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1493
+  },
+  {
+    "text": "Jam",
+    "targetPhoneme": "jh ae1 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1494
+  },
+  {
+    "text": "Jurisprudence",
+    "targetPhoneme": "jh uh0 r ah0 s p r uw1 d ah0 n s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1497
+  },
+  {
+    "text": "Kindred",
+    "targetPhoneme": "k ih1 n d r ih0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1503
+  },
+  {
+    "text": "Knowledgeable",
+    "targetPhoneme": "n aa1 l ah0 jh ah0 b ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1508
+  },
+  {
+    "text": "Keel",
+    "targetPhoneme": "k iy1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1509
+  },
+  {
+    "text": "Knot",
+    "targetPhoneme": "n aa1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1511
+  },
+  {
+    "text": "Keenly",
+    "targetPhoneme": "k iy1 n l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1521
+  },
+  {
+    "text": "Kite",
+    "targetPhoneme": "k ay1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1523
+  },
+  {
+    "text": "Keeper",
+    "targetPhoneme": "k iy1 p er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1536
+  },
+  {
+    "text": "Lament",
+    "targetPhoneme": "l ah0 m eh1 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1552
+  },
+  {
+    "text": "Lush",
+    "targetPhoneme": "l ah1 sh ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1556
+  },
+  {
+    "text": "Ludicrous",
+    "targetPhoneme": "l uw1 d ah0 k r ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1560
+  },
+  {
+    "text": "Lust",
+    "targetPhoneme": "l ah1 s t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1561
+  },
+  {
+    "text": "Lull",
+    "targetPhoneme": "l ah1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1562
+  },
+  {
+    "text": "Lavish",
+    "targetPhoneme": "l ae1 v ih0 sh ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1563
+  },
+  {
+    "text": "Lucid",
+    "targetPhoneme": "l uw1 s ah0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1565
+  },
+  {
+    "text": "Luminous",
+    "targetPhoneme": "l uw1 m ah0 n ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1566
+  },
+  {
+    "text": "Lagoon",
+    "targetPhoneme": "l ah0 g uw1 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1574
+  },
+  {
+    "text": "Lapse",
+    "targetPhoneme": "l ae1 p s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1592
+  },
+  {
+    "text": "Lax",
+    "targetPhoneme": "l ae1 k s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1598
+  },
+  {
+    "text": "Malaise",
+    "targetPhoneme": "m ae0 l ey1 z ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1602
+  },
+  {
+    "text": "Meticulous",
+    "targetPhoneme": "m ah0 t ih1 k y ah0 l ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1604
+  },
+  {
+    "text": "Meticulously",
+    "targetPhoneme": "m ah0 t ih1 k y ah0 l ah0 s l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1610
+  },
+  {
+    "text": "Malady",
+    "targetPhoneme": "m ae1 l ah0 d iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1611
+  },
+  {
+    "text": "Meridian",
+    "targetPhoneme": "m er0 ih1 d iy0 ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1617
+  },
+  {
+    "text": "Meager",
+    "targetPhoneme": "m iy1 g er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1620
+  },
+  {
+    "text": "Meek",
+    "targetPhoneme": "m iy1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1623
+  },
+  {
+    "text": "Mentor",
+    "targetPhoneme": "m eh1 n t ao0 r ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1624
+  },
+  {
+    "text": "Menacing",
+    "targetPhoneme": "m eh1 n ah0 s ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1626
+  },
+  {
+    "text": "Metamorphosis",
+    "targetPhoneme": "m eh0 t ah0 m ao1 r f ah0 s ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1628
+  },
+  {
+    "text": "Meadow",
+    "targetPhoneme": "m eh1 d ow0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1640
+  },
+  {
+    "text": "Metropolis",
+    "targetPhoneme": "m ah0 t r aa1 p ah0 l ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1641
+  },
+  {
+    "text": "Menace",
+    "targetPhoneme": "m eh1 n ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1642
+  },
+  {
+    "text": "Mend",
+    "targetPhoneme": "m eh1 n d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1649
+  },
+  {
+    "text": "Noteworthy",
+    "targetPhoneme": "n ow1 t w er0 dh iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1657
+  },
+  {
+    "text": "Necessitate",
+    "targetPhoneme": "n ah0 s eh1 s ah0 t ey0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1658
+  },
+  {
+    "text": "Nostalgia",
+    "targetPhoneme": "n ao0 s t ae1 l jh ah0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1659
+  },
+  {
+    "text": "Nexus",
+    "targetPhoneme": "n eh1 k s ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1661
+  },
+  {
+    "text": "Nous",
+    "targetPhoneme": "n uw1 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1664
+  },
+  {
+    "text": "Negate",
+    "targetPhoneme": "n ih0 g ey1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1674
+  },
+  {
+    "text": "Notorious",
+    "targetPhoneme": "n ow0 t ao1 r iy0 ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1677
+  },
+  {
+    "text": "Novelty",
+    "targetPhoneme": "n aa1 v ah0 l t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1683
+  },
+  {
+    "text": "Needy",
+    "targetPhoneme": "n iy1 d iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1684
+  },
+  {
+    "text": "Noxious",
+    "targetPhoneme": "n aa1 k sh ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1685
+  },
+  {
+    "text": "Novice",
+    "targetPhoneme": "n aa1 v ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1686
+  },
+  {
+    "text": "Nourish",
+    "targetPhoneme": "n er1 ih0 sh ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1689
+  },
+  {
+    "text": "Neurotic",
+    "targetPhoneme": "n uh0 r aa1 t ih0 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1693
+  },
+  {
+    "text": "Obscene",
+    "targetPhoneme": "aa0 b s iy1 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1704
+  },
+  {
+    "text": "Obstinate",
+    "targetPhoneme": "aa1 b s t ah0 n ah0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1705
+  },
+  {
+    "text": "Ostensibly",
+    "targetPhoneme": "aa0 s t eh1 n s ah0 b l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1706
+  },
+  {
+    "text": "Opaque",
+    "targetPhoneme": "ow0 p ey1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1715
+  },
+  {
+    "text": "Oblivious",
+    "targetPhoneme": "ah0 b l ih1 v iy0 ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1716
+  },
+  {
+    "text": "Obsolete",
+    "targetPhoneme": "aa0 b s ah0 l iy1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1717
+  },
+  {
+    "text": "Oblique",
+    "targetPhoneme": "ah0 b l iy1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1718
+  },
+  {
+    "text": "Oblivion",
+    "targetPhoneme": "ah0 b l ih1 v iy0 ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1725
+  },
+  {
+    "text": "Oversight",
+    "targetPhoneme": "ow1 v er0 s ay0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1730
+  },
+  {
+    "text": "Oracle",
+    "targetPhoneme": "ao1 r ah0 k ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1734
+  },
+  {
+    "text": "Overlook",
+    "targetPhoneme": "ow1 v er0 l uh0 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1739
+  },
+  {
+    "text": "Optimize",
+    "targetPhoneme": "aa1 p t ah0 m ay0 z ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1747
+  },
+  {
+    "text": "Ornate",
+    "targetPhoneme": "ao0 r n ey1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1748
+  },
+  {
+    "text": "Placid",
+    "targetPhoneme": "p l ae1 s ah0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1750
+  },
+  {
+    "text": "Poignant",
+    "targetPhoneme": "p oy1 n y ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1751
+  },
+  {
+    "text": "Plethora",
+    "targetPhoneme": "p l eh1 th er0 ah0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1755
+  },
+  {
+    "text": "Poise",
+    "targetPhoneme": "p oy1 z ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1756
+  },
+  {
+    "text": "Potency",
+    "targetPhoneme": "p ow1 t ah0 n s iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1757
+  },
+  {
+    "text": "Plume",
+    "targetPhoneme": "p l uw1 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1759
+  },
+  {
+    "text": "Plump",
+    "targetPhoneme": "p l ah1 m p ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1762
+  },
+  {
+    "text": "Playful",
+    "targetPhoneme": "p l ey1 f ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1764
+  },
+  {
+    "text": "Plight",
+    "targetPhoneme": "p l ay1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1766
+  },
+  {
+    "text": "Ponder",
+    "targetPhoneme": "p aa1 n d er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1772
+  },
+  {
+    "text": "Poised",
+    "targetPhoneme": "p oy1 z d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1777
+  },
+  {
+    "text": "Pompous",
+    "targetPhoneme": "p aa1 m p ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1782
+  },
+  {
+    "text": "Postulate",
+    "targetPhoneme": "p aa1 s ch ah0 l ey0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1784
+  },
+  {
+    "text": "Populace",
+    "targetPhoneme": "p aa1 p y ah0 l ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1785
+  },
+  {
+    "text": "Portray",
+    "targetPhoneme": "p ao0 r t r ey1 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1786
+  },
+  {
+    "text": "Plaza",
+    "targetPhoneme": "p l aa1 z ah0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1793
+  },
+  {
+    "text": "Plastered",
+    "targetPhoneme": "p l ae1 s t er0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1795
+  },
+  {
+    "text": "Quiescent",
+    "targetPhoneme": "k w ay0 eh1 s ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1800
+  },
+  {
+    "text": "Quaint",
+    "targetPhoneme": "k w ey1 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1802
+  },
+  {
+    "text": "Quarry",
+    "targetPhoneme": "k w ao1 r iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1806
+  },
+  {
+    "text": "Quiver",
+    "targetPhoneme": "k w ih1 v er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1811
+  },
+  {
+    "text": "Queer",
+    "targetPhoneme": "k w ih1 r ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1816
+  },
+  {
+    "text": "Queried",
+    "targetPhoneme": "k w ih1 r iy0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1822
+  },
+  {
+    "text": "Quivering",
+    "targetPhoneme": "k w ih1 v er0 ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1828
+  },
+  {
+    "text": "Quail",
+    "targetPhoneme": "k w ey1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1830
+  },
+  {
+    "text": "Quid",
+    "targetPhoneme": "k w ih1 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1844
+  },
+  {
+    "text": "Resolute",
+    "targetPhoneme": "r eh1 z ah0 l uw0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1850
+  },
+  {
+    "text": "Reverence",
+    "targetPhoneme": "r eh1 v er0 ah0 n s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1851
+  },
+  {
+    "text": "Repose",
+    "targetPhoneme": "r iy0 p ow1 z ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1852
+  },
+  {
+    "text": "Rebuke",
+    "targetPhoneme": "r iy0 b y uw1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1856
+  },
+  {
+    "text": "Relish",
+    "targetPhoneme": "r eh1 l ih0 sh ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1859
+  },
+  {
+    "text": "Retribution",
+    "targetPhoneme": "r eh0 t r ah0 b y uw1 sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1860
+  },
+  {
+    "text": "Respite",
+    "targetPhoneme": "r eh1 s p ih0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1861
+  },
+  {
+    "text": "Reverie",
+    "targetPhoneme": "r eh1 v er0 iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1862
+  },
+  {
+    "text": "Refute",
+    "targetPhoneme": "r ih0 f y uw1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1867
+  },
+  {
+    "text": "Recoil",
+    "targetPhoneme": "r iy0 k oy1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1869
+  },
+  {
+    "text": "Remorse",
+    "targetPhoneme": "r ih0 m ao1 r s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1872
+  },
+  {
+    "text": "Relinquish",
+    "targetPhoneme": "r ih0 l ih1 ng k w ih0 sh ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1873
+  },
+  {
+    "text": "Repository",
+    "targetPhoneme": "r iy0 p aa1 z ah0 t ao0 r iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1877
+  },
+  {
+    "text": "Resilience",
+    "targetPhoneme": "r ih0 z ih1 l iy0 ah0 n s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1881
+  },
+  {
+    "text": "Revulsion",
+    "targetPhoneme": "r ih0 v ah1 l sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1882
+  },
+  {
+    "text": "Repercussions",
+    "targetPhoneme": "r iy0 p er0 k ah1 sh ah0 n z ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1883
+  },
+  {
+    "text": "Relentless",
+    "targetPhoneme": "r ih0 l eh1 n t l ih0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1885
+  },
+  {
+    "text": "Recess",
+    "targetPhoneme": "r ih0 s eh1 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1887
+  },
+  {
+    "text": "Restrained",
+    "targetPhoneme": "r iy0 s t r ey1 n d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1888
+  },
+  {
+    "text": "Regent",
+    "targetPhoneme": "r iy1 jh ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1893
+  },
+  {
+    "text": "Rectify",
+    "targetPhoneme": "r eh1 k t ah0 f ay0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1896
+  },
+  {
+    "text": "Replete",
+    "targetPhoneme": "r iy0 p l iy1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1897
+  },
+  {
+    "text": "Salient",
+    "targetPhoneme": "s ey1 l iy0 ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1903
+  },
+  {
+    "text": "Solace",
+    "targetPhoneme": "s aa1 l ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1905
+  },
+  {
+    "text": "Sanguine",
+    "targetPhoneme": "s ae1 ng g w ih0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1909
+  },
+  {
+    "text": "Sanction",
+    "targetPhoneme": "s ae1 ng k sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1910
+  },
+  {
+    "text": "Solicit",
+    "targetPhoneme": "s ah0 l ih1 s ih0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1919
+  },
+  {
+    "text": "Sanctity",
+    "targetPhoneme": "s ae1 ng k t ih0 t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1925
+  },
+  {
+    "text": "Sanctified",
+    "targetPhoneme": "s ae0 ng k t ah0 f ay0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1930
+  },
+  {
+    "text": "Solemnity",
+    "targetPhoneme": "s ah0 l eh1 m n ah0 t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1933
+  },
+  {
+    "text": "Salvage",
+    "targetPhoneme": "s ae1 l v ah0 jh ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1937
+  },
+  {
+    "text": "Sarcastic",
+    "targetPhoneme": "s aa0 r k ae1 s t ih0 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1940
+  },
+  {
+    "text": "Solitude",
+    "targetPhoneme": "s aa1 l ah0 t uw0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1944
+  },
+  {
+    "text": "Salience",
+    "targetPhoneme": "s ey1 l iy0 ah0 n s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1947
+  },
+  {
+    "text": "Sap",
+    "targetPhoneme": "s ae1 p ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1948
+  },
+  {
+    "text": "Tenacity",
+    "targetPhoneme": "t ah0 n ae1 s ih0 t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1951
+  },
+  {
+    "text": "Tempest",
+    "targetPhoneme": "t eh1 m p ah0 s t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1953
+  },
+  {
+    "text": "Tenuous",
+    "targetPhoneme": "t eh1 n y ah0 w ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1955
+  },
+  {
+    "text": "Tentative",
+    "targetPhoneme": "t eh1 n t ah0 t ih0 v ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1956
+  },
+  {
+    "text": "Tenet",
+    "targetPhoneme": "t eh1 n ah0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1957
+  },
+  {
+    "text": "Torment",
+    "targetPhoneme": "t ao1 r m eh0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1960
+  },
+  {
+    "text": "Torrent",
+    "targetPhoneme": "t ao1 r ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1965
+  },
+  {
+    "text": "Tout",
+    "targetPhoneme": "t aw1 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1970
+  },
+  {
+    "text": "Tenderly",
+    "targetPhoneme": "t eh1 n d er0 l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1974
+  },
+  {
+    "text": "Tonic",
+    "targetPhoneme": "t aa1 n ih0 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1975
+  },
+  {
+    "text": "Tenor",
+    "targetPhoneme": "t eh1 n er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1982
+  },
+  {
+    "text": "Tortuous",
+    "targetPhoneme": "t ao1 r ch ah0 w ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1983
+  },
+  {
+    "text": "Tempo",
+    "targetPhoneme": "t eh1 m p ow0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1984
+  },
+  {
+    "text": "Toss",
+    "targetPhoneme": "t ao1 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1985
+  },
+  {
+    "text": "Tempting",
+    "targetPhoneme": "t eh1 m p t ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1988
+  },
+  {
+    "text": "Totem",
+    "targetPhoneme": "t ow1 t ah0 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1993
+  },
+  {
+    "text": "Temperate",
+    "targetPhoneme": "t eh1 m p r ah0 t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1994
+  },
+  {
+    "text": "Toll",
+    "targetPhoneme": "t ow1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 1996
+  },
+  {
+    "text": "Ubiquitous",
+    "targetPhoneme": "y uw0 b ih1 k w ih0 t ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2000
+  },
+  {
+    "text": "Unscrupulous",
+    "targetPhoneme": "ah0 n s k r uw1 p y ah0 l ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2003
+  },
+  {
+    "text": "Uncanny",
+    "targetPhoneme": "ah0 n k ae1 n iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2004
+  },
+  {
+    "text": "Unequivocally",
+    "targetPhoneme": "ah0 n iy0 k w ih1 v ah0 k ah0 l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2005
+  },
+  {
+    "text": "Unequivocal",
+    "targetPhoneme": "ah0 n ih0 k w ih1 v ah0 k ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2007
+  },
+  {
+    "text": "Unconventional",
+    "targetPhoneme": "ah0 n k ah0 n v eh1 n sh ah0 n ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2008
+  },
+  {
+    "text": "Unwittingly",
+    "targetPhoneme": "ah0 n w ih1 t ih0 ng l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2014
+  },
+  {
+    "text": "Unorthodox",
+    "targetPhoneme": "ah0 n ao1 r th ah0 d aa0 k s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2018
+  },
+  {
+    "text": "Undermine",
+    "targetPhoneme": "ah1 n d er0 m ay0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2020
+  },
+  {
+    "text": "Unsteady",
+    "targetPhoneme": "ah0 n s t eh1 d iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2027
+  },
+  {
+    "text": "Unruly",
+    "targetPhoneme": "ah0 n r uw1 l iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2035
+  },
+  {
+    "text": "Uncomplicated",
+    "targetPhoneme": "ah0 n k aa1 m p l ah0 k ey0 t ih0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2037
+  },
+  {
+    "text": "Unsettling",
+    "targetPhoneme": "ah0 n s eh1 t ah0 l ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2038
+  },
+  {
+    "text": "Unrestrained",
+    "targetPhoneme": "ah0 n r iy0 s t r ey1 n d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2039
+  },
+  {
+    "text": "Unwarranted",
+    "targetPhoneme": "ah0 n w ao1 r ah0 n t ih0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2046
+  },
+  {
+    "text": "Vehement",
+    "targetPhoneme": "v iy1 ah0 m ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2052
+  },
+  {
+    "text": "Veneration",
+    "targetPhoneme": "v eh0 n er0 ey1 sh ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2053
+  },
+  {
+    "text": "Vexed",
+    "targetPhoneme": "v eh1 k s t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2054
+  },
+  {
+    "text": "Virtuous",
+    "targetPhoneme": "v er1 ch uw0 ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2057
+  },
+  {
+    "text": "Vernacular",
+    "targetPhoneme": "v er0 n ae1 k y ah0 l er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2063
+  },
+  {
+    "text": "Virulent",
+    "targetPhoneme": "v ih1 r ah0 l ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2065
+  },
+  {
+    "text": "Venerable",
+    "targetPhoneme": "v eh1 n er0 ah0 b ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2069
+  },
+  {
+    "text": "Vigor",
+    "targetPhoneme": "v ih1 g er0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2074
+  },
+  {
+    "text": "Vanity",
+    "targetPhoneme": "v ae1 n ah0 t iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2079
+  },
+  {
+    "text": "Vigour",
+    "targetPhoneme": "v ih1 g uh1 r ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2086
+  },
+  {
+    "text": "Visceral",
+    "targetPhoneme": "v ih1 s er0 ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2087
+  },
+  {
+    "text": "Vibrant",
+    "targetPhoneme": "v ay1 b r ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2093
+  },
+  {
+    "text": "Vicious",
+    "targetPhoneme": "v ih1 sh ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2097
+  },
+  {
+    "text": "Vigilant",
+    "targetPhoneme": "v ih1 jh ah0 l ah0 n t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2099
+  },
+  {
+    "text": "Wanton",
+    "targetPhoneme": "w ao1 n t ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2103
+  },
+  {
+    "text": "Wail",
+    "targetPhoneme": "w ey1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2104
+  },
+  {
+    "text": "Wretched",
+    "targetPhoneme": "r eh1 ch ih0 d ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2105
+  },
+  {
+    "text": "Wrath",
+    "targetPhoneme": "r ae1 th ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2109
+  },
+  {
+    "text": "Wary",
+    "targetPhoneme": "w eh1 r iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2118
+  },
+  {
+    "text": "Wan",
+    "targetPhoneme": "w aa1 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2119
+  },
+  {
+    "text": "Wrap",
+    "targetPhoneme": "r ae1 p ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2129
+  },
+  {
+    "text": "Wrench",
+    "targetPhoneme": "r eh1 n ch ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2130
+  },
+  {
+    "text": "Warden",
+    "targetPhoneme": "w ao1 r d ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2139
+  },
+  {
+    "text": "Waning",
+    "targetPhoneme": "w ey1 n ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2145
+  },
+  {
+    "text": "Waltz",
+    "targetPhoneme": "w ao1 l t s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2148
+  },
+  {
+    "text": "Xxx",
+    "targetPhoneme": "z k s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2157
+  },
+  {
+    "text": "Xxvi",
+    "targetPhoneme": "z k s v iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2169
+  },
+  {
+    "text": "Yearning",
+    "targetPhoneme": "y er1 n ih0 ng ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2200
+  },
+  {
+    "text": "Yoke",
+    "targetPhoneme": "y ow1 k ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2204
+  },
+  {
+    "text": "Yen",
+    "targetPhoneme": "y eh1 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2206
+  },
+  {
+    "text": "Yell",
+    "targetPhoneme": "y eh1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2210
+  },
+  {
+    "text": "Yarn",
+    "targetPhoneme": "y aa1 r n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2212
+  },
+  {
+    "text": "Yea",
+    "targetPhoneme": "y ey1 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2233
+  },
+  {
+    "text": "Yanked",
+    "targetPhoneme": "y ae1 ng k t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2240
+  },
+  {
+    "text": "Youthful",
+    "targetPhoneme": "y uw1 th f ah0 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2247
+  },
+  {
+    "text": "Zeal",
+    "targetPhoneme": "z iy1 l ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2250
+  },
+  {
+    "text": "Zealous",
+    "targetPhoneme": "z eh1 l ah0 s ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2251
+  },
+  {
+    "text": "Zenith",
+    "targetPhoneme": "z iy1 n ah0 th ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2253
+  },
+  {
+    "text": "Zest",
+    "targetPhoneme": "z eh1 s t ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2256
+  },
+  {
+    "text": "Zoology",
+    "targetPhoneme": "z ow0 aa1 l ah0 jh iy0 ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2269
+  },
+  {
+    "text": "Zip",
+    "targetPhoneme": "z ih1 p ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2272
+  },
+  {
+    "text": "Zen",
+    "targetPhoneme": "z eh1 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2278
+  },
+  {
+    "text": "Zoom",
+    "targetPhoneme": "z uw1 m ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2282
+  },
+  {
+    "text": "Zion",
+    "targetPhoneme": "z ay1 ah0 n ",
+    "cefrLevel": "C1",
+    "minimalPairId": 2292
+  },
+  {
+    "text": "Anserine",
+    "targetPhoneme": "ae1 n s er0 iy1 n iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1006
+  },
+  {
+    "text": "Animus",
+    "targetPhoneme": "ae1 n ih0 m ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1008
+  },
+  {
+    "text": "Appall",
+    "targetPhoneme": "ah0 p ao1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1009
+  },
+  {
+    "text": "Angst",
+    "targetPhoneme": "aa1 ng k s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1010
+  },
+  {
+    "text": "Anathema",
+    "targetPhoneme": "ah0 n ae1 th ah0 m ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1011
+  },
+  {
+    "text": "Anodyne",
+    "targetPhoneme": "ae1 n ow0 d ay0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1013
+  },
+  {
+    "text": "Antithetical",
+    "targetPhoneme": "ae0 n t ah0 th eh1 t ih0 k ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1019
+  },
+  {
+    "text": "Appraise",
+    "targetPhoneme": "ah0 p r ey1 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1021
+  },
+  {
+    "text": "Antic",
+    "targetPhoneme": "ae1 n t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1024
+  },
+  {
+    "text": "Antiquated",
+    "targetPhoneme": "ae1 n t ah0 k w ey0 t ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1028
+  },
+  {
+    "text": "Anteroom",
+    "targetPhoneme": "ae0 n t eh1 r uw0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1035
+  },
+  {
+    "text": "Apprise",
+    "targetPhoneme": "ah0 p r ay1 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1041
+  },
+  {
+    "text": "Anguished",
+    "targetPhoneme": "ae1 ng g w ih0 sh t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1042
+  },
+  {
+    "text": "Antithetic",
+    "targetPhoneme": "ae0 n t ah0 th eh1 t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1046
+  },
+  {
+    "text": "Blithe",
+    "targetPhoneme": "b l ay1 dh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1050
+  },
+  {
+    "text": "Beguiling",
+    "targetPhoneme": "b ih0 g ay1 l ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1052
+  },
+  {
+    "text": "Besotted",
+    "targetPhoneme": "b ih0 s aa1 t ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1055
+  },
+  {
+    "text": "Bemused",
+    "targetPhoneme": "b ih0 m y uw1 z d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1056
+  },
+  {
+    "text": "Befuddled",
+    "targetPhoneme": "b ih0 f ah1 d ah0 l d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1058
+  },
+  {
+    "text": "Bleary",
+    "targetPhoneme": "b l ih1 r iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1061
+  },
+  {
+    "text": "Bereft",
+    "targetPhoneme": "b er0 eh1 f t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1064
+  },
+  {
+    "text": "Bellow",
+    "targetPhoneme": "b eh1 l ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1073
+  },
+  {
+    "text": "Blase",
+    "targetPhoneme": "b l ey1 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1076
+  },
+  {
+    "text": "Bluster",
+    "targetPhoneme": "b l ah1 s t er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1077
+  },
+  {
+    "text": "Berate",
+    "targetPhoneme": "b ih0 r ey1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1078
+  },
+  {
+    "text": "Bemoan",
+    "targetPhoneme": "b ih0 m ow1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1079
+  },
+  {
+    "text": "Beseeching",
+    "targetPhoneme": "b iy0 s iy1 ch ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1080
+  },
+  {
+    "text": "Benighted",
+    "targetPhoneme": "b ih0 n ay1 t ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1083
+  },
+  {
+    "text": "Beguile",
+    "targetPhoneme": "b ih0 g ay1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1085
+  },
+  {
+    "text": "Bellowed",
+    "targetPhoneme": "b eh1 l ow0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1086
+  },
+  {
+    "text": "Bespeak",
+    "targetPhoneme": "b ih0 s p iy1 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1088
+  },
+  {
+    "text": "Blithely",
+    "targetPhoneme": "b l ay1 th l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1089
+  },
+  {
+    "text": "Bellicose",
+    "targetPhoneme": "b eh1 l ah0 k ow0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1093
+  },
+  {
+    "text": "Belittle",
+    "targetPhoneme": "b ih0 l ih1 t ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1094
+  },
+  {
+    "text": "Benignant",
+    "targetPhoneme": "b eh0 n iy1 g n ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1095
+  },
+  {
+    "text": "Bemusement",
+    "targetPhoneme": "b eh1 m y uw0 s m ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1096
+  },
+  {
+    "text": "Conceited",
+    "targetPhoneme": "k ah0 n s iy1 t ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1103
+  },
+  {
+    "text": "Conundrum",
+    "targetPhoneme": "k ah0 n ah1 n d r ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1114
+  },
+  {
+    "text": "Contrite",
+    "targetPhoneme": "k ah0 n t r ay1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1115
+  },
+  {
+    "text": "Comely",
+    "targetPhoneme": "k ah1 m l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1123
+  },
+  {
+    "text": "Convoluted",
+    "targetPhoneme": "k aa1 n v ah0 l uw0 t ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1125
+  },
+  {
+    "text": "Contrive",
+    "targetPhoneme": "k ah0 n t r ay1 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1143
+  },
+  {
+    "text": "Diffident",
+    "targetPhoneme": "d ih1 f ah0 d ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1162
+  },
+  {
+    "text": "Disconcerted",
+    "targetPhoneme": "d ih0 s k ah0 n s er1 t ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1167
+  },
+  {
+    "text": "Disparage",
+    "targetPhoneme": "d ih0 s p eh1 r ih0 jh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1171
+  },
+  {
+    "text": "Disquiet",
+    "targetPhoneme": "d ih0 s k w ay1 ah0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1175
+  },
+  {
+    "text": "Divulge",
+    "targetPhoneme": "d ih0 v ah1 l jh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1177
+  },
+  {
+    "text": "Disquieting",
+    "targetPhoneme": "d ih0 s k w ay1 ah0 t ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1180
+  },
+  {
+    "text": "Discomfited",
+    "targetPhoneme": "d ih0 s k ah1 m f ih0 t ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1181
+  },
+  {
+    "text": "Disarray",
+    "targetPhoneme": "d ih0 s er0 ey1 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1188
+  },
+  {
+    "text": "Disgruntled",
+    "targetPhoneme": "d ih0 s g r ah1 n t ah0 l d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1189
+  },
+  {
+    "text": "Dispirited",
+    "targetPhoneme": "d ih0 s p ih1 r ah0 t ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1192
+  },
+  {
+    "text": "Disoriented",
+    "targetPhoneme": "d ih0 s ao1 r iy0 eh0 n t ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1194
+  },
+  {
+    "text": "Elation",
+    "targetPhoneme": "ih0 l ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1205
+  },
+  {
+    "text": "Esurient",
+    "targetPhoneme": "eh0 sh uh1 r iy0 ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1208
+  },
+  {
+    "text": "Enthralled",
+    "targetPhoneme": "eh0 n th r ao1 l d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1211
+  },
+  {
+    "text": "Endearing",
+    "targetPhoneme": "eh0 n d ih1 r ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1214
+  },
+  {
+    "text": "Elysium",
+    "targetPhoneme": "ih0 l ih1 z iy0 ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1218
+  },
+  {
+    "text": "Empyrean",
+    "targetPhoneme": "eh0 m p ih0 r iy0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1220
+  },
+  {
+    "text": "Ennui",
+    "targetPhoneme": "eh0 n uw1 iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1221
+  },
+  {
+    "text": "Enamored",
+    "targetPhoneme": "eh0 n ae1 m er0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1224
+  },
+  {
+    "text": "Emblematic",
+    "targetPhoneme": "eh0 m b l ah0 m ae1 t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1225
+  },
+  {
+    "text": "Empyreal",
+    "targetPhoneme": "eh0 m p ih0 r iy0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1227
+  },
+  {
+    "text": "Empathetic",
+    "targetPhoneme": "eh0 m p ah0 th eh1 t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1228
+  },
+  {
+    "text": "Emollient",
+    "targetPhoneme": "ih0 m aa1 l y ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1231
+  },
+  {
+    "text": "Enticing",
+    "targetPhoneme": "eh0 n t ay1 s ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1236
+  },
+  {
+    "text": "Enclave",
+    "targetPhoneme": "aa1 n k l ey0 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1237
+  },
+  {
+    "text": "Elude",
+    "targetPhoneme": "ih0 l uw1 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1239
+  },
+  {
+    "text": "Elysian",
+    "targetPhoneme": "ih0 l iy1 zh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1244
+  },
+  {
+    "text": "Enthralling",
+    "targetPhoneme": "eh0 n th r ao1 l ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1246
+  },
+  {
+    "text": "Entreat",
+    "targetPhoneme": "eh0 n t r iy1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1248
+  },
+  {
+    "text": "Fervid",
+    "targetPhoneme": "f er1 v ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1250
+  },
+  {
+    "text": "Feckless",
+    "targetPhoneme": "f eh1 k l ih0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1259
+  },
+  {
+    "text": "Felicitous",
+    "targetPhoneme": "f ih0 l ih1 s ah0 t ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1264
+  },
+  {
+    "text": "Forthright",
+    "targetPhoneme": "f ao1 r th r ay1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1265
+  },
+  {
+    "text": "Facetious",
+    "targetPhoneme": "f ah0 s iy1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1266
+  },
+  {
+    "text": "Feculent",
+    "targetPhoneme": "f eh1 k y ah0 l ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1274
+  },
+  {
+    "text": "Fervidly",
+    "targetPhoneme": "f er1 v ah0 d l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1280
+  },
+  {
+    "text": "Fortify",
+    "targetPhoneme": "f ao1 r t ih0 f ay0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1284
+  },
+  {
+    "text": "Fervour",
+    "targetPhoneme": "f er1 v er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1291
+  },
+  {
+    "text": "Fetid",
+    "targetPhoneme": "f eh1 t ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1293
+  },
+  {
+    "text": "Fealty",
+    "targetPhoneme": "f iy1 ah0 l t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1296
+  },
+  {
+    "text": "Fettered",
+    "targetPhoneme": "f eh1 t er0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1297
+  },
+  {
+    "text": "Feral",
+    "targetPhoneme": "f eh1 r ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1299
+  },
+  {
+    "text": "Grimace",
+    "targetPhoneme": "g r ih1 m ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1300
+  },
+  {
+    "text": "Glower",
+    "targetPhoneme": "g l aw1 er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1301
+  },
+  {
+    "text": "Grumble",
+    "targetPhoneme": "g r ah1 m b ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1304
+  },
+  {
+    "text": "Gratuitous",
+    "targetPhoneme": "g r ah0 t uw1 ah0 t ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1317
+  },
+  {
+    "text": "Glint",
+    "targetPhoneme": "g l ih1 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1319
+  },
+  {
+    "text": "Glade",
+    "targetPhoneme": "g l ey1 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1320
+  },
+  {
+    "text": "Glib",
+    "targetPhoneme": "g l ih1 b ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1321
+  },
+  {
+    "text": "Gloaming",
+    "targetPhoneme": "g l ow1 m ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1325
+  },
+  {
+    "text": "Gruff",
+    "targetPhoneme": "g r ah1 f ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1329
+  },
+  {
+    "text": "Gripe",
+    "targetPhoneme": "g r ay1 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1332
+  },
+  {
+    "text": "Gregarious",
+    "targetPhoneme": "g r ah0 g eh1 r iy0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1334
+  },
+  {
+    "text": "Glum",
+    "targetPhoneme": "g l ah1 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1336
+  },
+  {
+    "text": "Galling",
+    "targetPhoneme": "g ao1 l ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1338
+  },
+  {
+    "text": "Grisly",
+    "targetPhoneme": "g r ih1 z l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1339
+  },
+  {
+    "text": "Grouse",
+    "targetPhoneme": "g r aw1 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1341
+  },
+  {
+    "text": "Grandiloquent",
+    "targetPhoneme": "g r ae0 n d ih1 l ah0 k w ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1342
+  },
+  {
+    "text": "Grueling",
+    "targetPhoneme": "g r uw1 ih0 l ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1344
+  },
+  {
+    "text": "Grimaced",
+    "targetPhoneme": "g r ih1 m ah0 s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1345
+  },
+  {
+    "text": "Glean",
+    "targetPhoneme": "g l iy1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1347
+  },
+  {
+    "text": "Glimmer",
+    "targetPhoneme": "g l ih1 m er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1348
+  },
+  {
+    "text": "Glim",
+    "targetPhoneme": "g l ih1 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1349
+  },
+  {
+    "text": "Halcyon",
+    "targetPhoneme": "hh ae1 l s iy0 ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1350
+  },
+  {
+    "text": "Harrowing",
+    "targetPhoneme": "hh eh1 r ow0 ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1351
+  },
+  {
+    "text": "Hapless",
+    "targetPhoneme": "hh ae1 p l ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1352
+  },
+  {
+    "text": "Harbinger",
+    "targetPhoneme": "hh aa1 r b ih0 n jh er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1353
+  },
+  {
+    "text": "Harried",
+    "targetPhoneme": "hh eh1 r iy0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1356
+  },
+  {
+    "text": "Harlot",
+    "targetPhoneme": "hh aa1 r l ah0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1358
+  },
+  {
+    "text": "Hallow",
+    "targetPhoneme": "hh ae1 l ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1365
+  },
+  {
+    "text": "Hagridden",
+    "targetPhoneme": "hh ah0 g r ih1 d ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1366
+  },
+  {
+    "text": "Hallowed",
+    "targetPhoneme": "hh ae1 l ow0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1368
+  },
+  {
+    "text": "Hackneyed",
+    "targetPhoneme": "hh ae1 k n iy0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1374
+  },
+  {
+    "text": "Harangue",
+    "targetPhoneme": "hh er0 ae1 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1389
+  },
+  {
+    "text": "Harass",
+    "targetPhoneme": "hh er0 ae1 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1392
+  },
+  {
+    "text": "Hassle",
+    "targetPhoneme": "hh ae1 s ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1397
+  },
+  {
+    "text": "Halation",
+    "targetPhoneme": "hh ah0 l ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1398
+  },
+  {
+    "text": "Haplessly",
+    "targetPhoneme": "hh ae1 p l ah0 s l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1399
+  },
+  {
+    "text": "Indolent",
+    "targetPhoneme": "ih1 n d ah0 l ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1405
+  },
+  {
+    "text": "Inscrutable",
+    "targetPhoneme": "ih0 n s k r uw1 t ah0 b ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1408
+  },
+  {
+    "text": "Insouciant",
+    "targetPhoneme": "ih0 n s uw1 s y ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1409
+  },
+  {
+    "text": "Incredulity",
+    "targetPhoneme": "ih0 n k r ah0 d uw1 l ih0 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1412
+  },
+  {
+    "text": "Incisive",
+    "targetPhoneme": "ih0 n s ay1 s ih0 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1416
+  },
+  {
+    "text": "Inane",
+    "targetPhoneme": "ih0 n ey1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1417
+  },
+  {
+    "text": "Incite",
+    "targetPhoneme": "ih0 n s ay1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1419
+  },
+  {
+    "text": "Insensate",
+    "targetPhoneme": "ih0 n s eh1 n s ah0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1420
+  },
+  {
+    "text": "Insipid",
+    "targetPhoneme": "ih0 n s ih1 p ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1421
+  },
+  {
+    "text": "Incredulous",
+    "targetPhoneme": "ih0 n k r eh1 jh ah0 l ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1427
+  },
+  {
+    "text": "Inept",
+    "targetPhoneme": "ih0 n eh1 p t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1431
+  },
+  {
+    "text": "Incorporeal",
+    "targetPhoneme": "ih0 n k ao1 r p r iy0 ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1434
+  },
+  {
+    "text": "Intrepid",
+    "targetPhoneme": "ih0 n t r eh1 p ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1435
+  },
+  {
+    "text": "Incensed",
+    "targetPhoneme": "ih1 n s eh0 n s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1436
+  },
+  {
+    "text": "Inchoate",
+    "targetPhoneme": "ih1 n ch ow1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1442
+  },
+  {
+    "text": "Insolent",
+    "targetPhoneme": "ih1 n s ah0 l ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1448
+  },
+  {
+    "text": "Jeer",
+    "targetPhoneme": "jh ih1 r ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1450
+  },
+  {
+    "text": "Jaunty",
+    "targetPhoneme": "jh ao1 n t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1453
+  },
+  {
+    "text": "Jape",
+    "targetPhoneme": "jh ey1 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1455
+  },
+  {
+    "text": "Jaunt",
+    "targetPhoneme": "jh ao1 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1456
+  },
+  {
+    "text": "Jovial",
+    "targetPhoneme": "jh ow1 v iy0 ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1457
+  },
+  {
+    "text": "Jolt",
+    "targetPhoneme": "jh ow1 l t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1459
+  },
+  {
+    "text": "Jubilant",
+    "targetPhoneme": "jh uw1 b ah0 l ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1460
+  },
+  {
+    "text": "Jeering",
+    "targetPhoneme": "jh ih1 r ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1461
+  },
+  {
+    "text": "Jejune",
+    "targetPhoneme": "jh eh1 jh uw1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1465
+  },
+  {
+    "text": "Jarring",
+    "targetPhoneme": "jh aa1 r ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1466
+  },
+  {
+    "text": "Jaded",
+    "targetPhoneme": "jh ey1 d ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1468
+  },
+  {
+    "text": "Jouissance",
+    "targetPhoneme": "jh ah0 s aa1 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1470
+  },
+  {
+    "text": "Jostle",
+    "targetPhoneme": "jh aa1 s ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1472
+  },
+  {
+    "text": "Judder",
+    "targetPhoneme": "jh ah1 d er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1474
+  },
+  {
+    "text": "Jactitation",
+    "targetPhoneme": "jh ae1 k t ah0 t ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1475
+  },
+  {
+    "text": "Jackass",
+    "targetPhoneme": "jh ae1 k ae0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1476
+  },
+  {
+    "text": "Jubilation",
+    "targetPhoneme": "jh uw0 b ah0 l ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1478
+  },
+  {
+    "text": "Jocund",
+    "targetPhoneme": "jh aa1 k ah0 n d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1479
+  },
+  {
+    "text": "Juxtapose",
+    "targetPhoneme": "jh ah0 k s t ah0 p ow1 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1484
+  },
+  {
+    "text": "Jab",
+    "targetPhoneme": "jh ae1 b ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1487
+  },
+  {
+    "text": "Jock",
+    "targetPhoneme": "jh aa1 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1488
+  },
+  {
+    "text": "Jounce",
+    "targetPhoneme": "jh aw1 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1489
+  },
+  {
+    "text": "Jubilance",
+    "targetPhoneme": "jh uw1 b ah0 l ah0 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1490
+  },
+  {
+    "text": "Jetty",
+    "targetPhoneme": "jh eh1 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1495
+  },
+  {
+    "text": "Jaundiced",
+    "targetPhoneme": "jh ao1 n d ih0 s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1496
+  },
+  {
+    "text": "Kindle",
+    "targetPhoneme": "k ih1 n d ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1505
+  },
+  {
+    "text": "Knavish",
+    "targetPhoneme": "n ey1 v ih0 sh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1506
+  },
+  {
+    "text": "Kvetch",
+    "targetPhoneme": "k v eh1 ch ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1510
+  },
+  {
+    "text": "Kink",
+    "targetPhoneme": "k ih1 ng k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1512
+  },
+  {
+    "text": "Krill",
+    "targetPhoneme": "k r ih1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1513
+  },
+  {
+    "text": "Keening",
+    "targetPhoneme": "k iy1 n ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1514
+  },
+  {
+    "text": "Knave",
+    "targetPhoneme": "n ey1 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1515
+  },
+  {
+    "text": "Karcist",
+    "targetPhoneme": "k aa0 r s ah0 s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1516
+  },
+  {
+    "text": "Kip",
+    "targetPhoneme": "k ih1 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1520
+  },
+  {
+    "text": "Kitsch",
+    "targetPhoneme": "k ih1 ch ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1522
+  },
+  {
+    "text": "Kindling",
+    "targetPhoneme": "k ih1 n d l ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1524
+  },
+  {
+    "text": "Keepsake",
+    "targetPhoneme": "k iy1 p s ey0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1525
+  },
+  {
+    "text": "Knell",
+    "targetPhoneme": "n eh1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1526
+  },
+  {
+    "text": "Kinky",
+    "targetPhoneme": "k ih1 ng k iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1528
+  },
+  {
+    "text": "Kindhearted",
+    "targetPhoneme": "k ih1 n d hh aa0 r t ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1529
+  },
+  {
+    "text": "Kamikaze",
+    "targetPhoneme": "k aa0 m ah0 k aa1 z iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1532
+  },
+  {
+    "text": "Knap",
+    "targetPhoneme": "n ae1 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1533
+  },
+  {
+    "text": "Keister",
+    "targetPhoneme": "k iy1 ih0 s t er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1534
+  },
+  {
+    "text": "Keenness",
+    "targetPhoneme": "k iy1 n n ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1538
+  },
+  {
+    "text": "Knoll",
+    "targetPhoneme": "n ow1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1539
+  },
+  {
+    "text": "Katabatic",
+    "targetPhoneme": "k ae0 t ah0 b ae1 t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1540
+  },
+  {
+    "text": "Kente",
+    "targetPhoneme": "k eh1 n t ey0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1541
+  },
+  {
+    "text": "Knack",
+    "targetPhoneme": "n ae1 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1544
+  },
+  {
+    "text": "Kismet",
+    "targetPhoneme": "k ih1 z m ih0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1545
+  },
+  {
+    "text": "Kibosh",
+    "targetPhoneme": "k ih1 b ah0 sh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1547
+  },
+  {
+    "text": "Kerf",
+    "targetPhoneme": "k er1 f ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1548
+  },
+  {
+    "text": "Kafkaesque",
+    "targetPhoneme": "k aa1 f k ah0 eh1 s k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1549
+  },
+  {
+    "text": "Lurid",
+    "targetPhoneme": "l uh1 r ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1550
+  },
+  {
+    "text": "Languid",
+    "targetPhoneme": "l ae1 ng g w ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1551
+  },
+  {
+    "text": "Lascivious",
+    "targetPhoneme": "l ah0 s ih1 v iy0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1553
+  },
+  {
+    "text": "Lucent",
+    "targetPhoneme": "l uw1 s ih0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1554
+  },
+  {
+    "text": "Languor",
+    "targetPhoneme": "l ae1 ng g w ao1 r ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1555
+  },
+  {
+    "text": "Lustrous",
+    "targetPhoneme": "l ah1 s t r ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1557
+  },
+  {
+    "text": "Luscious",
+    "targetPhoneme": "l ah1 sh ih0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1558
+  },
+  {
+    "text": "Lurch",
+    "targetPhoneme": "l er1 ch ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1559
+  },
+  {
+    "text": "Lambent",
+    "targetPhoneme": "l ae1 m b ih0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1564
+  },
+  {
+    "text": "Lackadaisical",
+    "targetPhoneme": "l ae0 k ah0 d ey1 z ih0 k ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1567
+  },
+  {
+    "text": "Languish",
+    "targetPhoneme": "l ae1 ng g w ih0 sh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1568
+  },
+  {
+    "text": "Lamentable",
+    "targetPhoneme": "l ah0 m eh1 n t ah0 b ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1569
+  },
+  {
+    "text": "Lubricious",
+    "targetPhoneme": "l uw1 b r ih1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1570
+  },
+  {
+    "text": "Lacuna",
+    "targetPhoneme": "l aa0 k uw1 n ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1571
+  },
+  {
+    "text": "Laggard",
+    "targetPhoneme": "l ae1 g er0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1572
+  },
+  {
+    "text": "Languidly",
+    "targetPhoneme": "l ae1 ng g w ah0 d l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1573
+  },
+  {
+    "text": "Luminescent",
+    "targetPhoneme": "l uw0 m ah0 n eh1 s ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1575
+  },
+  {
+    "text": "Luster",
+    "targetPhoneme": "l ah1 s t er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1577
+  },
+  {
+    "text": "Lugubrious",
+    "targetPhoneme": "l uw0 g y uw1 b r iy0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1578
+  },
+  {
+    "text": "Lamia",
+    "targetPhoneme": "l ey1 m iy0 ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1579
+  },
+  {
+    "text": "Luculent",
+    "targetPhoneme": "l uw0 k y ah0 l ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1580
+  },
+  {
+    "text": "Lustful",
+    "targetPhoneme": "l ah1 s t f ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1582
+  },
+  {
+    "text": "Lank",
+    "targetPhoneme": "l ae1 ng k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1584
+  },
+  {
+    "text": "Languorous",
+    "targetPhoneme": "l ae1 ng g w er0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1585
+  },
+  {
+    "text": "Lauded",
+    "targetPhoneme": "l ao1 d ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1586
+  },
+  {
+    "text": "Laconic",
+    "targetPhoneme": "l aa0 k aa1 n ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1587
+  },
+  {
+    "text": "Laceration",
+    "targetPhoneme": "l ae0 s er0 ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1588
+  },
+  {
+    "text": "Lustre",
+    "targetPhoneme": "l ah1 s t er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1589
+  },
+  {
+    "text": "Lusty",
+    "targetPhoneme": "l ah1 s t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1590
+  },
+  {
+    "text": "Lucidity",
+    "targetPhoneme": "l uw0 s ih1 d ih0 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1591
+  },
+  {
+    "text": "Lurk",
+    "targetPhoneme": "l er1 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1593
+  },
+  {
+    "text": "Lackluster",
+    "targetPhoneme": "l ae1 k l ah0 s t er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1594
+  },
+  {
+    "text": "Lamentation",
+    "targetPhoneme": "l aa0 m eh0 n t ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1596
+  },
+  {
+    "text": "Lanky",
+    "targetPhoneme": "l ae1 ng k iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1597
+  },
+  {
+    "text": "Laud",
+    "targetPhoneme": "l ao1 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1599
+  },
+  {
+    "text": "Malevolent",
+    "targetPhoneme": "m ah0 l eh1 v ah0 l ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1601
+  },
+  {
+    "text": "Mellow",
+    "targetPhoneme": "m eh1 l ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1603
+  },
+  {
+    "text": "Melancholic",
+    "targetPhoneme": "m eh0 l ah0 n k aa1 l ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1605
+  },
+  {
+    "text": "Mewl",
+    "targetPhoneme": "m y uw1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1606
+  },
+  {
+    "text": "Malign",
+    "targetPhoneme": "m ah0 l ay1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1607
+  },
+  {
+    "text": "Mendacious",
+    "targetPhoneme": "m eh0 n d ey1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1609
+  },
+  {
+    "text": "Meretricious",
+    "targetPhoneme": "m eh1 r eh0 t r ih1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1614
+  },
+  {
+    "text": "Mellifluous",
+    "targetPhoneme": "m eh1 l ih0 f l w ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1616
+  },
+  {
+    "text": "Meander",
+    "targetPhoneme": "m iy0 ae1 n d er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1618
+  },
+  {
+    "text": "Melodramatic",
+    "targetPhoneme": "m eh0 l ah0 d r ah0 m ae1 t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1619
+  },
+  {
+    "text": "Meliorate",
+    "targetPhoneme": "m iy1 l y er0 ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1621
+  },
+  {
+    "text": "Mentation",
+    "targetPhoneme": "m eh0 n t ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1622
+  },
+  {
+    "text": "Merriment",
+    "targetPhoneme": "m eh1 r ih0 m ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1625
+  },
+  {
+    "text": "Maledict",
+    "targetPhoneme": "m ae0 l ah0 d ih0 k t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1627
+  },
+  {
+    "text": "Mercurial",
+    "targetPhoneme": "m er0 k y uh1 r iy0 ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1629
+  },
+  {
+    "text": "Mettle",
+    "targetPhoneme": "m eh1 t ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1630
+  },
+  {
+    "text": "Malevolence",
+    "targetPhoneme": "m ah0 l eh1 v ah0 l ah0 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1632
+  },
+  {
+    "text": "Meandering",
+    "targetPhoneme": "m iy0 ae1 n d er0 ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1633
+  },
+  {
+    "text": "Malefic",
+    "targetPhoneme": "m ae1 l ah0 f ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1635
+  },
+  {
+    "text": "Meandered",
+    "targetPhoneme": "m iy0 ae1 n d er0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1637
+  },
+  {
+    "text": "Mellisonant",
+    "targetPhoneme": "m eh1 l ih0 s ah0 n ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1638
+  },
+  {
+    "text": "Menagerie",
+    "targetPhoneme": "m ah0 n ae1 jh er0 iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1643
+  },
+  {
+    "text": "Maladroit",
+    "targetPhoneme": "m ae0 l ah0 d r oy1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1644
+  },
+  {
+    "text": "Merited",
+    "targetPhoneme": "m eh1 r ih0 t ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1646
+  },
+  {
+    "text": "Methodically",
+    "targetPhoneme": "m ah0 th aa1 d ih0 k ah0 l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1647
+  },
+  {
+    "text": "Mephistophelean",
+    "targetPhoneme": "m eh1 f ih0 s t ao1 f ih0 l iy1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1648
+  },
+  {
+    "text": "Nescient",
+    "targetPhoneme": "n iy1 sh iy0 ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1654
+  },
+  {
+    "text": "Nonchalant",
+    "targetPhoneme": "n aa0 n sh ah0 l aa1 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1655
+  },
+  {
+    "text": "Nettled",
+    "targetPhoneme": "n eh1 t ah0 l d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1656
+  },
+  {
+    "text": "Nox",
+    "targetPhoneme": "n aa0 k s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1663
+  },
+  {
+    "text": "Nebulous",
+    "targetPhoneme": "n eh1 b y ah0 l ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1665
+  },
+  {
+    "text": "Nonpareil",
+    "targetPhoneme": "n aa0 n p aa1 r iy1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1668
+  },
+  {
+    "text": "Nonplussed",
+    "targetPhoneme": "n aa0 n p l ah1 s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1670
+  },
+  {
+    "text": "Neophyte",
+    "targetPhoneme": "n iy1 ah0 f ay0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1671
+  },
+  {
+    "text": "Notoriety",
+    "targetPhoneme": "n ow0 t er0 ay1 ah0 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1672
+  },
+  {
+    "text": "Nefarious",
+    "targetPhoneme": "n ah0 f eh1 r iy0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1673
+  },
+  {
+    "text": "Nook",
+    "targetPhoneme": "n uh1 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1675
+  },
+  {
+    "text": "Nemesis",
+    "targetPhoneme": "n eh1 m ah0 s ih0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1680
+  },
+  {
+    "text": "Nonce",
+    "targetPhoneme": "n aa1 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1681
+  },
+  {
+    "text": "Nettlesome",
+    "targetPhoneme": "n eh1 t ah0 l s ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1682
+  },
+  {
+    "text": "Nestle",
+    "targetPhoneme": "n eh1 s ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1687
+  },
+  {
+    "text": "Noetic",
+    "targetPhoneme": "n ow0 eh1 t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1691
+  },
+  {
+    "text": "Nocturne",
+    "targetPhoneme": "n aa1 k t er0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1695
+  },
+  {
+    "text": "Nought",
+    "targetPhoneme": "n ao1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1696
+  },
+  {
+    "text": "Negus",
+    "targetPhoneme": "n iy1 g ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1697
+  },
+  {
+    "text": "Nether",
+    "targetPhoneme": "n eh1 dh er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1699
+  },
+  {
+    "text": "Otiose",
+    "targetPhoneme": "ow1 t iy0 ow1 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1700
+  },
+  {
+    "text": "Ostentatious",
+    "targetPhoneme": "aa0 s t ah0 n t ey1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1702
+  },
+  {
+    "text": "Ostensible",
+    "targetPhoneme": "aa0 s t eh1 n s ah0 b ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1703
+  },
+  {
+    "text": "Obtuse",
+    "targetPhoneme": "aa0 b t uw1 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1708
+  },
+  {
+    "text": "Orgulous",
+    "targetPhoneme": "ao1 r g y ah0 l ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1710
+  },
+  {
+    "text": "Opulent",
+    "targetPhoneme": "aa1 p y ah0 l ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1714
+  },
+  {
+    "text": "Obdurate",
+    "targetPhoneme": "aa1 b d er0 ah0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1719
+  },
+  {
+    "text": "Obviate",
+    "targetPhoneme": "aa1 b v iy0 ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1720
+  },
+  {
+    "text": "Obsequious",
+    "targetPhoneme": "ah0 b s iy1 k w iy0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1722
+  },
+  {
+    "text": "Oblation",
+    "targetPhoneme": "aa0 b l ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1726
+  },
+  {
+    "text": "Opulence",
+    "targetPhoneme": "aa1 p y ah0 l ah0 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1727
+  },
+  {
+    "text": "Overcast",
+    "targetPhoneme": "ow1 v er0 k ae0 s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1729
+  },
+  {
+    "text": "Ophidian",
+    "targetPhoneme": "ah0 f ih1 d iy0 ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1731
+  },
+  {
+    "text": "Oscillate",
+    "targetPhoneme": "aa1 s ah0 l ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1732
+  },
+  {
+    "text": "Opined",
+    "targetPhoneme": "ow0 p ay1 n d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1735
+  },
+  {
+    "text": "Obliterate",
+    "targetPhoneme": "ah0 b l ih1 t er0 ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1737
+  },
+  {
+    "text": "Orphic",
+    "targetPhoneme": "ao1 r f ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1740
+  },
+  {
+    "text": "Obtrusive",
+    "targetPhoneme": "ah0 b t r uw1 s ih0 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1741
+  },
+  {
+    "text": "Obstreperous",
+    "targetPhoneme": "ah0 b s t r eh1 p er0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1745
+  },
+  {
+    "text": "Obeah",
+    "targetPhoneme": "ow0 b iy1 ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1749
+  },
+  {
+    "text": "Portentous",
+    "targetPhoneme": "p ao0 r t eh1 n t ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1752
+  },
+  {
+    "text": "Placate",
+    "targetPhoneme": "p l ey1 k ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1758
+  },
+  {
+    "text": "Placidly",
+    "targetPhoneme": "p l ae1 s ih0 d l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1761
+  },
+  {
+    "text": "Pliant",
+    "targetPhoneme": "p l ay1 ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1763
+  },
+  {
+    "text": "Plod",
+    "targetPhoneme": "p l aa1 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1771
+  },
+  {
+    "text": "Ponderous",
+    "targetPhoneme": "p aa1 n d er0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1773
+  },
+  {
+    "text": "Plaintive",
+    "targetPhoneme": "p l ey1 n t ih0 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1776
+  },
+  {
+    "text": "Portent",
+    "targetPhoneme": "p ao1 r t eh0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1779
+  },
+  {
+    "text": "Portend",
+    "targetPhoneme": "p ao0 r t eh1 n d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1788
+  },
+  {
+    "text": "Plebeian",
+    "targetPhoneme": "p l ah0 b iy1 ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1789
+  },
+  {
+    "text": "Plussed",
+    "targetPhoneme": "p l ah1 s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1794
+  },
+  {
+    "text": "Placidity",
+    "targetPhoneme": "p l ah0 s ih1 d ih0 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1796
+  },
+  {
+    "text": "Plush",
+    "targetPhoneme": "p l ah1 sh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1797
+  },
+  {
+    "text": "Pliable",
+    "targetPhoneme": "p l ay1 ah0 b ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1798
+  },
+  {
+    "text": "Posit",
+    "targetPhoneme": "p aa1 z ah0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1799
+  },
+  {
+    "text": "Quandary",
+    "targetPhoneme": "k w aa1 n d er0 iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1801
+  },
+  {
+    "text": "Quipped",
+    "targetPhoneme": "k w ih1 p t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1803
+  },
+  {
+    "text": "Quip",
+    "targetPhoneme": "k w ih1 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1804
+  },
+  {
+    "text": "Quell",
+    "targetPhoneme": "k w eh1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1805
+  },
+  {
+    "text": "Quotidian",
+    "targetPhoneme": "k w ow1 t ih1 d iy0 ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1808
+  },
+  {
+    "text": "Quixotic",
+    "targetPhoneme": "k w ih0 k s aa1 t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1810
+  },
+  {
+    "text": "Quintessence",
+    "targetPhoneme": "k w ih0 n t eh1 s ah0 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1812
+  },
+  {
+    "text": "Quietude",
+    "targetPhoneme": "k w ay1 ah0 t uw0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1813
+  },
+  {
+    "text": "Quaver",
+    "targetPhoneme": "k w ey1 v er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1815
+  },
+  {
+    "text": "Quirky",
+    "targetPhoneme": "k w er1 k iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1817
+  },
+  {
+    "text": "Quondam",
+    "targetPhoneme": "k w aa1 n d ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1818
+  },
+  {
+    "text": "Quizzical",
+    "targetPhoneme": "k w ih1 z ah0 k ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1819
+  },
+  {
+    "text": "Quiescence",
+    "targetPhoneme": "k w ay0 eh1 s ah0 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1820
+  },
+  {
+    "text": "Quietus",
+    "targetPhoneme": "k w ay1 ah0 t ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1821
+  },
+  {
+    "text": "Quash",
+    "targetPhoneme": "k w ao1 sh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1823
+  },
+  {
+    "text": "Quetch",
+    "targetPhoneme": "k w eh1 ch ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1824
+  },
+  {
+    "text": "Quagmire",
+    "targetPhoneme": "k w ae1 g m ay0 er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1826
+  },
+  {
+    "text": "Quavering",
+    "targetPhoneme": "k w ey1 v er0 ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1827
+  },
+  {
+    "text": "Qualm",
+    "targetPhoneme": "k w aa1 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1831
+  },
+  {
+    "text": "Quintessential",
+    "targetPhoneme": "k w ih0 n t ih0 s eh1 n sh ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1832
+  },
+  {
+    "text": "Quiesce",
+    "targetPhoneme": "k w ay0 eh1 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1833
+  },
+  {
+    "text": "Queasy",
+    "targetPhoneme": "k w iy1 z iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1835
+  },
+  {
+    "text": "Quiff",
+    "targetPhoneme": "k w ih1 f ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1836
+  },
+  {
+    "text": "Quake",
+    "targetPhoneme": "k w ey1 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1837
+  },
+  {
+    "text": "Quaking",
+    "targetPhoneme": "k w ey1 k ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1838
+  },
+  {
+    "text": "Quieten",
+    "targetPhoneme": "k w ay1 ah0 t ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1839
+  },
+  {
+    "text": "Queasiness",
+    "targetPhoneme": "k w iy1 z iy0 n ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1842
+  },
+  {
+    "text": "Quean",
+    "targetPhoneme": "k w iy1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1845
+  },
+  {
+    "text": "Querent",
+    "targetPhoneme": "k w ih1 r ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1846
+  },
+  {
+    "text": "Quicksilver",
+    "targetPhoneme": "k w ih1 k s ih1 l v er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1848
+  },
+  {
+    "text": "Reticent",
+    "targetPhoneme": "r eh1 t ih0 s ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1854
+  },
+  {
+    "text": "Revel",
+    "targetPhoneme": "r eh1 v ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1863
+  },
+  {
+    "text": "Reprisal",
+    "targetPhoneme": "r iy0 p r ay1 z ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1866
+  },
+  {
+    "text": "Reprimand",
+    "targetPhoneme": "r eh1 p r ah0 m ae0 n d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1868
+  },
+  {
+    "text": "Resplendent",
+    "targetPhoneme": "r iy0 s p l eh1 n d ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1870
+  },
+  {
+    "text": "Renegade",
+    "targetPhoneme": "r eh1 n ah0 g ey0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1874
+  },
+  {
+    "text": "Reprobate",
+    "targetPhoneme": "r eh1 p r ao0 b ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1875
+  },
+  {
+    "text": "Revere",
+    "targetPhoneme": "r ih0 v ih1 r ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1878
+  },
+  {
+    "text": "Recondite",
+    "targetPhoneme": "r eh1 k ah0 n d ay0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1879
+  },
+  {
+    "text": "Reticence",
+    "targetPhoneme": "r eh1 t ih0 s ah0 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1880
+  },
+  {
+    "text": "Reminiscence",
+    "targetPhoneme": "r eh0 m ah0 n ih1 s ah0 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1884
+  },
+  {
+    "text": "Reprieve",
+    "targetPhoneme": "r iy0 p r iy1 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1889
+  },
+  {
+    "text": "Restive",
+    "targetPhoneme": "r eh1 s t ih0 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1894
+  },
+  {
+    "text": "Sardonic",
+    "targetPhoneme": "s aa0 r d aa1 n ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1900
+  },
+  {
+    "text": "Salacious",
+    "targetPhoneme": "s ah0 l ey1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1902
+  },
+  {
+    "text": "Saunter",
+    "targetPhoneme": "s ao1 n t er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1904
+  },
+  {
+    "text": "Saccharine",
+    "targetPhoneme": "s ae1 k er0 ay0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1906
+  },
+  {
+    "text": "Sagacity",
+    "targetPhoneme": "s aa0 g ae1 s ah0 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1907
+  },
+  {
+    "text": "Sallow",
+    "targetPhoneme": "s ae1 l ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1908
+  },
+  {
+    "text": "Saturnine",
+    "targetPhoneme": "s ae1 t er0 n ay0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1911
+  },
+  {
+    "text": "Sagacious",
+    "targetPhoneme": "s ae1 g ey1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1916
+  },
+  {
+    "text": "Sauntered",
+    "targetPhoneme": "s ao1 n t er0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1918
+  },
+  {
+    "text": "Sapless",
+    "targetPhoneme": "s ae1 p l ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1920
+  },
+  {
+    "text": "Sardonically",
+    "targetPhoneme": "s aa0 r d aa1 n ih0 k ah0 l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1921
+  },
+  {
+    "text": "Sanctimonious",
+    "targetPhoneme": "s ae0 ng k t ah0 m ow1 n iy0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1922
+  },
+  {
+    "text": "Soliloquy",
+    "targetPhoneme": "s ah0 l ih1 l ah0 k w iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1923
+  },
+  {
+    "text": "Solicitous",
+    "targetPhoneme": "s ah0 l ih1 s ah0 t ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1924
+  },
+  {
+    "text": "Sanguineous",
+    "targetPhoneme": "s ae1 ng g w iy1 n iy0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1928
+  },
+  {
+    "text": "Savor",
+    "targetPhoneme": "s ey1 v er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1929
+  },
+  {
+    "text": "Satori",
+    "targetPhoneme": "s ah0 t ao1 r iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1931
+  },
+  {
+    "text": "Sapient",
+    "targetPhoneme": "s ey1 p iy0 ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1932
+  },
+  {
+    "text": "Salve",
+    "targetPhoneme": "s aa1 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1934
+  },
+  {
+    "text": "Sated",
+    "targetPhoneme": "s ey1 t ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1936
+  },
+  {
+    "text": "Sable",
+    "targetPhoneme": "s ey1 b ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1938
+  },
+  {
+    "text": "Sanguinary",
+    "targetPhoneme": "s ae1 ng g w ah0 n eh0 r iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1939
+  },
+  {
+    "text": "Saucy",
+    "targetPhoneme": "s ao1 s iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1941
+  },
+  {
+    "text": "Savvy",
+    "targetPhoneme": "s ae1 v iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1942
+  },
+  {
+    "text": "Sanctum",
+    "targetPhoneme": "s ae1 ng k t ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1945
+  },
+  {
+    "text": "Sapience",
+    "targetPhoneme": "s ey1 p iy0 ah0 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1946
+  },
+  {
+    "text": "Torrid",
+    "targetPhoneme": "t ao1 r ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1950
+  },
+  {
+    "text": "Tenacious",
+    "targetPhoneme": "t ah0 n ey1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1954
+  },
+  {
+    "text": "Torpid",
+    "targetPhoneme": "t ao1 r p ah0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1962
+  },
+  {
+    "text": "Tenebrous",
+    "targetPhoneme": "t eh1 n ah0 b r ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1963
+  },
+  {
+    "text": "Temerity",
+    "targetPhoneme": "t ah0 m eh1 r ah0 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1966
+  },
+  {
+    "text": "Tempestuous",
+    "targetPhoneme": "t eh0 m p eh1 s ch uw0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1968
+  },
+  {
+    "text": "Temperamental",
+    "targetPhoneme": "t eh0 m p r ah0 m eh1 n t ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1973
+  },
+  {
+    "text": "Torpor",
+    "targetPhoneme": "t ao1 r p er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1976
+  },
+  {
+    "text": "Tousled",
+    "targetPhoneme": "t ah1 s l d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1977
+  },
+  {
+    "text": "Totter",
+    "targetPhoneme": "t aa1 t er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1979
+  },
+  {
+    "text": "Tenebrious",
+    "targetPhoneme": "t eh1 n ah0 b r iy0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1980
+  },
+  {
+    "text": "Toddle",
+    "targetPhoneme": "t aa1 d ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1986
+  },
+  {
+    "text": "Temptress",
+    "targetPhoneme": "t eh1 m p t r ih0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1987
+  },
+  {
+    "text": "Tenebrific",
+    "targetPhoneme": "t eh1 n ah0 b r ih1 f ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1989
+  },
+  {
+    "text": "Toot",
+    "targetPhoneme": "t uw1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1997
+  },
+  {
+    "text": "Touchy",
+    "targetPhoneme": "t ah1 ch iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1998
+  },
+  {
+    "text": "Tortious",
+    "targetPhoneme": "t ao1 r sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 1999
+  },
+  {
+    "text": "Unyielding",
+    "targetPhoneme": "ah0 n y iy1 l d ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2002
+  },
+  {
+    "text": "Unctuous",
+    "targetPhoneme": "ah1 ng ch w ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2009
+  },
+  {
+    "text": "Unease",
+    "targetPhoneme": "ah0 n iy1 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2011
+  },
+  {
+    "text": "Unemotional",
+    "targetPhoneme": "ah0 n iy0 m ow1 sh ah0 n ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2012
+  },
+  {
+    "text": "Unfettered",
+    "targetPhoneme": "ah0 n f eh1 t er0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2013
+  },
+  {
+    "text": "Unwavering",
+    "targetPhoneme": "ah0 n w ey1 v er0 ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2016
+  },
+  {
+    "text": "Undulate",
+    "targetPhoneme": "ah1 n jh ah0 l ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2022
+  },
+  {
+    "text": "Unveil",
+    "targetPhoneme": "ah0 n v ey1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2025
+  },
+  {
+    "text": "Unconcerned",
+    "targetPhoneme": "ah0 n k ah0 n s er1 n d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2026
+  },
+  {
+    "text": "Unpretentious",
+    "targetPhoneme": "ah0 n p r iy0 t eh1 n sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2028
+  },
+  {
+    "text": "Unbridled",
+    "targetPhoneme": "ah0 n b r ay1 d ah0 l d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2031
+  },
+  {
+    "text": "Uncouth",
+    "targetPhoneme": "ah1 n k uw1 th ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2033
+  },
+  {
+    "text": "Unfathomable",
+    "targetPhoneme": "ah0 n f ae1 dh ah0 m ah0 b ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2036
+  },
+  {
+    "text": "Unabated",
+    "targetPhoneme": "ah0 n ah0 b ey1 t ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2040
+  },
+  {
+    "text": "Unrefined",
+    "targetPhoneme": "ah0 n r iy0 f ay1 n d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2041
+  },
+  {
+    "text": "Unction",
+    "targetPhoneme": "ah1 ng k sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2043
+  },
+  {
+    "text": "Unrelenting",
+    "targetPhoneme": "ah0 n r iy0 l eh1 n t ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2044
+  },
+  {
+    "text": "Unwieldy",
+    "targetPhoneme": "ah0 n w iy1 l d iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2045
+  },
+  {
+    "text": "Unhinged",
+    "targetPhoneme": "ah0 n hh ih1 n jh d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2047
+  },
+  {
+    "text": "Vexation",
+    "targetPhoneme": "v eh0 k s ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2050
+  },
+  {
+    "text": "Vacuous",
+    "targetPhoneme": "v ae1 k y uw0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2051
+  },
+  {
+    "text": "Vivacious",
+    "targetPhoneme": "v ah0 v ey1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2056
+  },
+  {
+    "text": "Visage",
+    "targetPhoneme": "v ih1 z ah0 jh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2058
+  },
+  {
+    "text": "Vestige",
+    "targetPhoneme": "v eh1 s t ih0 jh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2059
+  },
+  {
+    "text": "Vexatious",
+    "targetPhoneme": "v eh0 k s ey1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2060
+  },
+  {
+    "text": "Vindictive",
+    "targetPhoneme": "v ih0 n d ih1 k t ih0 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2061
+  },
+  {
+    "text": "Vexing",
+    "targetPhoneme": "v eh1 k s ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2062
+  },
+  {
+    "text": "Venerate",
+    "targetPhoneme": "v eh1 n er0 ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2064
+  },
+  {
+    "text": "Vehemence",
+    "targetPhoneme": "v iy1 ah0 m ah0 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2066
+  },
+  {
+    "text": "Vitiate",
+    "targetPhoneme": "v ih1 sh iy0 ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2067
+  },
+  {
+    "text": "Vassal",
+    "targetPhoneme": "v ae1 s ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2071
+  },
+  {
+    "text": "Veracious",
+    "targetPhoneme": "v eh0 r ey1 sh ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2073
+  },
+  {
+    "text": "Virile",
+    "targetPhoneme": "v ih1 r ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2075
+  },
+  {
+    "text": "Vitriolic",
+    "targetPhoneme": "v ih0 t r iy0 aa1 l ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2076
+  },
+  {
+    "text": "Vitriol",
+    "targetPhoneme": "v ih1 t r iy0 ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2077
+  },
+  {
+    "text": "Virtuoso",
+    "targetPhoneme": "v er0 ch uw0 ow1 s ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2078
+  },
+  {
+    "text": "Vivacity",
+    "targetPhoneme": "v ih0 v ae1 s ah0 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2080
+  },
+  {
+    "text": "Vibe",
+    "targetPhoneme": "v ay1 b ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2082
+  },
+  {
+    "text": "Vapid",
+    "targetPhoneme": "v ae1 p ih0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2084
+  },
+  {
+    "text": "Vainglorious",
+    "targetPhoneme": "v ey1 n g l ao1 r iy0 ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2085
+  },
+  {
+    "text": "Vixen",
+    "targetPhoneme": "v ih1 k s ih0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2088
+  },
+  {
+    "text": "Veracity",
+    "targetPhoneme": "v er0 ae1 s ih0 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2089
+  },
+  {
+    "text": "Verity",
+    "targetPhoneme": "v eh1 r ah0 t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2090
+  },
+  {
+    "text": "Vagrant",
+    "targetPhoneme": "v ey1 g r ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2092
+  },
+  {
+    "text": "Viridian",
+    "targetPhoneme": "v er0 ih1 d iy0 ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2094
+  },
+  {
+    "text": "Vagabond",
+    "targetPhoneme": "v ae1 g ah0 b aa0 n d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2095
+  },
+  {
+    "text": "Vernal",
+    "targetPhoneme": "v er1 n ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2096
+  },
+  {
+    "text": "Wistful",
+    "targetPhoneme": "w ih1 s t f ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2100
+  },
+  {
+    "text": "Wry",
+    "targetPhoneme": "r ay1 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2101
+  },
+  {
+    "text": "Wraith",
+    "targetPhoneme": "r ey1 th ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2107
+  },
+  {
+    "text": "Wince",
+    "targetPhoneme": "w ih1 n s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2110
+  },
+  {
+    "text": "Waver",
+    "targetPhoneme": "w ey1 v er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2111
+  },
+  {
+    "text": "Withal",
+    "targetPhoneme": "w ih0 dh ao0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2113
+  },
+  {
+    "text": "Wriggle",
+    "targetPhoneme": "r ih1 g ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2114
+  },
+  {
+    "text": "Winsome",
+    "targetPhoneme": "w ih1 n s ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2115
+  },
+  {
+    "text": "Waft",
+    "targetPhoneme": "w aa1 f t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2116
+  },
+  {
+    "text": "Wring",
+    "targetPhoneme": "r ih1 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2117
+  },
+  {
+    "text": "Wistfulness",
+    "targetPhoneme": "w ih1 s t f ah0 l n ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2121
+  },
+  {
+    "text": "Wisp",
+    "targetPhoneme": "w ih1 s p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2123
+  },
+  {
+    "text": "Wallow",
+    "targetPhoneme": "w aa1 l ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2124
+  },
+  {
+    "text": "Warder",
+    "targetPhoneme": "w ao1 r d er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2125
+  },
+  {
+    "text": "Witless",
+    "targetPhoneme": "w ih1 t l ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2126
+  },
+  {
+    "text": "Wayfarer",
+    "targetPhoneme": "w ey1 f eh0 r er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2127
+  },
+  {
+    "text": "Waive",
+    "targetPhoneme": "w ey1 v ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2128
+  },
+  {
+    "text": "Wily",
+    "targetPhoneme": "w ay1 l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2131
+  },
+  {
+    "text": "Wanker",
+    "targetPhoneme": "w aa1 ng k er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2132
+  },
+  {
+    "text": "Wistfully",
+    "targetPhoneme": "w ih1 s t f ah0 l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2135
+  },
+  {
+    "text": "Wight",
+    "targetPhoneme": "w ay1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2137
+  },
+  {
+    "text": "Wane",
+    "targetPhoneme": "w ey1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2138
+  },
+  {
+    "text": "Warble",
+    "targetPhoneme": "w ao1 r b ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2142
+  },
+  {
+    "text": "Wrest",
+    "targetPhoneme": "r eh1 s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2143
+  },
+  {
+    "text": "Writhe",
+    "targetPhoneme": "r ay1 dh ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2144
+  },
+  {
+    "text": "Writhing",
+    "targetPhoneme": "r ay1 dh ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2146
+  },
+  {
+    "text": "Xenophobia",
+    "targetPhoneme": "z eh0 n ah0 f ow1 b iy0 ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2150
+  },
+  {
+    "text": "Xenocide",
+    "targetPhoneme": "z eh1 n ah0 s ay0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2151
+  },
+  {
+    "text": "Xenic",
+    "targetPhoneme": "z eh1 n ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2152
+  },
+  {
+    "text": "Xor",
+    "targetPhoneme": "eh1 k s er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2153
+  },
+  {
+    "text": "Xanadu",
+    "targetPhoneme": "z ah0 n aa1 d uw0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2154
+  },
+  {
+    "text": "Xoanon",
+    "targetPhoneme": "z ow1 ah0 n aa0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2155
+  },
+  {
+    "text": "Xantippe",
+    "targetPhoneme": "z ae1 n t ih0 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2156
+  },
+  {
+    "text": "Xorn",
+    "targetPhoneme": "z ao1 r n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2158
+  },
+  {
+    "text": "Xanthic",
+    "targetPhoneme": "z ae1 n th ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2159
+  },
+  {
+    "text": "Xanthous",
+    "targetPhoneme": "z ae1 n dh aw1 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2160
+  },
+  {
+    "text": "Xerxes",
+    "targetPhoneme": "z er1 k s iy0 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2161
+  },
+  {
+    "text": "Xystus",
+    "targetPhoneme": "z ay1 s t ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2162
+  },
+  {
+    "text": "Xenomorph",
+    "targetPhoneme": "z eh0 n ah0 m ao0 r f ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2163
+  },
+  {
+    "text": "Xenonymy",
+    "targetPhoneme": "z eh1 n ah0 n ah0 m iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2164
+  },
+  {
+    "text": "Xyster",
+    "targetPhoneme": "z ay1 s t er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2165
+  },
+  {
+    "text": "Xenium",
+    "targetPhoneme": "z iy1 n iy0 ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2166
+  },
+  {
+    "text": "Xenophile",
+    "targetPhoneme": "z eh0 n ah0 f ay0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2167
+  },
+  {
+    "text": "Xenophilia",
+    "targetPhoneme": "z eh0 n ah0 f ih1 l y ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2168
+  },
+  {
+    "text": "Xystarch",
+    "targetPhoneme": "z ay1 s t aa0 r ch ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2170
+  },
+  {
+    "text": "Xanthinine",
+    "targetPhoneme": "z ae1 n dh iy0 n iy1 n iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2171
+  },
+  {
+    "text": "Xanthochromic",
+    "targetPhoneme": "z ae1 n dh ah0 k r ow0 m ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2172
+  },
+  {
+    "text": "Xanthogenic",
+    "targetPhoneme": "z ae1 n th ah0 jh eh1 n ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2173
+  },
+  {
+    "text": "Xtreme",
+    "targetPhoneme": "eh1 k s t r iy1 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2174
+  },
+  {
+    "text": "Xenology",
+    "targetPhoneme": "z iy1 n aa1 l ah0 jh iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2175
+  },
+  {
+    "text": "Xform",
+    "targetPhoneme": "z f ao0 r m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2176
+  },
+  {
+    "text": "Xmit",
+    "targetPhoneme": "z m ih1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2177
+  },
+  {
+    "text": "Xenocentrism",
+    "targetPhoneme": "z ah0 n ah0 s eh1 n t r ih1 z ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2178
+  },
+  {
+    "text": "Xerification",
+    "targetPhoneme": "z eh1 r ah0 f ah0 k ey1 sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2179
+  },
+  {
+    "text": "Xylophone",
+    "targetPhoneme": "z ay1 l ah0 f ow0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2180
+  },
+  {
+    "text": "Xenon",
+    "targetPhoneme": "z iy1 n aa0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2181
+  },
+  {
+    "text": "Xerox",
+    "targetPhoneme": "z ih1 r aa0 k s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2182
+  },
+  {
+    "text": "Xeric",
+    "targetPhoneme": "z eh1 r ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2183
+  },
+  {
+    "text": "Xenobiotic",
+    "targetPhoneme": "z iy1 n ow0 b iy0 aa1 t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2184
+  },
+  {
+    "text": "Xenophobic",
+    "targetPhoneme": "z eh0 n ah0 f aa1 b ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2185
+  },
+  {
+    "text": "Xiphias",
+    "targetPhoneme": "z ay1 f iy0 ah0 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2186
+  },
+  {
+    "text": "Xeno",
+    "targetPhoneme": "z iy1 n ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2187
+  },
+  {
+    "text": "Xenolith",
+    "targetPhoneme": "z eh0 n ah0 l ih0 th ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2188
+  },
+  {
+    "text": "Xanthopsia",
+    "targetPhoneme": "z ae1 n dh aa0 p s iy0 ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2189
+  },
+  {
+    "text": "Xenophobe",
+    "targetPhoneme": "z eh0 n ah0 f ow1 b ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2190
+  },
+  {
+    "text": "Xerophile",
+    "targetPhoneme": "z eh1 r ah0 f ay0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2191
+  },
+  {
+    "text": "Xyris",
+    "targetPhoneme": "z ay1 r ih0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2192
+  },
+  {
+    "text": "Xanthochroic",
+    "targetPhoneme": "z ae1 n dh aa1 k r ow1 ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2193
+  },
+  {
+    "text": "Xenial",
+    "targetPhoneme": "z iy1 n iy0 ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2194
+  },
+  {
+    "text": "Xtian",
+    "targetPhoneme": "z sh ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2195
+  },
+  {
+    "text": "Xenomorphic",
+    "targetPhoneme": "z eh0 n ah0 m ao1 r f ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2196
+  },
+  {
+    "text": "Xerophagia",
+    "targetPhoneme": "z ih1 r aa0 f ae1 g iy0 ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2197
+  },
+  {
+    "text": "Xlnt",
+    "targetPhoneme": "z l n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2198
+  },
+  {
+    "text": "Xanthodontous",
+    "targetPhoneme": "z ae1 n th ah0 d aa1 n t ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2199
+  },
+  {
+    "text": "Yank",
+    "targetPhoneme": "y ae1 ng k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2205
+  },
+  {
+    "text": "Yawp",
+    "targetPhoneme": "y ao1 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2207
+  },
+  {
+    "text": "Yeoman",
+    "targetPhoneme": "y ow1 m ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2209
+  },
+  {
+    "text": "Yearn",
+    "targetPhoneme": "y er1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2211
+  },
+  {
+    "text": "Yak",
+    "targetPhoneme": "y ae1 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2213
+  },
+  {
+    "text": "Yammering",
+    "targetPhoneme": "y ae1 m er0 ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2214
+  },
+  {
+    "text": "Yelp",
+    "targetPhoneme": "y eh1 l p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2215
+  },
+  {
+    "text": "Yammer",
+    "targetPhoneme": "y ae1 m er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2216
+  },
+  {
+    "text": "Yobbo",
+    "targetPhoneme": "y aa1 b ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2218
+  },
+  {
+    "text": "Yawl",
+    "targetPhoneme": "y ao1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2220
+  },
+  {
+    "text": "Yowl",
+    "targetPhoneme": "y aw1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2221
+  },
+  {
+    "text": "Yelped",
+    "targetPhoneme": "y eh1 l p t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2222
+  },
+  {
+    "text": "Yowling",
+    "targetPhoneme": "y aw1 l ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2223
+  },
+  {
+    "text": "Yule",
+    "targetPhoneme": "y uw1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2227
+  },
+  {
+    "text": "Yore",
+    "targetPhoneme": "y ao1 r ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2228
+  },
+  {
+    "text": "Yare",
+    "targetPhoneme": "y eh1 r ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2229
+  },
+  {
+    "text": "Yokefellow",
+    "targetPhoneme": "y ow1 k ah0 f eh0 l ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2230
+  },
+  {
+    "text": "Yaw",
+    "targetPhoneme": "y ao1 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2231
+  },
+  {
+    "text": "Yawn",
+    "targetPhoneme": "y ao1 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2232
+  },
+  {
+    "text": "Yokemate",
+    "targetPhoneme": "y ow1 k m ey0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2234
+  },
+  {
+    "text": "Yoop",
+    "targetPhoneme": "y uw1 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2235
+  },
+  {
+    "text": "Yahoo",
+    "targetPhoneme": "y aa1 hh uw0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2236
+  },
+  {
+    "text": "Yap",
+    "targetPhoneme": "y ae1 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2237
+  },
+  {
+    "text": "Yucky",
+    "targetPhoneme": "y ah1 k iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2238
+  },
+  {
+    "text": "Yerk",
+    "targetPhoneme": "y er1 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2239
+  },
+  {
+    "text": "Yapping",
+    "targetPhoneme": "y ae1 p ih0 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2241
+  },
+  {
+    "text": "Yammered",
+    "targetPhoneme": "y ae1 m er0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2242
+  },
+  {
+    "text": "Yeet",
+    "targetPhoneme": "y iy1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2243
+  },
+  {
+    "text": "Ylike",
+    "targetPhoneme": "iy0 l ay0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2244
+  },
+  {
+    "text": "Yuletide",
+    "targetPhoneme": "y uw1 l t ay0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2248
+  },
+  {
+    "text": "Yay",
+    "targetPhoneme": "y ey1 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2249
+  },
+  {
+    "text": "Zephyr",
+    "targetPhoneme": "z eh1 f er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2252
+  },
+  {
+    "text": "Zany",
+    "targetPhoneme": "z ey1 n iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2254
+  },
+  {
+    "text": "Zaftig",
+    "targetPhoneme": "z ae1 f t ih0 g ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2255
+  },
+  {
+    "text": "Zealot",
+    "targetPhoneme": "z eh1 l ah0 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2257
+  },
+  {
+    "text": "Zing",
+    "targetPhoneme": "z ih1 ng ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2258
+  },
+  {
+    "text": "Zealotry",
+    "targetPhoneme": "z eh1 l ah0 t r iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2259
+  },
+  {
+    "text": "Zesty",
+    "targetPhoneme": "z eh1 s t iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2260
+  },
+  {
+    "text": "Zilch",
+    "targetPhoneme": "z ih1 l ch ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2261
+  },
+  {
+    "text": "Zizz",
+    "targetPhoneme": "z ih1 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2262
+  },
+  {
+    "text": "Zeitgeist",
+    "targetPhoneme": "t s ay1 t g ay0 s t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2263
+  },
+  {
+    "text": "Zoar",
+    "targetPhoneme": "z ao1 r ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2264
+  },
+  {
+    "text": "Zoomorphism",
+    "targetPhoneme": "z uw1 m ao1 r f ih0 z ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2265
+  },
+  {
+    "text": "Zestful",
+    "targetPhoneme": "z eh1 s t f ah0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2266
+  },
+  {
+    "text": "Zetetic",
+    "targetPhoneme": "z ah0 t eh1 t ih0 k ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2267
+  },
+  {
+    "text": "Zoftig",
+    "targetPhoneme": "z ow1 f t ih0 g ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2268
+  },
+  {
+    "text": "Zipperhead",
+    "targetPhoneme": "z ih1 p er0 hh eh0 d ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2273
+  },
+  {
+    "text": "Zealotism",
+    "targetPhoneme": "z iy1 l ah0 t ih0 z ah0 m ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2274
+  },
+  {
+    "text": "Zebra",
+    "targetPhoneme": "z iy1 b r ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2275
+  },
+  {
+    "text": "Zealousness",
+    "targetPhoneme": "z eh1 l ah0 s n ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2276
+  },
+  {
+    "text": "Zephyrous",
+    "targetPhoneme": "z eh1 f r ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2277
+  },
+  {
+    "text": "Zinger",
+    "targetPhoneme": "z ih1 ng er0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2279
+  },
+  {
+    "text": "Zazen",
+    "targetPhoneme": "z ey1 z ah0 n ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2280
+  },
+  {
+    "text": "Zilant",
+    "targetPhoneme": "z ah0 l ah0 n t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2281
+  },
+  {
+    "text": "Zap",
+    "targetPhoneme": "z ae1 p ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2283
+  },
+  {
+    "text": "Zydeco",
+    "targetPhoneme": "z ay1 d ah0 k ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2284
+  },
+  {
+    "text": "Zealously",
+    "targetPhoneme": "z iy1 l ah0 s l iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2285
+  },
+  {
+    "text": "Zorro",
+    "targetPhoneme": "z ao1 r ow0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2286
+  },
+  {
+    "text": "Zephyrs",
+    "targetPhoneme": "z eh1 f er0 z ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2287
+  },
+  {
+    "text": "Zotheca",
+    "targetPhoneme": "z ah1 th eh1 k ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2288
+  },
+  {
+    "text": "Zephyrette",
+    "targetPhoneme": "z eh1 f ih0 r eh1 t ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2289
+  },
+  {
+    "text": "Zeugma",
+    "targetPhoneme": "z uw1 g m ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2290
+  },
+  {
+    "text": "Zigzag",
+    "targetPhoneme": "z ih1 g z ae0 g ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2291
+  },
+  {
+    "text": "Zoophilia",
+    "targetPhoneme": "z uw1 f iy1 l iy0 ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2293
+  },
+  {
+    "text": "Zenana",
+    "targetPhoneme": "z iy1 n ae1 n ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2294
+  },
+  {
+    "text": "Zenithal",
+    "targetPhoneme": "z iy1 n ih0 th ao0 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2295
+  },
+  {
+    "text": "Zestless",
+    "targetPhoneme": "z eh1 s t l ah0 s ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2296
+  },
+  {
+    "text": "Zeroa",
+    "targetPhoneme": "z ih1 r ow1 ah0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2297
+  },
+  {
+    "text": "Zeale",
+    "targetPhoneme": "z iy1 l ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2298
+  },
+  {
+    "text": "Zealousy",
+    "targetPhoneme": "z eh1 l ah0 s iy0 ",
+    "cefrLevel": "C2",
+    "minimalPairId": 2299
+  }
+]

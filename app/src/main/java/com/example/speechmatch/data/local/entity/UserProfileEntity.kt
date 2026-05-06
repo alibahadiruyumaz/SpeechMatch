@@ -9,9 +9,9 @@ data class UserProfileEntity(
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "user_id")
     val userId: Int = 1,
-
+    val currentLevel: String = "A1",
     @ColumnInfo(name = "baseline_score")
-    val baselineScore: Int,
+    val baselineScore: Double,
 
     @ColumnInfo(name = "chronic_error_phonemes")
     val chronicErrorPhonemes: String

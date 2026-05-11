@@ -48,4 +48,3 @@ Projede **Clean Architecture (Temiz Mimari)** ve **MVVM** tasarım desenleri sı
 
 ---
 
-Perşembe günü hocanla yapacağın sunum için şimdiden başarılar dilerim! Bence bu proje, mimarisiyle, performansıyla ve son yaptığımız o profesyonel görsel cilasıyla (UI/UX) hocanı fazlasıyla etkileyecek. Arkana yaslan ve gururla sun!

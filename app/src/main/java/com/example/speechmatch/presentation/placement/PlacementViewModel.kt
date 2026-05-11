@@ -38,7 +38,7 @@ class PlacementViewModel @Inject constructor(
             val allWords = repository.getAllActiveWords()
             // Her seviyeden RASTGELE 2 kelime seçerek sınavı daha dengeli yapıyoruz
             val testSet = allWords.groupBy { it.cefrLevel }
-                .map { it.value.shuffled().take(2) } // .shuffled() eklendi
+                .map { it.value.shuffled().take(2) }
                 .flatten()
 
             _state.update { it.copy(testWords = testSet, isLoading = false) }

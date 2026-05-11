@@ -22,7 +22,7 @@ class UpdateSm2SpacedRepetitionUseCase {
         consecutiveCorrect: Int
     ): Sm2Result {
 
-        // Formüldeki 'f' takıları kaldırıldı, Kotlin artık bunları varsayılan Double olarak işleyecek
+
         var newEaseFactor = previousEaseFactor + (0.1 - (5 - qualityScore) * (0.08 + (5 - qualityScore) * 0.02))
         if (newEaseFactor < 1.3) {
             newEaseFactor = 1.3

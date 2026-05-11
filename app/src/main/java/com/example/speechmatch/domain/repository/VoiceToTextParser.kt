@@ -8,6 +8,8 @@ interface VoiceToTextParser {
     fun startListening(languageCode: String)
     fun stopListening()
     fun destroy()
+
+    fun reset()
 }
 
 // 2. Sözleşmenin veri paketi: Mikrofonun anlık durumunu tutan Veri Sınıfı (Data Class)

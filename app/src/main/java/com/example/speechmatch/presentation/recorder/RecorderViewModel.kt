@@ -9,6 +9,7 @@ import com.example.speechmatch.domain.repository.SpeechMatchRepository
 import com.example.speechmatch.domain.repository.VoiceToTextParser
 import com.example.speechmatch.domain.usecase.EvaluatePronunciationUseCase
 import com.example.speechmatch.domain.usecase.EvaluationResult
+import com.example.speechmatch.domain.util.SpeechMatchTTS
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -28,19 +29,18 @@ class RecorderViewModel @Inject constructor(
     private val voiceParser: VoiceToTextParser,
     private val headsetObserver: HeadsetStateObserver,
     private val repository: SpeechMatchRepository,
-    private val evaluatePronunciationUseCase: EvaluatePronunciationUseCase
+    private val evaluatePronunciationUseCase: EvaluatePronunciationUseCase,
+    private val tts: SpeechMatchTTS
 ) : ViewModel() {
 
     private val _viewState = MutableStateFlow(RecorderViewState())
 
-    // REAKTİF BİRLEŞTİRME MOTORU (Single Source of Truth)
     val state = combine(
         voiceParser.state,
         headsetObserver.isHeadsetConnected,
         _viewState
     ) { parserState, isHeadsetConnected, viewState ->
 
-        // SPRINT 10: DURUM SIZINTISI (STATE LEAK) GÜVENLİK DUVARI
         val priorityError = if (viewState.errorMessage == "BITTI" || viewState.errorMessage?.contains("hatası") == true) {
             viewState.errorMessage
         } else {
@@ -54,7 +54,6 @@ class RecorderViewModel @Inject constructor(
             isHeadsetConnected = isHeadsetConnected,
             activeWord = viewState.activeWord,
             evaluationResult = viewState.evaluationResult,
-            // SPRINT 10: Yeni oturum verileri UI'a bağlanıyor
             sessionResults = viewState.sessionResults,
             isSessionFinished = viewState.isSessionFinished
         )
@@ -65,6 +64,7 @@ class RecorderViewModel @Inject constructor(
     )
 
     init {
+        voiceParser.reset()
         headsetObserver.startObserving()
         seedDatabaseFromJson()
     }
@@ -112,7 +112,7 @@ class RecorderViewModel @Inject constructor(
                 if (wordsToReview.isNotEmpty()) {
                     _viewState.update {
                         it.copy(
-                            activeWord = wordsToReview.first(),
+                            activeWord = wordsToReview.random(),
                             errorMessage = null,
                             evaluationResult = null
                         )
@@ -132,12 +132,14 @@ class RecorderViewModel @Inject constructor(
         }
     }
 
-    fun startListening() {
-        if (!state.value.isHeadsetConnected) {
-            _viewState.update { it.copy(errorMessage = "Yankıyı önlemek için kulaklık takın!") }
-            return
+    fun playActiveWord() {
+        state.value.activeWord?.let { word ->
+            tts.speak(word.text)
         }
+    }
 
+    fun startListening() {
+        // KULAKLIK ZORUNLULUĞU KALDIRILDI! Sadece kelime var mı diye bakıyoruz.
         if (state.value.activeWord == null) {
             _viewState.update { it.copy(errorMessage = "Önce hedef kelimeyi yüklemelisiniz.") }
             return
@@ -168,7 +170,6 @@ class RecorderViewModel @Inject constructor(
             try {
                 val result = evaluatePronunciationUseCase(targetEntity, sanitizedText)
 
-                // SPRINT 11: Detaylı sonuç kara kutuya ekleniyor
                 _viewState.update {
                     it.copy(
                         evaluationResult = result,
@@ -186,22 +187,24 @@ class RecorderViewModel @Inject constructor(
     }
 
     fun proceedToNextWord() {
+        voiceParser.reset()
         loadNextWordFromDatabase()
     }
 
-    // SPRINT 10: Dersi bitirme fonksiyonu
     fun finishSession() {
         _viewState.update { it.copy(isSessionFinished = true) }
     }
-
+    // SPRINT 14: Yanlışlıkla dersi bitirenler için geri dönüş fonksiyonu
+    fun resumeSession() {
+        _viewState.update { it.copy(isSessionFinished = false) }
+    }
     override fun onCleared() {
         super.onCleared()
         headsetObserver.stopObserving()
         voiceParser.destroy()
+        tts.shutdown()
     }
 }
-
-// --- RecorderViewModel.kt dosyasının EN ALTINA eklenecek/değiştirilecek kısımlar ---
 
 data class SessionWordResult(
     val targetWord: String,

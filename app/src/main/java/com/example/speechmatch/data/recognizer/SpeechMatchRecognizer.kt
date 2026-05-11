@@ -97,4 +97,8 @@ class SpeechMatchRecognizer(
     }
 
     override fun onEvent(eventType: Int, params: Bundle?) {}
+
+    override fun reset() {
+        _state.update { it.copy(spokenText = "", error = null) }
+    }
 }

@@ -44,5 +44,7 @@ data class ReviewLogEntity(
 
     /** SM-2: Kelimenin tekrar çalışılması gereken tarih (Epoch ms). */
     @ColumnInfo(name = "next_review_date")
-    val nextReviewDate: Long
+    val nextReviewDate: Long,
+
+    val consecutiveCorrectAnswers: Int = 0
 )

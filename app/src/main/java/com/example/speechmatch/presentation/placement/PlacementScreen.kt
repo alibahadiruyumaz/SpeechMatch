@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
@@ -28,6 +29,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
  * interaktif seviye belirleme sınavı ekranı.
  * * Bu ekran; ses tanıma motoru, dinamik tema desteği (Dark/Light Mode) ve
  * Android çalışma zamanı izinlerini (Runtime Permissions) koordine eder.
+ * Ayrıca uzun kelimelerde (Örn: "Unpretentious") UI bozulmalarını önleyen dinamik font boyutlandırması içerir.
  * * @param viewModel Sınav mantığını, skor hesaplamasını ve ses motoru durumunu yöneten [PlacementViewModel].
  * @param onTestFinished Sınav başarıyla tamamlandığında, hesaplanan seviye bilgisiyle ana ekrana yönlendiren geri çağırım.
  */
@@ -106,7 +108,7 @@ fun PlacementScreen(
             // Durum 3: Aktif Sınav Soruları (Interactive Test State)
             val currentWord = state.testWords.getOrNull(state.currentWordIndex)
 
-            // --- YENİ: KULAKLIK UYARISI EKLENDİ ---
+            // --- KULAKLIK UYARISI EKLENDİ ---
             if (!state.isHeadsetConnected) {
                 Row(
                     modifier = Modifier
@@ -141,8 +143,25 @@ fun PlacementScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(text = "OKUNACAK KELİME", color = secondaryTextColor, fontSize = 12.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
-                        Text(text = currentWord.text, fontSize = 42.sp, fontWeight = FontWeight.ExtraBold, color = accentColor, modifier = Modifier.padding(top = 16.dp))
-                        // NOT: "targetPhoneme" kopyası sınav güvenilirliği için buradan tamamen kaldırıldı.
+
+                        /** Sınav ekranı için uzunluk bazlı dinamik font hesaplaması */
+                        val wordLength = currentWord.text.length
+                        val dynamicFontSize = when {
+                            wordLength > 10 -> 32.sp
+                            wordLength > 7 -> 36.sp
+                            else -> 42.sp
+                        }
+
+                        Text(
+                            text = currentWord.text,
+                            fontSize = dynamicFontSize,
+                            fontWeight = FontWeight.ExtraBold,
+                            color = accentColor,
+                            textAlign = TextAlign.Center,
+                            lineHeight = dynamicFontSize,
+                            modifier = Modifier.padding(top = 16.dp)
+                        )
+
                     }
                 }
             }

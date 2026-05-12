@@ -26,6 +26,10 @@ interface VocabularyDao {
     @Query("UPDATE Vocabulary_Table SET is_archived = 1 WHERE id = :id")
     suspend fun archiveWord(id: Int)
 
+    /** Belirli bir seviyedeki (Örn: B1) arşivlenmiş kelime sayısını döndürür. */
+    @Query("SELECT COUNT(*) FROM Vocabulary_Table WHERE cefrLevel = :level AND is_archived = 1")
+    suspend fun getArchivedWordCountByLevel(level: String): Int
+
     /** * Kullanıcının CEFR seviyesine uygun; daha önce hiç çalışılmamış (yeni) veya
      * SM-2 algoritmasına göre tekrar vakti gelmiş aktif kelimeleri getirir.
      */

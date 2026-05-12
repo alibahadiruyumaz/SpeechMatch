@@ -1,7 +1,7 @@
 package com.example.speechmatch.domain.usecase
 
 import java.util.Calendar
-
+import javax.inject.Inject
 /**
  * SM-2 aralıklı tekrar (Spaced Repetition) algoritmasının hesaplama sonucunu barındıran veri sınıfı.
  */
@@ -20,7 +20,7 @@ data class Sm2Result(
  * Levenshtein algoritmasından elde edilen kalite skorunu (q) kullanarak,
  * kelimenin bir sonraki çalışma zamanlamasını (SM-2) otonom olarak hesaplayan UseCase.
  */
-class UpdateSm2SpacedRepetitionUseCase {
+class UpdateSm2SpacedRepetitionUseCase @Inject constructor(){
 
     /**
      * SM-2 formülünü uygulayarak yeni tekrar aralığını (interval) ve kolaylık faktörünü (EF) belirler.

@@ -39,4 +39,7 @@ interface SpeechMatchRepository {
 
     /** Sistemdeki aktif (tekil) kullanıcı profilini getirir. */
     suspend fun getUserProfile(): UserProfileEntity?
+
+    /** Kullanıcının belirli bir seviyede (Örn: B1) arşivlediği (öğrendiği) toplam kelime sayısını döndürür. */
+    suspend fun getArchivedWordCountByLevel(level: String): Int
 }

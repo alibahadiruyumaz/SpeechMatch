@@ -17,6 +17,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -24,7 +27,9 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -35,9 +40,11 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 /**
  * Kullanıcının günlük telaffuz antrenmanlarını yaptığı ve performans raporlarını görüntülediği ana çalışma ekranı.
  * * Bu ekran; gerçek zamanlı ses analizi, donanımsal kulaklık takibi, SM-2 algoritma geri bildirimleri,
- * dairesel başarı grafikleri ve pedagojik (easyRead) okunuş rehberleri sunar.
+ * dairesel başarı grafikleri, pedagojik (easyRead) okunuş rehberleri ve akademik fonetik bilgi paneli sunar.
+ * Ayrıca uzun kelimelerde UI kırılmalarını önlemek için Dinamik Font Boyutlandırması kullanır.
  * * @param viewModel Antrenman sürecini, ses motorunu ve SM-2 ilerleme kayıtlarını yöneten [RecorderViewModel].
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RecorderScreen(
     viewModel: RecorderViewModel = hiltViewModel()
@@ -57,9 +64,11 @@ fun RecorderScreen(
     val errorColor = Color(0xFFEF4444)
     val cardElevation = if (isDark) 8.dp else 2.dp
 
-    /** * Otomatik Değerlendirme Döngüsü:
-     * Kullanıcı konuşmayı bitirdiğinde ve metin hazır olduğunda akustik analizi tetikler.
-     */
+    // Alttan açılan "Info" penceresinin durumunu kontrol eden değişkenler
+    var showInfoSheet by remember { mutableStateOf(false) }
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    /** Otomatik Değerlendirme Döngüsü */
     LaunchedEffect(state.isSpeaking) {
         if (!state.isSpeaking && state.spokenText.isNotBlank() && state.evaluationResult == null) {
             viewModel.evaluateSpeech(state.spokenText)
@@ -90,10 +99,10 @@ fun RecorderScreen(
 
             Text("🎯 Analiz Raporu", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = primaryTextColor, modifier = Modifier.padding(top = 16.dp))
 
-            /** Başarı Oranı Donut Grafiği: Toplam oturum performansını görselleştirir. */
+            /** Başarı Oranı Donut Grafiği */
             Box(
                 contentAlignment = Alignment.Center,
-                modifier = Modifier.padding(vertical = 24.dp).size(140.dp)
+                modifier = Modifier.padding(vertical = 16.dp).size(130.dp)
             ) {
                 CircularProgressIndicator(
                     progress = { 1f },
@@ -110,15 +119,43 @@ fun RecorderScreen(
                     strokeCap = StrokeCap.Round
                 )
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("%$displayPercentage", fontSize = 36.sp, fontWeight = FontWeight.ExtraBold, color = primaryTextColor)
+                    Text("%$displayPercentage", fontSize = 32.sp, fontWeight = FontWeight.ExtraBold, color = primaryTextColor)
                     Text("Başarı", fontSize = 14.sp, color = secondaryTextColor)
                 }
             }
 
-            /** Oturumdaki kelimelerin detaylı hata analizini (Metin işaretleme ile) listeleyen bölüm. */
+            /** Mini İstatistik Satırı */
+            val totalWordsCount = state.sessionResults.size
+            val perfectWordsCount = state.sessionResults.count { it.score == 5 }
+            val worstWord = state.sessionResults.minByOrNull { it.score }?.targetWord ?: "-"
+
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 8.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text("Çalışılan", color = secondaryTextColor, fontSize = 12.sp)
+                    Text(text = "$totalWordsCount", color = primaryTextColor, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                }
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text("Kusursuz", color = secondaryTextColor, fontSize = 12.sp)
+                    Text(text = "$perfectWordsCount", color = successColor, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                }
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text("En Zor", color = secondaryTextColor, fontSize = 12.sp)
+                    Text(text = worstWord, color = errorColor, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                }
+            }
+
+            Spacer(modifier = Modifier.height(8.dp))
+
+            /** Akıllı Sıralama */
+            val sortedResults = state.sessionResults.sortedBy { it.score }
+
+            /** Detaylı hata analizi listesi */
             LazyColumn(modifier = Modifier.weight(1f).fillMaxWidth()) {
-                items(state.sessionResults.size) { index ->
-                    val result = state.sessionResults[index]
+                items(sortedResults.size) { index ->
+                    val result = sortedResults[index]
 
                     Card(
                         modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp),
@@ -126,15 +163,32 @@ fun RecorderScreen(
                         colors = CardDefaults.cardColors(containerColor = cardBgColor)
                     ) {
                         Column(modifier = Modifier.padding(16.dp)) {
-                            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                                Text("Hedef: ${result.targetWord}", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = primaryTextColor)
-                                Text("${result.score} / 5", fontWeight = FontWeight.ExtraBold, color = if(result.score >= 4) successColor else errorColor)
+
+                            // Hedef kelime ve Play butonu
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Text("Hedef: ${result.targetWord}", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = primaryTextColor)
+                                    Text("${result.score} / 5", fontWeight = FontWeight.ExtraBold, color = if(result.score >= 4) successColor else errorColor)
+                                }
+
+                                IconButton(onClick = { viewModel.playWord(result.targetWord) }) {
+                                    Icon(
+                                        imageVector = Icons.Default.PlayArrow,
+                                        contentDescription = "Doğrusunu Dinle",
+                                        tint = accentColor,
+                                        modifier = Modifier.size(32.dp)
+                                    )
+                                }
                             }
 
-                            Spacer(modifier = Modifier.height(8.dp))
+                            Spacer(modifier = Modifier.height(4.dp))
                             Text("Söylediğin:", fontSize = 14.sp, color = secondaryTextColor)
 
-                            /** Karşılaştırmalı Metin İşaretleme: Yanlış söylenen karakterleri vurgular. */
+                            /** Karşılaştırmalı Metin İşaretleme */
                             val annotatedString = buildAnnotatedString {
                                 val target = result.targetWord.lowercase()
                                 val spoken = result.spokenWord.lowercase()
@@ -192,7 +246,7 @@ fun RecorderScreen(
                 Text(text = state.error!!, color = errorColor, fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.padding(bottom = 16.dp))
             }
 
-            /** Yankı (Echo) Uyarısı: Kulaklık takılı değilse kullanıcıyı bilgilendirir. */
+            /** Yankı (Echo) Uyarısı */
             val currentWord = state.activeWord
             if (!state.isHeadsetConnected && currentWord != null) {
                 Row(
@@ -212,35 +266,78 @@ fun RecorderScreen(
                     elevation = CardDefaults.cardElevation(defaultElevation = cardElevation),
                     colors = CardDefaults.cardColors(containerColor = cardBgColor)
                 ) {
-                    Column(
-                        modifier = Modifier.padding(32.dp).fillMaxWidth(),
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        Text(text = "HEDEF KELİME", color = secondaryTextColor, fontSize = 12.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
+                    // KARTI SARMALAYAN KUTU: Info ikonunu sağ üste sabitlemek için
+                    Box(modifier = Modifier.fillMaxWidth()) {
 
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Center,
-                            modifier = Modifier.padding(top = 16.dp)
+                        Column(
+                            modifier = Modifier.padding(32.dp).fillMaxWidth(),
+                            horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            Text(text = currentWord.text, fontSize = 42.sp, fontWeight = FontWeight.ExtraBold, color = accentColor)
-                            IconButton(onClick = { viewModel.playActiveWord() }, modifier = Modifier.padding(start = 12.dp)) {
-                                Icon(imageVector = Icons.Default.PlayArrow, contentDescription = "Dinle", tint = accentColor, modifier = Modifier.size(36.dp))
+                            Text(text = "HEDEF KELİME", color = secondaryTextColor, fontSize = 12.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
+
+                            /** Dinamik Font Boyutu Hesaplama */
+                            val wordLength = currentWord.text.length
+                            val dynamicFontSize = when {
+                                wordLength > 10 -> 28.sp
+                                wordLength > 7 -> 34.sp
+                                else -> 42.sp
+                            }
+
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.Center,
+                                modifier = Modifier
+                                    .padding(top = 16.dp)
+                                    .fillMaxWidth()
+                            ) {
+                                Text(
+                                    text = currentWord.text,
+                                    fontSize = dynamicFontSize,
+                                    fontWeight = FontWeight.ExtraBold,
+                                    color = accentColor,
+                                    textAlign = TextAlign.Center,
+                                    lineHeight = dynamicFontSize,
+                                    modifier = Modifier.weight(1f, fill = false)
+                                )
+                                IconButton(
+                                    onClick = { viewModel.playActiveWord() },
+                                    modifier = Modifier.padding(start = 8.dp)
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.PlayArrow,
+                                        contentDescription = "Dinle",
+                                        tint = accentColor,
+                                        modifier = Modifier.size(36.dp)
+                                    )
+                                }
+                            }
+
+                            // EasyRead Okunuş Rehberi
+                            Surface(
+                                color = accentColor.copy(alpha = 0.1f),
+                                shape = RoundedCornerShape(8.dp),
+                                modifier = Modifier.padding(top = 12.dp)
+                            ) {
+                                Text(
+                                    text = "[ ${currentWord.easyRead} ]",
+                                    color = accentColor,
+                                    fontSize = 22.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
+                                )
                             }
                         }
 
-                        // Sadece eğitim ekranında görünen Okunuş Rehberi (easyRead)
-                        Surface(
-                            color = accentColor.copy(alpha = 0.1f),
-                            shape = RoundedCornerShape(8.dp),
-                            modifier = Modifier.padding(top = 12.dp)
+                        // Info Butonu
+                        IconButton(
+                            onClick = { showInfoSheet = true },
+                            modifier = Modifier.align(Alignment.TopEnd).padding(8.dp)
                         ) {
-                            Text(
-                                text = "[ ${currentWord.easyRead} ]",
-                                color = accentColor,
-                                fontSize = 22.sp,
-                                fontWeight = FontWeight.Bold,
-                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
+                            Icon(
+                                imageVector = Icons.Default.Info,
+                                contentDescription = "Detaylı Bilgi",
+                                tint = secondaryTextColor.copy(alpha = 0.5f),
+                                modifier = Modifier.size(24.dp)
                             )
                         }
                     }
@@ -271,7 +368,7 @@ fun RecorderScreen(
 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                /** Akustik Değerlendirme Sonucu: SM-2 kalite skorunu kullanıcıya sunar. */
+                /** Akustik Değerlendirme Sonucu */
                 state.evaluationResult?.let { result ->
                     val resultColor = if (result.isPerfect) successColor else errorColor
                     Text(text = "Akustik Kalite Skoru: ${result.qualityScore} / 5", color = resultColor, fontSize = 22.sp, fontWeight = FontWeight.Bold)
@@ -322,6 +419,93 @@ fun RecorderScreen(
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         color = if (state.isSpeaking) Color.White else accentColor
+                    )
+                }
+            }
+        }
+    }
+
+    // --- ALTTAN AÇILAN BİLGİ PENCERESİ (BOTTOM SHEET) ---
+    val wordForSheet = state.activeWord
+    if (showInfoSheet && wordForSheet != null) {
+
+        val dynamicNote = remember(wordForSheet) {
+            val p = wordForSheet.targetPhoneme.uppercase()
+            when {
+                p.contains("AH") || p.contains("IH") ->
+                    "Bu kelime 'Schwa' (/ə/) veya kısa /ɪ/ sesi içerir. Türkçede tam karşılığı olmayan bu sesler için 'Dinle' butonunu dikkatle takip edin."
+                p.contains("TH") || p.contains("SH") || p.contains("CH") ->
+                    "Bu kelime İngilizceye özgü özel ünsüz birleşimleri içerir. Dil ve diş pozisyonu telaffuz kalitesini doğrudan etkiler."
+                wordForSheet.text.length <= 4 ->
+                    "Bu kelime temel seslerden oluşur. Telaffuzdaki netlik ve hece üzerindeki vurgu (stress) en önemli kriterdir."
+                else ->
+                    "Başarılı bir telaffuz için hece vurgusuna (vurgulu heceyi daha uzun ve gür söylemek) odaklanın."
+            }
+        }
+
+        ModalBottomSheet(
+            onDismissRequest = { showInfoSheet = false },
+            sheetState = sheetState,
+            containerColor = cardBgColor
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp)
+                    .padding(bottom = 48.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "Fonetik & Analiz Detayı",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = primaryTextColor,
+                    modifier = Modifier.padding(bottom = 16.dp)
+                )
+
+                // Teknik Veri Kartı
+                Card(
+                    colors = CardDefaults.cardColors(containerColor = bgColor),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                            Text("Kelime:", color = secondaryTextColor, fontWeight = FontWeight.Bold)
+                            Text(wordForSheet.text, color = primaryTextColor, fontWeight = FontWeight.ExtraBold)
+                        }
+                        HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp), color = secondaryTextColor.copy(alpha = 0.2f))
+                        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                            Text("Zorluk Seviyesi:", color = secondaryTextColor, fontWeight = FontWeight.Bold)
+                            Text(wordForSheet.cefrLevel, color = accentColor, fontWeight = FontWeight.ExtraBold)
+                        }
+                        HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp), color = secondaryTextColor.copy(alpha = 0.2f))
+                        Column(modifier = Modifier.fillMaxWidth()) {
+                            Text("Makine Fonemi (ARPAbet):", color = secondaryTextColor, fontWeight = FontWeight.Bold)
+                            Text(
+                                text = "/ ${wordForSheet.targetPhoneme} /",
+                                color = primaryTextColor,
+                                fontSize = 15.sp,
+                                modifier = Modifier.padding(top = 6.dp),
+                                fontFamily = FontFamily.Monospace
+                            )
+                        }
+                    }
+                }
+
+                // Pedagojik Uyarı
+                Row(
+                    modifier = Modifier
+                        .background(accentColor.copy(alpha = 0.1f), RoundedCornerShape(12.dp))
+                        .padding(16.dp),
+                    verticalAlignment = Alignment.Top
+                ) {
+                    Icon(imageVector = Icons.Default.Info, contentDescription = null, tint = accentColor, modifier = Modifier.size(24.dp))
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Text(
+                        text = dynamicNote,
+                        color = secondaryTextColor,
+                        fontSize = 13.sp,
+                        lineHeight = 18.sp
                     )
                 }
             }

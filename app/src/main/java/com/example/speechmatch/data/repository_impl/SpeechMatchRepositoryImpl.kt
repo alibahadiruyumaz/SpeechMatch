@@ -68,4 +68,7 @@ class SpeechMatchRepositoryImpl @Inject constructor(
     override suspend fun getUserProfile(): UserProfileEntity? {
         return userProfileDao.getUserProfile()
     }
+    override suspend fun getArchivedWordCountByLevel(level: String): Int {
+        return vocabularyDao.getArchivedWordCountByLevel(level)
+    }
 }

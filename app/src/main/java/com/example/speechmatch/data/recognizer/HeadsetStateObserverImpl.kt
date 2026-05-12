@@ -13,6 +13,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 import javax.inject.Singleton
 
+/** * Yankı (echo) ve geri beslemeyi (feedback) önlemek amacıyla cihazın donanımsal
+ * kulaklık bağlantı durumunu (Bluetooth, USB-C, Jak) eşzamanlı olarak takip eden gözlemci sınıf.
+ */
 @Singleton
 class HeadsetStateObserverImpl @Inject constructor(
     @ApplicationContext private val context: Context
@@ -20,11 +23,11 @@ class HeadsetStateObserverImpl @Inject constructor(
 
     private val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
 
-    // Uygulama ilk açıldığında donanım durumunu hemen kontrol ederek başlarız
+    /** Arayüz katmanına kulaklık bağlantı durumunu reaktif olarak ileten StateFlow. */
     private val _isHeadsetConnected = MutableStateFlow(checkCurrentAudioDevice())
     override val isHeadsetConnected: StateFlow<Boolean> = _isHeadsetConnected.asStateFlow()
 
-    // Donanım değişikliklerini sürücü seviyesinde yakalayan modern sistem kancası
+    /** Donanımsal bağlantı değişikliklerini sürücü seviyesinde yakalayan sistem geri çağırımı. */
     private val audioDeviceCallback = object : android.media.AudioDeviceCallback() {
         override fun onAudioDevicesAdded(addedDevices: Array<out AudioDeviceInfo>?) {
             _isHeadsetConnected.value = checkCurrentAudioDevice()
@@ -35,21 +38,19 @@ class HeadsetStateObserverImpl @Inject constructor(
         }
     }
 
+    /** Kulaklık donanım durumunu dinlemeye başlar ve sistem servisine kayıt olur. */
     override fun startObserving() {
-        // Main Looper üzerinden sistem servislerine kayıt oluyoruz
         audioManager.registerAudioDeviceCallback(audioDeviceCallback, Handler(Looper.getMainLooper()))
-        // Mevcut durumu Flow şelalesine pompala
         _isHeadsetConnected.value = checkCurrentAudioDevice()
     }
 
+    /** Bellek sızıntılarını (memory leak) önlemek için sistem servisi dinlemesini sonlandırır. */
     override fun stopObserving() {
-        // Bellek sızıntısını önlemek için takibi bırakıyoruz
         audioManager.unregisterAudioDeviceCallback(audioDeviceCallback)
     }
 
-    /**
-     * ALGORİTMİK TARAMA: Cihazın tüm aktif çıkış portlarını analiz eder.
-     * Bluetooth (A2DP/SCO), USB-C ve Analog Jack birimlerini kapsar.
+    /** * Aktif çıkış portlarını tarayarak geçerli bir kulaklık biriminin
+     * (Bluetooth A2DP/SCO, Kablolu Jak veya USB-C) bağlı olup olmadığını denetler.
      */
     private fun checkCurrentAudioDevice(): Boolean {
         val devices = audioManager.getDevices(AudioManager.GET_DEVICES_OUTPUTS)

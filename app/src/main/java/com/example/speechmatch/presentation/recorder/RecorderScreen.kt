@@ -32,6 +32,12 @@ import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
+/**
+ * Kullanıcının günlük telaffuz antrenmanlarını yaptığı ve performans raporlarını görüntülediği ana çalışma ekranı.
+ * * Bu ekran; gerçek zamanlı ses analizi, donanımsal kulaklık takibi, SM-2 algoritma geri bildirimleri
+ * ve dairesel başarı grafikleri içeren kapsamlı bir analiz raporu sunar.
+ * * @param viewModel Antrenman sürecini, ses motorunu ve SM-2 ilerleme kayıtlarını yöneten [RecorderViewModel].
+ */
 @Composable
 fun RecorderScreen(
     viewModel: RecorderViewModel = hiltViewModel()
@@ -39,7 +45,7 @@ fun RecorderScreen(
     val state by viewModel.state.collectAsStateWithLifecycle()
     val context = LocalContext.current
 
-    // SİSTEM TEMASI BAĞLANTILARI
+    // --- Dinamik Tema ve Modern Renk Paleti Yapılandırması ---
     val isDark = isSystemInDarkTheme()
     val bgColor = if (isDark) Color(0xFF0B1120) else Color(0xFFF1F5F9)
     val cardBgColor = if (isDark) Color(0xFF1E293B) else Color(0xFFFFFFFF)
@@ -51,12 +57,16 @@ fun RecorderScreen(
     val errorColor = Color(0xFFEF4444)
     val cardElevation = if (isDark) 8.dp else 2.dp
 
+    /** * Otomatik Değerlendirme Döngüsü:
+     * Kullanıcı konuşmayı bitirdiğinde ve metin hazır olduğunda akustik analizi tetikler.
+     */
     LaunchedEffect(state.isSpeaking) {
         if (!state.isSpeaking && state.spokenText.isNotBlank() && state.evaluationResult == null) {
             viewModel.evaluateSpeech(state.spokenText)
         }
     }
 
+    /** Mikrofon erişim izni akışını yöneten fırlatıcı. */
     val permissionLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.RequestPermission(),
         onResult = { isGranted ->
@@ -65,7 +75,7 @@ fun RecorderScreen(
     )
 
     if (state.isSessionFinished) {
-        // --- PREMIUM KARNE EKRANI (GRAFİKLİ) ---
+        // --- Durum 1: Oturum Sonu Analiz Raporu (Premium Report UI) ---
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -80,12 +90,11 @@ fun RecorderScreen(
 
             Text("🎯 Analiz Raporu", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = primaryTextColor, modifier = Modifier.padding(top = 16.dp))
 
-            // YENİ: DAİRESEL PASTA GRAFİĞİ (DONUT CHART)
+            /** Başarı Oranı Donut Grafiği: Toplam oturum performansını görselleştirir. */
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier.padding(vertical = 24.dp).size(140.dp)
             ) {
-                // Arka plan dairesi
                 CircularProgressIndicator(
                     progress = { 1f },
                     modifier = Modifier.fillMaxSize(),
@@ -93,7 +102,6 @@ fun RecorderScreen(
                     strokeWidth = 12.dp,
                     strokeCap = StrokeCap.Round
                 )
-                // İlerleme (Başarı) dairesi
                 CircularProgressIndicator(
                     progress = { progressPercentage },
                     modifier = Modifier.fillMaxSize(),
@@ -101,13 +109,13 @@ fun RecorderScreen(
                     strokeWidth = 12.dp,
                     strokeCap = StrokeCap.Round
                 )
-                // Ortadaki Yüzde Metni
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text("%$displayPercentage", fontSize = 36.sp, fontWeight = FontWeight.ExtraBold, color = primaryTextColor)
                     Text("Başarı", fontSize = 14.sp, color = secondaryTextColor)
                 }
             }
 
+            /** Oturumdaki kelimelerin detaylı hata analizini (Metin işaretleme ile) listeleyen bölüm. */
             LazyColumn(modifier = Modifier.weight(1f).fillMaxWidth()) {
                 items(state.sessionResults.size) { index ->
                     val result = state.sessionResults[index]
@@ -126,6 +134,7 @@ fun RecorderScreen(
                             Spacer(modifier = Modifier.height(8.dp))
                             Text("Söylediğin:", fontSize = 14.sp, color = secondaryTextColor)
 
+                            /** Karşılaştırmalı Metin İşaretleme: Yanlış söylenen karakterleri vurgular. */
                             val annotatedString = buildAnnotatedString {
                                 val target = result.targetWord.lowercase()
                                 val spoken = result.spokenWord.lowercase()
@@ -149,17 +158,15 @@ fun RecorderScreen(
                 }
             }
 
-            // YENİ: YAN YANA İKİ BUTON (Derse Dön ve Çıkış Yap)
             Row(
                 modifier = Modifier.fillMaxWidth().padding(top = 16.dp, bottom = 16.dp),
                 horizontalArrangement = Arrangement.SpaceEvenly,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 OutlinedButton(
-                    onClick = { viewModel.resumeSession() }, // Geri Dönüş Fonksiyonu
+                    onClick = { viewModel.resumeSession() },
                     modifier = Modifier.weight(1f).padding(end = 8.dp).height(60.dp),
-                    shape = RoundedCornerShape(16.dp),
-                    colors = ButtonDefaults.outlinedButtonColors(contentColor = primaryTextColor)
+                    shape = RoundedCornerShape(16.dp)
                 ) {
                     Text("Derse Dön", fontSize = 16.sp, fontWeight = FontWeight.Bold)
                 }
@@ -175,7 +182,7 @@ fun RecorderScreen(
             }
         }
     } else {
-        // --- PREMIUM ANTRENMAN EKRANI (Öncekiyle aynı kaldı) ---
+        // --- Durum 2: Aktif Antrenman Ekranı (Interactive Training UI) ---
         Column(
             modifier = Modifier.fillMaxSize().background(bgColor).padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -185,6 +192,7 @@ fun RecorderScreen(
                 Text(text = state.error!!, color = errorColor, fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.padding(bottom = 16.dp))
             }
 
+            /** Yankı (Echo) Uyarısı: Kulaklık takılı değilse kullanıcıyı bilgilendirir. */
             val currentWord = state.activeWord
             if (!state.isHeadsetConnected && currentWord != null) {
                 Row(
@@ -217,7 +225,7 @@ fun RecorderScreen(
                         ) {
                             Text(text = currentWord.text, fontSize = 42.sp, fontWeight = FontWeight.ExtraBold, color = accentColor)
                             IconButton(onClick = { viewModel.playActiveWord() }, modifier = Modifier.padding(start = 12.dp)) {
-                                Icon(imageVector = Icons.Default.PlayArrow, contentDescription = "Kelimeyi Dinle", tint = accentColor, modifier = Modifier.size(36.dp))
+                                Icon(imageVector = Icons.Default.PlayArrow, contentDescription = "Dinle", tint = accentColor, modifier = Modifier.size(36.dp))
                             }
                         }
                         Text(text = "/ ${currentWord.targetPhoneme} /", color = primaryTextColor, fontSize = 22.sp, modifier = Modifier.padding(top = 8.dp))
@@ -232,7 +240,6 @@ fun RecorderScreen(
                     }
                 } else {
                     CircularProgressIndicator(color = accentColor)
-                    Text(text = "Kelime yükleniyor...", color = secondaryTextColor, modifier = Modifier.padding(top = 16.dp))
                 }
             }
 
@@ -250,6 +257,7 @@ fun RecorderScreen(
 
                 Spacer(modifier = Modifier.height(32.dp))
 
+                /** Akustik Değerlendirme Sonucu: SM-2 kalite skorunu kullanıcıya sunar. */
                 state.evaluationResult?.let { result ->
                     val resultColor = if (result.isPerfect) successColor else errorColor
                     Text(text = "Akustik Kalite Skoru: ${result.qualityScore} / 5", color = resultColor, fontSize = 22.sp, fontWeight = FontWeight.Bold)
@@ -271,8 +279,7 @@ fun RecorderScreen(
                         OutlinedButton(
                             onClick = { viewModel.finishSession() },
                             modifier = Modifier.weight(1f).padding(start = 8.dp).height(56.dp),
-                            shape = RoundedCornerShape(12.dp),
-                            colors = ButtonDefaults.outlinedButtonColors(contentColor = errorColor)
+                            shape = RoundedCornerShape(12.dp)
                         ) {
                             Text("Dersi Bitir", fontSize = 16.sp, fontWeight = FontWeight.Bold)
                         }
@@ -297,7 +304,7 @@ fun RecorderScreen(
                     colors = ButtonDefaults.buttonColors(containerColor = if (state.isSpeaking) errorColor else cardBgColor)
                 ) {
                     Text(
-                        text = if (state.isSpeaking) "Dinlemeyi Durdur ve Analiz Et" else "Konuşmaya Başla",
+                        text = if (state.isSpeaking) "Duraklat ve Analiz Et" else "Konuşmaya Başla",
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         color = if (state.isSpeaking) Color.White else accentColor

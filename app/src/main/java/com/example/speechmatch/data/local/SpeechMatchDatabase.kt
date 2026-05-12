@@ -9,7 +9,9 @@ import com.example.speechmatch.data.local.entity.ReviewLogEntity
 import com.example.speechmatch.data.local.entity.UserProfileEntity
 import com.example.speechmatch.data.local.entity.VocabularyEntity
 
-// Sistemdeki tüm entity'leri (tabloları) burada deklare ediyoruz
+/** * Uygulamanın yerel veri depolama merkezini (SQLite/Room) temsil eden ana veritabanı sınıfı.
+ * Kelime havuzu, SM-2 algoritma günlükleri ve kullanıcı profili tablolarını barındırır.
+ */
 @Database(
     entities = [VocabularyEntity::class, ReviewLogEntity::class, UserProfileEntity::class],
     version = 1,
@@ -17,8 +19,12 @@ import com.example.speechmatch.data.local.entity.VocabularyEntity
 )
 abstract class SpeechMatchDatabase : RoomDatabase() {
 
-    // İşçi sınıfların (DAO'ların) veritabanı ile konuşabilmesi için açılan kapılar
+    /** Kelime havuzu ve çalışma listesi işlemlerini yürüten DAO'ya (Data Access Object) erişim sağlar. */
     abstract val vocabularyDao: VocabularyDao
+
+    /** SM-2 aralıklı tekrar algoritmasının performans kayıtlarını yöneten DAO'ya erişim sağlar. */
     abstract val reviewLogDao: ReviewLogDao
+
+    /** Kullanıcı seviyesi ve teşhis verilerini barındıran DAO'ya erişim sağlar. */
     abstract val userProfileDao: UserProfileDao
 }

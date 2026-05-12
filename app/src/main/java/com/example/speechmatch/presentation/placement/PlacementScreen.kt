@@ -21,17 +21,25 @@ import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
+/**
+ * Kullanıcının başlangıç dil seviyesini (A1, B1, C1) belirlemek için kullanılan
+ * interaktif seviye belirleme sınavı ekranı.
+ * * Bu ekran; ses tanıma motoru, dinamik tema desteği (Dark/Light Mode) ve
+ * Android çalışma zamanı izinlerini (Runtime Permissions) koordine eder.
+ * * @param viewModel Sınav mantığını, skor hesaplamasını ve ses motoru durumunu yöneten [PlacementViewModel].
+ * @param onTestFinished Sınav başarıyla tamamlandığında, hesaplanan seviye bilgisiyle ana ekrana yönlendiren geri çağırım.
+ */
 @Composable
 fun PlacementScreen(
     viewModel: PlacementViewModel = hiltViewModel(),
-    onTestFinished: (String) -> Unit // Sınav bitince ana ekrana yönlendirecek tetikleyici
+    onTestFinished: (String) -> Unit
 ) {
-    // SENİN ORİJİNAL STATE YAPIN
+    // ViewModel durumlarının yaşam döngüsüne duyarlı (lifecycle-aware) şekilde toplanması
     val state by viewModel.state.collectAsStateWithLifecycle()
     val voiceState by viewModel.voiceState.collectAsStateWithLifecycle()
     val context = LocalContext.current
 
-    // --- SPRINT 14: DİNAMİK SİSTEM TEMASI ---
+    // --- Dinamik Sistem Teması ve Renk Paleti Yapılandırması ---
     val isDark = isSystemInDarkTheme()
     val bgColor = if (isDark) Color(0xFF0B1120) else Color(0xFFF1F5F9)
     val cardBgColor = if (isDark) Color(0xFF1E293B) else Color(0xFFFFFFFF)
@@ -43,13 +51,17 @@ fun PlacementScreen(
     val errorColor = Color(0xFFEF4444)
     val cardElevation = if (isDark) 8.dp else 2.dp
 
+    /** Mikrofon erişim izni isteğini yöneten fırlatıcı. */
     val permissionLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) { isGranted ->
         if (isGranted) viewModel.startListening()
     }
 
-    // Otonom Dinleme Ajanı (Senin orijinal mantığın: Sessizlik algılandığında tetiklenir)
+    /** * Otomatik Değerlendirme Ajanı:
+     * Kullanıcı konuşmayı bitirdiğinde (isSpeaking false olduğunda) ve bir metin oluştuğunda
+     * kelimeyi otomatik olarak değerlendirmeye gönderir.
+     */
     LaunchedEffect(voiceState.isSpeaking) {
         if (!voiceState.isSpeaking && voiceState.spokenText.isNotBlank()) {
             viewModel.onWordSpoken(voiceState.spokenText)
@@ -62,12 +74,12 @@ fun PlacementScreen(
         verticalArrangement = Arrangement.Center
     ) {
         if (state.isLoading) {
-            // YÜKLENİYOR EKRANI
+            // Durum 1: Sınav Soruları Hazırlanıyor (Loading State)
             CircularProgressIndicator(color = accentColor)
             Text("Sınav Hazırlanıyor...", color = secondaryTextColor, modifier = Modifier.padding(top = 16.dp))
 
         } else if (state.isTestFinished) {
-            // SINAV BİTİŞ EKRANI
+            // Durum 2: Sınav Tamamlandı ve Seviye Hesaplandı (Success/Result State)
             Text("🎉 Sınav Tamamlandı!", fontSize = 32.sp, fontWeight = FontWeight.Bold, color = successColor)
             Text("Teşhis Edilen Seviye:", fontSize = 20.sp, color = secondaryTextColor, modifier = Modifier.padding(top = 16.dp))
 
@@ -89,7 +101,7 @@ fun PlacementScreen(
             }
 
         } else {
-            // AKTİF SINAV EKRANI
+            // Durum 3: Aktif Sınav Soruları (Interactive Test State)
             val currentWord = state.testWords.getOrNull(state.currentWordIndex)
 
             Text("Seviye Belirleme Sınavı", color = secondaryTextColor, fontSize = 18.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.sp)
@@ -131,6 +143,7 @@ fun PlacementScreen(
 
             Spacer(modifier = Modifier.height(48.dp))
 
+            // Ses Tanıma Kontrol Butonu: İzin kontrolü ve motor tetiklemesi sağlar.
             Button(
                 onClick = {
                     if (voiceState.isSpeaking) {

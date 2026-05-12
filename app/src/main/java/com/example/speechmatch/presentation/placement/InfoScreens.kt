@@ -14,9 +14,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+/**
+ * Uygulamanın ilk açılışında kullanıcıyı karşılayan karşılama ekranı.
+ * Sistem temasına (Dark/Light) göre dinamik renk paleti kullanır.
+ * * @param onStartTest Seviye belirleme sınavına geçişi tetikleyen geri çağırım (callback).
+ */
 @Composable
 fun WelcomeScreen(onStartTest: () -> Unit) {
-    // SİSTEM TEMASI (Açık / Koyu)
     val isDark = isSystemInDarkTheme()
     val bgColor = if (isDark) Color(0xFF0B1120) else Color(0xFFF1F5F9)
     val primaryTextColor = if (isDark) Color.White else Color(0xFF0F172A)
@@ -75,9 +79,14 @@ fun WelcomeScreen(onStartTest: () -> Unit) {
     }
 }
 
+/**
+ * Seviye belirleme sınavı sonucunda kullanıcının CEFR seviyesini gösteren sonuç ekranı.
+ * Seviyeye özel dinamik açıklama metinleri (A1, B1, C1) sunar.
+ * * @param level Teşhis edilen kullanıcı seviyesi (Örn: "A1").
+ * @param onStartTraining Ana çalışma (antrenman) ekranına geçişi tetikleyen geri çağırım.
+ */
 @Composable
 fun LevelIntroScreen(level: String, onStartTraining: () -> Unit) {
-    // SİSTEM TEMASI (Açık / Koyu)
     val isDark = isSystemInDarkTheme()
     val bgColor = if (isDark) Color(0xFF0B1120) else Color(0xFFF1F5F9)
     val primaryTextColor = if (isDark) Color.White else Color(0xFF0F172A)
@@ -85,7 +94,6 @@ fun LevelIntroScreen(level: String, onStartTraining: () -> Unit) {
     val accentColor = if (isDark) Color(0xFFD0FF9A) else Color(0xFF2563EB)
     val accentTextColor = if (isDark) Color(0xFF0F172A) else Color.White
 
-    // SENİN HARİKA DİNAMİK AÇIKLAMA MANTIĞIN KORUNDU
     val description = when(level) {
         "A1" -> "Harika! İngilizce yolculuğuna temelden başlıyoruz. A1 seviyesinde en temel sesleri ve günlük kelimeleri öğreneceksin."
         "B1" -> "Güzel bir temeliniz var! B1 seviyesinde daha karmaşık kelime yapıları ve akıcı konuşma üzerine çalışacağız."

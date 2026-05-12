@@ -32,13 +32,19 @@ import com.example.speechmatch.presentation.recorder.RecorderScreen
 import com.example.speechmatch.presentation.splash.SplashViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * Uygulamanın tek aktivite (Single Activity Architecture) giriş noktası.
+ * * Android 12+ Splash Screen desteği, Hilt bağımlılık enjeksiyonu ve
+ * Jetpack Compose navigasyon yapısını barındırır.
+ */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Modern Android Splash Screen API kurulumu
         installSplashScreen()
         super.onCreate(savedInstanceState)
         setContent {
-            // SPRINT 14: SİSTEM TEMASI ENTEGRASYONU (Açık/Koyu uyumu)
+            // Sistem temasına (Dark/Light) duyarlı küresel arka plan yapılandırması
             val isDark = isSystemInDarkTheme()
             val systemBgColor = if (isDark) Color(0xFF0B1120) else Color(0xFFF1F5F9)
 
@@ -54,6 +60,12 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+/**
+ * Uygulamanın tüm navigasyon (rota) yönetimini, ekran geçiş animasyonlarını
+ * ve başlangıç hedefi (Start Destination) karar mekanizmasını yöneten ana bileşen.
+ * * @param splashViewModel Uygulamanın hangi ekrandan (Sınav veya Antrenman)
+ * başlayacağına karar veren [SplashViewModel].
+ */
 @Composable
 fun AppRouter(
     splashViewModel: SplashViewModel = hiltViewModel()
@@ -64,11 +76,11 @@ fun AppRouter(
     val systemBgColor = if (isDark) Color(0xFF0B1120) else Color(0xFFF1F5F9)
     val accentColor = if (isDark) Color(0xFFD0FF9A) else Color(0xFF2563EB)
 
-    // Animasyon Süresi (Milisaniye)
+    // Navigasyon geçişleri için standart süre (500ms)
     val animationDuration = 500
 
     if (startDestination == null) {
-        // YÜKLENİYOR (SPLASH) EKRANI
+        // Durum 1: Başlangıç rotası hesaplanırken (Veritabanı kontrolü/Seeding) gösterilen yükleme alanı.
         Box(
             modifier = Modifier.fillMaxSize().background(systemBgColor),
             contentAlignment = Alignment.Center
@@ -76,10 +88,11 @@ fun AppRouter(
             CircularProgressIndicator(color = accentColor)
         }
     } else {
+        // Durum 2: Navigasyon Grafiği (NavGraph) Tanımlaması
         NavHost(
             navController = navController,
             startDestination = startDestination!!,
-            // TÜM EKRANLAR İÇİN VARSAYILAN ÇIKIŞ VE GİRİŞ ANİMASYONLARI
+            // Ekranlar arası kayma ve solma (Slide & Fade) animasyonlarının merkezi tanımı
             enterTransition = {
                 slideIntoContainer(
                     towards = AnimatedContentTransitionScope.SlideDirection.Left,
@@ -105,35 +118,36 @@ fun AppRouter(
                 ) + fadeOut(animationSpec = tween(animationDuration))
             }
         ) {
-            // ROTA: Karşılama Ekranı
+            // ROTA: Seviye belirleme öncesi karşılama ekranı.
             composable("placement") {
                 WelcomeScreen(onStartTest = { navController.navigate("actual_test") })
             }
 
-            // ROTA: Gerçek Sınav Ekranı
+            // ROTA: Aktif ses analizinin yapıldığı seviye tespit sınavı.
             composable("actual_test") {
                 PlacementScreen(
                     onTestFinished = { calculatedLevel ->
                         navController.navigate("level_intro/$calculatedLevel") {
+                            // Sınav ekranını geri yığınından temizler (Back-stack management)
                             popUpTo("actual_test") { inclusive = true }
                         }
                     }
                 )
             }
 
-            // ROTA: Seviye Tanıtım Ekranı (B1 vs.)
+            // ROTA: Tespit edilen seviyenin kullanıcıya açıklandığı ara ekran.
             composable("level_intro/{level}") { backStackEntry ->
                 val calculatedLevel = backStackEntry.arguments?.getString("level") ?: "A1"
 
                 LevelIntroScreen(level = calculatedLevel) {
                     navController.navigate("recorder") {
-                        // Eğitime başlandığında tüm sınav geçmişini sırtından at (Geri tuşu ile dönülmesin)
+                        // Eğitim başladığında tüm sınav sürecini yığından atar.
                         popUpTo("placement") { inclusive = true }
                     }
                 }
             }
 
-            // ROTA: Ana Antrenman Ekranı
+            // ROTA: SM-2 algoritmasının ve günlük antrenmanların yapıldığı ana ekran.
             composable("recorder") {
                 RecorderScreen()
             }

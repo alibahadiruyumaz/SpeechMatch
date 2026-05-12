@@ -9,10 +9,8 @@ import com.example.speechmatch.data.local.entity.VocabularyEntity
 import com.example.speechmatch.domain.repository.SpeechMatchRepository
 import javax.inject.Inject
 
-/**
- * Data Katmanı İşçi Sınıfı (Implementation).
- * Domain katmanındaki SpeechMatchRepository anayasasına kesin bir şekilde uyar.
- * Gelen soyut emirleri, Room DB DAO'ları aracılığıyla fiziksel disk işlemlerine dönüştürür.
+/** * Domain katmanındaki soyut arayüzü uygulayan ve Room DAO'larını (Veri Erişim Nesneleri)
+ * koordine eden veri deposu (Repository) implementasyonu.
  */
 class SpeechMatchRepositoryImpl @Inject constructor(
     private val vocabularyDao: VocabularyDao,
@@ -21,43 +19,52 @@ class SpeechMatchRepositoryImpl @Inject constructor(
 ) : SpeechMatchRepository {
 
     // --- VOCABULARY İŞLEMLERİ ---
+
+    /** Yeni bir kelimeyi veritabanına kaydeder. */
     override suspend fun insertWord(word: VocabularyEntity): Long {
         return vocabularyDao.insertWord(word)
     }
 
+    /** Arşivlenmemiş (aktif) tüm kelimeleri getirir. */
     override suspend fun getAllActiveWords(): List<VocabularyEntity> {
         return vocabularyDao.getAllActiveWords()
     }
 
+    /** Belirtilen kimliğe sahip kelimeyi getirir. */
     override suspend fun getWordWithMinimalPair(targetId: Int): List<VocabularyEntity> {
         return vocabularyDao.getWordWithMinimalPair(targetId)
     }
 
+    /** SM-2 barajını geçen kelimeyi arşivler. */
     override suspend fun archiveWord(id: Int) {
         vocabularyDao.archiveWord(id)
     }
 
+    /** Kullanıcının seviyesine uygun, henüz çalışılmamış veya tekrar vakti gelmiş kelimeleri getirir. */
     override suspend fun getWordsToReview(currentTimeMillis: Long): List<VocabularyEntity> {
-        // İleride DAO içerisinde bugünden önce tekrar edilmesi gereken kelimeleri getiren SQL yazılacak
         return vocabularyDao.getWordsToReview(currentTimeMillis)
     }
 
     // --- SM-2 REVIEW LOG İŞLEMLERİ ---
+
+    /** Belirli bir kelimenin mevcut SM-2 ilerlemesini ve geçmişini getirir. */
     override suspend fun getReviewLogForWord(vocabId: Int): ReviewLogEntity? {
-        // Arayüzdeki yeni ismi, DAO'daki eski isme (getLogForWord) bağlıyoruz
         return reviewLogDao.getLogForWord(vocabId)
     }
 
+    /** Kelimeye ait SM-2 tekrar günlüğünü veritabanına ekler veya günceller (UPSERT). */
     override suspend fun insertOrUpdateReviewLog(reviewLog: ReviewLogEntity) {
-        // Arayüzdeki yeni ismi, DAO'daki eski isme (upsertLog) bağlıyoruz
         reviewLogDao.upsertLog(reviewLog)
     }
 
     // --- USER PROFILE İŞLEMLERİ ---
+
+    /** Kullanıcı profilini ve teşhis verilerini ekler veya günceller (UPSERT). */
     override suspend fun upsertProfile(profile: UserProfileEntity) {
         userProfileDao.upsertProfile(profile)
     }
 
+    /** Sistemdeki aktif kullanıcı profilini getirir. */
     override suspend fun getUserProfile(): UserProfileEntity? {
         return userProfileDao.getUserProfile()
     }

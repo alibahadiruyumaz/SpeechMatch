@@ -23,6 +23,11 @@ import kotlinx.coroutines.launch
 import org.json.JSONArray
 import javax.inject.Inject
 
+/**
+ * Antrenman ekranının iş mantığını, ses analizini ve asenkron veri akışlarını yöneten ana kontrol merkezi.
+ * * Bu ViewModel; ses tanıma (STT), metin seslendirme (TTS), kulaklık durumu ve veritabanı işlemlerini
+ * 'combine' operatörü ile birleştirerek tek bir UI State üzerinden sunar.
+ */
 @HiltViewModel
 class RecorderViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
@@ -33,14 +38,19 @@ class RecorderViewModel @Inject constructor(
     private val tts: SpeechMatchTTS
 ) : ViewModel() {
 
+    /** ViewModel içi içsel durum yönetimi (View State). */
     private val _viewState = MutableStateFlow(RecorderViewState())
 
+    /** * Üç farklı veri kaynağını (Ses motoru, Donanım gözlemcisi, Dahili durum) birleştirerek
+     * UI katmanına tutarlı bir [RecorderUiState] sağlayan ana akış.
+     */
     val state = combine(
         voiceParser.state,
         headsetObserver.isHeadsetConnected,
         _viewState
     ) { parserState, isHeadsetConnected, viewState ->
 
+        // Hata önceliklendirme mantığı: Kritik sistem hataları, parser hatalarına göre önceliklidir.
         val priorityError = if (viewState.errorMessage == "BITTI" || viewState.errorMessage?.contains("hatası") == true) {
             viewState.errorMessage
         } else {
@@ -69,6 +79,9 @@ class RecorderViewModel @Inject constructor(
         seedDatabaseFromJson()
     }
 
+    /** * Veritabanı boşsa JSON üzerinden ön yükleme (Seed) yapar,
+     * doluysa doğrudan çalışma listesini (Next Word) hazırlar.
+     */
     private fun seedDatabaseFromJson() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
@@ -83,7 +96,6 @@ class RecorderViewModel @Inject constructor(
 
                 for (i in 0 until jsonArray.length()) {
                     val jsonObject = jsonArray.getJSONObject(i)
-
                     val entity = VocabularyEntity(
                         id = 0,
                         text = jsonObject.getString("text"),
@@ -95,36 +107,25 @@ class RecorderViewModel @Inject constructor(
                     repository.insertWord(entity)
                 }
                 loadNextWordFromDatabase()
-
             } catch (e: Exception) {
-                _viewState.update { it.copy(errorMessage = "JSON Ayrıştırma (Parsing) Hatası: ${e.message}") }
+                _viewState.update { it.copy(errorMessage = "JSON Ayrıştırma Hatası: ${e.message}") }
             }
         }
     }
 
+    /** SM-2 zamanlamasına göre bugün tekrar edilmesi gereken kelimelerden rastgele birini yükler. */
     private fun loadNextWordFromDatabase() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                delay(300)
-
+                delay(300) // UI geçişleri için kısa bekleme
                 val wordsToReview = repository.getWordsToReview(System.currentTimeMillis())
 
                 if (wordsToReview.isNotEmpty()) {
                     _viewState.update {
-                        it.copy(
-                            activeWord = wordsToReview.random(),
-                            errorMessage = null,
-                            evaluationResult = null
-                        )
+                        it.copy(activeWord = wordsToReview.random(), errorMessage = null, evaluationResult = null)
                     }
                 } else {
-                    _viewState.update {
-                        it.copy(
-                            activeWord = null,
-                            evaluationResult = null,
-                            errorMessage = "BITTI"
-                        )
-                    }
+                    _viewState.update { it.copy(activeWord = null, evaluationResult = null, errorMessage = "BITTI") }
                 }
             } catch (e: Exception) {
                 _viewState.update { it.copy(errorMessage = "Veritabanı okuma hatası: ${e.message}") }
@@ -132,27 +133,29 @@ class RecorderViewModel @Inject constructor(
         }
     }
 
+    /** TTS motorunu kullanarak hedef kelimenin doğru Amerikan İngilizcesi telaffuzunu seslendirir. */
     fun playActiveWord() {
-        state.value.activeWord?.let { word ->
-            tts.speak(word.text)
-        }
+        state.value.activeWord?.let { word -> tts.speak(word.text) }
     }
 
+    /** Ses dinleme sürecini başlatır ve ekran durumunu temizler. */
     fun startListening() {
-        // KULAKLIK ZORUNLULUĞU KALDIRILDI! Sadece kelime var mı diye bakıyoruz.
         if (state.value.activeWord == null) {
             _viewState.update { it.copy(errorMessage = "Önce hedef kelimeyi yüklemelisiniz.") }
             return
         }
-
         _viewState.update { it.copy(errorMessage = null, evaluationResult = null) }
         voiceParser.startListening("en-US")
     }
 
+    /** Ses dinleme sürecini durdurur ve STT analizini sonlandırır. */
     fun stopListening() {
         voiceParser.stopListening()
     }
 
+    /** * Kullanıcının telaffuzunu Levenshtein ve SM-2 metrikleri ile analiz eder
+     * ve oturum sonuçlarına (Session Results) kaydeder.
+     */
     fun evaluateSpeech(finalSpokenText: String) {
         val targetEntity = state.value.activeWord ?: return
         if (finalSpokenText.isBlank()) return
@@ -169,7 +172,6 @@ class RecorderViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val result = evaluatePronunciationUseCase(targetEntity, sanitizedText)
-
                 _viewState.update {
                     it.copy(
                         evaluationResult = result,
@@ -186,18 +188,23 @@ class RecorderViewModel @Inject constructor(
         }
     }
 
+    /** Mevcut kelimeyi ve ses motorunu sıfırlayarak bir sonraki kelimeye geçer. */
     fun proceedToNextWord() {
         voiceParser.reset()
         loadNextWordFromDatabase()
     }
 
+    /** Mevcut çalışma oturumunu sonlandırır ve analiz raporu ekranına geçişi sağlar. */
     fun finishSession() {
         _viewState.update { it.copy(isSessionFinished = true) }
     }
-    // SPRINT 14: Yanlışlıkla dersi bitirenler için geri dönüş fonksiyonu
+
+    /** Rapor ekranından mevcut antrenmana geri dönülmesini sağlar. */
     fun resumeSession() {
         _viewState.update { it.copy(isSessionFinished = false) }
     }
+
+    /** ViewModel yok edildiğinde sistem kaynaklarını (Donanım gözlemcisi, TTS, STT) serbest bırakır. */
     override fun onCleared() {
         super.onCleared()
         headsetObserver.stopObserving()
@@ -206,12 +213,14 @@ class RecorderViewModel @Inject constructor(
     }
 }
 
+/** Oturum sonu raporunda gösterilecek her bir kelime değerlendirmesini temsil eden veri sınıfı. */
 data class SessionWordResult(
     val targetWord: String,
     val spokenWord: String,
     val score: Int
 )
 
+/** Kullanıcı arayüzüne (UI) sunulan, tüm veri kaynaklarının birleştiği nihai durum paketi. */
 data class RecorderUiState(
     val spokenText: String = "",
     val isSpeaking: Boolean = false,
@@ -223,6 +232,7 @@ data class RecorderUiState(
     val isSessionFinished: Boolean = false
 )
 
+/** ViewModel içinde saklanan ve sadece dahili mantığı besleyen durum sınıfı. */
 data class RecorderViewState(
     val errorMessage: String? = null,
     val activeWord: VocabularyEntity? = null,

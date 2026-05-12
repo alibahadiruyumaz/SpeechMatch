@@ -10,18 +10,19 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+/** Ses tanıma ve donanım izleme arayüzlerinin bağımlılık enjeksiyonunu (DI) sağlayan Hilt modülü. */
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class AudioModule {
 
-    // Mikrofon Motoru Sözleşme Köprüsü
+    /** Çevrimdışı ses tanıma motorunun (SpeechRecognizer) uygulama genelinde tekil (Singleton) örneğini bağlar. */
     @Binds
     @Singleton
     abstract fun bindVoiceToTextParser(
         parser: VoiceToTextParserImpl
     ): VoiceToTextParser
 
-    // Yankı Engelleyici Ajan Sözleşme Köprüsü
+    /** Donanımsal kulaklık durumunu takip eden gözlemcinin uygulama genelinde tekil (Singleton) örneğini bağlar. */
     @Binds
     @Singleton
     abstract fun bindHeadsetStateObserver(

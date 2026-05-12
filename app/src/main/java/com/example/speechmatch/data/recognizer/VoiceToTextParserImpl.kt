@@ -13,16 +13,21 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
+/** * Çevrimdışı (Edge Computing) odaklı, gecikmesiz ses-metin (STT) motoru.
+ * Android'in yerel SpeechRecognizer API'sini kullanarak cihaz donanımında çalışır.
+ */
 class VoiceToTextParserImpl @Inject constructor(
     private val app: Application
 ) : VoiceToTextParser, RecognitionListener {
 
+    /** Ses tanıma sürecinin anlık durumunu arayüze reaktif olarak ileten StateFlow. */
     private val _state = MutableStateFlow(VoiceParserState())
     override val state = _state.asStateFlow()
 
-    // Nesne yaratılır yaratılmaz değil, sadece ihtiyaç anında oluşturulacak
+    /** Lazy Initialization: Kaynak tüketimini önlemek için sadece ihtiyaç anında oluşturulur. */
     private var recognizer: SpeechRecognizer? = null
 
+    /** Çevrimdışı (Offline) işleme tercihiyle ses dinleme ve analiz sürecini başlatır. */
     override fun startListening(languageCode: String) {
         _state.update { it.copy(error = null, isSpeaking = true, spokenText = "") }
 
@@ -31,7 +36,6 @@ class VoiceToTextParserImpl @Inject constructor(
             return
         }
 
-        // Lazy Initialization: Sadece dinleme başladığında ve Main Thread'de oluşturulur
         if (recognizer == null) {
             recognizer = SpeechRecognizer.createSpeechRecognizer(app)
             recognizer?.setRecognitionListener(this)
@@ -40,22 +44,21 @@ class VoiceToTextParserImpl @Inject constructor(
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             putExtra(RecognizerIntent.EXTRA_LANGUAGE, languageCode)
-            // UÇ BİLİŞİMİN KALBİ: İnterneti yasaklıyoruz (Sıfır Gecikme)
-            putExtra(RecognizerIntent.EXTRA_PREFER_OFFLINE, true)
-            // Kelime kelime (Partial) sonuçları anlık almak için
-            putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
+            putExtra(RecognizerIntent.EXTRA_PREFER_OFFLINE, true) // Bulut bağımlılığını keser
+            putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true) // Anlık akış sağlar
         }
 
         recognizer?.startListening(intent)
     }
 
+    /** Dinleme işlemini manuel olarak durdurur. */
     override fun stopListening() {
         _state.update { it.copy(isSpeaking = false) }
         recognizer?.stopListening()
     }
 
+    /** Bellek sızıntılarını (Memory Leak) önlemek için STT motorunu sistemden tamamen kazır. */
     override fun destroy() {
-        // Zombi süreç bırakmamak için bellekten tamamen kazıyoruz
         recognizer?.destroy()
         recognizer = null
     }
@@ -74,6 +77,7 @@ class VoiceToTextParserImpl @Inject constructor(
         _state.update { it.copy(isSpeaking = false) }
     }
 
+    /** API düzeyindeki hataları yakalayarak kullanıcı dostu Türkçe hata mesajlarına çevirir. */
     override fun onError(error: Int) {
         val errorMessage = when (error) {
             SpeechRecognizer.ERROR_AUDIO -> "Ses yakalanamadı. Mikrofonu kontrol edin."
@@ -90,11 +94,13 @@ class VoiceToTextParserImpl @Inject constructor(
         _state.update { it.copy(error = errorMessage, isSpeaking = false) }
     }
 
+    /** Analiz edilen kesinleşmiş (nihai) metin sonucunu iletir. */
     override fun onResults(results: Bundle?) {
         val text = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)?.getOrNull(0)
         _state.update { it.copy(spokenText = text ?: "", isSpeaking = false) }
     }
 
+    /** Kullanıcı konuşurken canlı (anlık) parçalı metinleri asenkron olarak iletir. */
     override fun onPartialResults(partialResults: Bundle?) {
         val text = partialResults?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)?.getOrNull(0)
         text?.let { partialText ->
@@ -104,6 +110,7 @@ class VoiceToTextParserImpl @Inject constructor(
 
     override fun onEvent(eventType: Int, params: Bundle?) {}
 
+    /** Motorun state verilerini sıfırlayarak yeni bir kelime analizine hazırlar. */
     override fun reset() {
         _state.update { it.copy(spokenText = "", error = null) }
     }

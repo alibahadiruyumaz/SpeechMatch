@@ -4,24 +4,30 @@ import java.util.Locale
 import kotlin.math.max
 
 /**
- * Uç bilişim algoritmik kalbi: Hedef kelime ile söylenen kelimeyi hizalar.
- * 0 (Tamamen Yanlış) ile 5 (Kusursuz) arası bir kalite skoru döner (SM-2 formatı).
+ * Hedef kelime ile kullanıcının telaffuzu arasındaki fonetik benzerliği
+ * Levenshtein Mesafe algoritması ile hesaplayarak SM-2 kalite skoru (0-5) üreten UseCase.
  */
 class CalculateLevenshteinScoreUseCase {
 
+    /**
+     * İki metin arasındaki minimum düzenleme mesafesini (silme, ekleme, değiştirme) hesaplar.
+     * * @param targetWord Okunması beklenen hedef kelime.
+     * @param spokenText STT motorundan dönen kullanıcı telaffuzu.
+     * @return SM-2 algoritması için 0 (Başarısız) ile 5 (Kusursuz) arası kalite skoru (q).
+     */
     operator fun invoke(targetWord: String, spokenText: String): Int {
         val target = targetWord.trim().lowercase(Locale.ENGLISH)
         val spoken = spokenText.trim().lowercase(Locale.ENGLISH)
 
         if (target.isEmpty() || spoken.isEmpty()) return 0
 
-        // Eğer cihaz birebir aynısını anladıysa, matrisi yormadan direkt 5 puan dön (Optimizasyon)
+        // Optimizasyon: Birebir eşleşme durumunda işlem yükünü önlemek için doğrudan tam puan döndürülür.
         if (target == spoken) return 5
 
-        // Dinamik Programlama Matrisi (Boyut: [targetLength + 1][spokenLength + 1])
+        // Dinamik Programlama (DP) matrisinin oluşturulması.
         val dp = Array(target.length + 1) { IntArray(spoken.length + 1) }
 
-        // Matrisin ilk satır ve sütununu baz operasyon (silme/ekleme) maliyetleriyle doldur
+        // Matrisin taban durumlarının (ilk satır ve sütun) ilklendirilmesi.
         for (i in 0..target.length) {
             dp[i][0] = i
         }
@@ -29,10 +35,10 @@ class CalculateLevenshteinScoreUseCase {
             dp[0][j] = j
         }
 
-        // Matrisi doldurma (Kesişim maliyetlerini hesapla)
+        // Levenshtein mesafesinin (Silme, Ekleme, Değiştirme maliyetleri) hesaplanması.
         for (i in 1..target.length) {
             for (j in 1..spoken.length) {
-                val cost = if (target[i - 1] == spoken[j - 1]) 0 else 1 // Harfler aynıysa maliyet 0, farklıysa 1 (Değiştirme)
+                val cost = if (target[i - 1] == spoken[j - 1]) 0 else 1
 
                 dp[i][j] = minOf(
                     dp[i - 1][j] + 1,       // Silme (Deletion)
@@ -42,23 +48,20 @@ class CalculateLevenshteinScoreUseCase {
             }
         }
 
-        // Matrisin sağ alt köşesi: Toplam Levenshtein Mesafesi
         val distance = dp[target.length][spoken.length]
-
-        // Maksimum olası mesafe, iki kelimeden en uzun olanıdır
         val maxLength = max(target.length, spoken.length)
 
-        // Benzerlik oranını % olarak hesapla (0.0 ile 1.0 arası)
+        // Levenshtein mesafesinin %0 ile %100 arası benzerlik oranına dönüştürülmesi.
         val similarityRatio = 1.0 - (distance.toDouble() / maxLength.toDouble())
 
-        // SM-2 algoritmasının kabul ettiği 0-5 kalite skoruna (q) çevir
+        // Benzerlik oranının SM-2 algoritması kalite skoruna (q) haritalanması.
         return when {
             similarityRatio >= 0.90 -> 5 // Kusursuz
-            similarityRatio >= 0.80 -> 4 // Çok iyi (Ufak pürüz)
-            similarityRatio >= 0.65 -> 3 // Sınırda geçer
-            similarityRatio >= 0.50 -> 2 // Kötü (Zar zor anlaşıldı)
-            similarityRatio >= 0.30 -> 1 // Çok kötü
-            else -> 0                    // Tamamen alakasız
+            similarityRatio >= 0.80 -> 4 // Çok İyi
+            similarityRatio >= 0.65 -> 3 // Geçer Not
+            similarityRatio >= 0.50 -> 2 // Kötü
+            similarityRatio >= 0.30 -> 1 // Çok Kötü
+            else -> 0                    // Başarısız
         }
     }
 }

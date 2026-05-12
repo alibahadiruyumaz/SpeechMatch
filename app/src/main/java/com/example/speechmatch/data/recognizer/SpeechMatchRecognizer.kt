@@ -7,7 +7,6 @@ import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 
-
 import com.example.speechmatch.domain.repository.VoiceParserState
 import com.example.speechmatch.domain.repository.VoiceToTextParser
 
@@ -16,15 +15,20 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
+/** * Android'in yerel SpeechRecognizer API'sini kullanarak tamamen çevrimdışı
+ * (Offline/Edge Computing) ses-metin dönüşümü (STT) yapan motor.
+ */
 class SpeechMatchRecognizer(
     private val context: Context
 ) : VoiceToTextParser, RecognitionListener {
 
+    /** Ses tanıma motorunun anlık durumunu (konuşma, metin, hata) arayüze reaktif olarak iletir. */
     private val _state = MutableStateFlow(VoiceParserState())
     override val state: StateFlow<VoiceParserState> = _state.asStateFlow()
 
     private var recognizer: SpeechRecognizer? = null
 
+    /** Bulut sunucularını reddederek, cihaz donanımı üzerinde ses dinleme ve analiz sürecini başlatır. */
     override fun startListening(languageCode: String) {
         _state.update { it.copy(error = null, isSpeaking = true, spokenText = "") }
 
@@ -36,7 +40,7 @@ class SpeechMatchRecognizer(
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             putExtra(RecognizerIntent.EXTRA_LANGUAGE, languageCode)
-            // Bulutu reddeden çevrimdışı işleme emri
+            // Bulutu reddeden çevrimdışı işleme emri (Zero-Latency hedefi)
             putExtra(RecognizerIntent.EXTRA_PREFER_OFFLINE, true)
             putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
         }
@@ -44,11 +48,13 @@ class SpeechMatchRecognizer(
         recognizer?.startListening(intent)
     }
 
+    /** Dinleme işlemini manuel olarak durdurur ve motoru beklemeye alır. */
     override fun stopListening() {
         _state.update { it.copy(isSpeaking = false) }
         recognizer?.stopListening()
     }
 
+    /** Bellek sızıntılarını (Memory Leak) önlemek için STT motorunu sistemden tamamen temizler. */
     override fun destroy() {
         recognizer?.destroy()
         recognizer = null
@@ -66,6 +72,7 @@ class SpeechMatchRecognizer(
         _state.update { it.copy(isSpeaking = false) }
     }
 
+    /** API düzeyindeki hataları yakalayarak kullanıcı dostu Türkçe hata mesajlarına çevirir. */
     override fun onError(error: Int) {
         val errorMessage = when (error) {
             SpeechRecognizer.ERROR_AUDIO -> "Ses yakalanamadı. Mikrofonu kontrol edin."
@@ -82,6 +89,7 @@ class SpeechMatchRecognizer(
         _state.update { it.copy(error = errorMessage, isSpeaking = false) }
     }
 
+    /** Ses analizinin kesinleşmiş nihai sonucunu State'e aktarır. */
     override fun onResults(results: Bundle?) {
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         if (!matches.isNullOrEmpty()) {
@@ -89,6 +97,7 @@ class SpeechMatchRecognizer(
         }
     }
 
+    /** Kullanıcı konuşurken canlı (anlık) metin akışını asenkron olarak State'e iletir. */
     override fun onPartialResults(partialResults: Bundle?) {
         val matches = partialResults?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         if (!matches.isNullOrEmpty()) {
@@ -98,6 +107,7 @@ class SpeechMatchRecognizer(
 
     override fun onEvent(eventType: Int, params: Bundle?) {}
 
+    /** Motorun state verilerini (metin ve hata geçmişini) sıfırlayarak yeni kelime analizine hazırlar. */
     override fun reset() {
         _state.update { it.copy(spokenText = "", error = null) }
     }

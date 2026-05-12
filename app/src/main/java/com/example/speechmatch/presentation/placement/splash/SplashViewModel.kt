@@ -14,12 +14,17 @@ import kotlinx.coroutines.launch
 import org.json.JSONArray
 import javax.inject.Inject
 
+/**
+ * Uygulamanın başlatma (startup) sürecini, veri tohumlamayı (seeding)
+ * ve kullanıcı durumuna göre yönlendirme (routing) mantığını yöneten ViewModel.
+ */
 @HiltViewModel
 class SplashViewModel @Inject constructor(
-    @ApplicationContext private val context: Context, // JSON okumak için Context eklendi
+    @ApplicationContext private val context: Context,
     private val repository: SpeechMatchRepository
 ) : ViewModel() {
 
+    /** Uygulamanın hangi ekrandan başlayacağını (Placement veya Recorder) belirleyen reaktif durum. */
     private val _startDestination = MutableStateFlow<String?>(null)
     val startDestination = _startDestination.asStateFlow()
 
@@ -27,25 +32,29 @@ class SplashViewModel @Inject constructor(
         initializeApp()
     }
 
+    /** Uygulama ilk açıldığında gerekli veri hazırlıklarını ve profil kontrollerini asenkron olarak yürütür. */
     private fun initializeApp() {
-        // Ağır I/O (Disk) işlemleri olduğu için Dispatchers.IO kullanıyoruz
         viewModelScope.launch(Dispatchers.IO) {
 
-            // 1. ÖNYÜKLEME (BOOTSTRAPPING): Veritabanı boşsa önce JSON'u içeri bas!
+            // 1. Veritabanı boşsa Assets içerisindeki JSON dosyasından kelime havuzunu (vocabulary) oluşturur.
             if (repository.getAllActiveWords().isEmpty()) {
                 seedDatabaseFromJson()
             }
 
-            // 2. YÖNLENDİRME (ROUTING): Veritabanı kesin olarak dolduktan sonra profile bak.
+            // 2. Kullanıcı profilini kontrol ederek; yeni kullanıcıyı Seviye Tespit Sınavına,
+            // kayıtlı kullanıcıyı ana çalışma ekranına yönlendirir.
             val profile = repository.getUserProfile()
             if (profile == null || profile.currentLevel.isEmpty()) {
-                _startDestination.value = "placement" // Sınava (Hoş Geldin ekranına) gönder
+                _startDestination.value = "placement"
             } else {
-                _startDestination.value = "recorder" // Antrenmana gönder
+                _startDestination.value = "recorder"
             }
         }
     }
 
+    /** * 'vocabulary_seed.json' dosyasını okuyarak veritabanı ön yükleme (bootstrapping) işlemini gerçekleştirir.
+     * Bu işlem sadece uygulamanın ilk kurulumundaki ilk açılışta bir kez çalışır.
+     */
     private suspend fun seedDatabaseFromJson() {
         try {
             val inputStream = context.assets.open("vocabulary_seed.json")
@@ -59,13 +68,13 @@ class SplashViewModel @Inject constructor(
                     text = jsonObject.getString("text"),
                     targetPhoneme = jsonObject.getString("targetPhoneme"),
                     cefrLevel = jsonObject.getString("cefrLevel"),
-                    minimalPairId = jsonObject.getInt("minimalPairId"),
+                    minimalPairId = if (jsonObject.has("minimalPairId")) jsonObject.getInt("minimalPairId") else null,
                     isArchived = false
                 )
                 repository.insertWord(entity)
             }
         } catch (e: Exception) {
-            e.printStackTrace() // Ayrıştırma hatası olursa loga yaz
+            e.printStackTrace()
         }
     }
 }

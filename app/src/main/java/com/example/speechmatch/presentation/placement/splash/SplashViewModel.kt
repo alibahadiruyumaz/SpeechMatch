@@ -67,6 +67,7 @@ class SplashViewModel @Inject constructor(
                     id = 0,
                     text = jsonObject.getString("text"),
                     targetPhoneme = jsonObject.getString("targetPhoneme"),
+                    easyRead = jsonObject.getString("easyRead"),
                     cefrLevel = jsonObject.getString("cefrLevel"),
                     minimalPairId = if (jsonObject.has("minimalPairId")) jsonObject.getInt("minimalPairId") else null,
                     isArchived = false

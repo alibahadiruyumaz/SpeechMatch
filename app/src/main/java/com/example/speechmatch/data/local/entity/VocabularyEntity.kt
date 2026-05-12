@@ -25,18 +25,22 @@ data class VocabularyEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 
-    /** Telaffuz edilecek hedef kelime (Örn: "Ship"). */
+    /** Telaffuz edilecek hedef kelime (Örn: "Jealousy"). */
     val text: String,
 
-    /** Kelimenin test ettiği spesifik hedef ses/fonem (Örn: "/ʃ/"). */
+    /** Kelimenin test ettiği spesifik hedef ses/fonem (Örn: "z eh1 l ah0 s iy0"). */
     @ColumnInfo(name = "target_phoneme")
     val targetPhoneme: String,
+
+    /** Kullanıcı dostu, Türkçe mantığına yakın okunuş ve vurgu rehberi */
+    @ColumnInfo(name = "easy_read")
+    val easyRead: String,
 
     /** Kelimenin uluslararası zorluk derecesi (Örn: "A1", "B2"). */
     @ColumnInfo(name = "cefrLevel")
     val cefrLevel: String,
 
-    /** Sesletim hatası durumunda çapraz sorgulanacak (Örn: "Sheep") kelimenin referans kimliği. */
+    /** Sesletim hatası durumunda çapraz sorgulanacak kelimenin referans kimliği. */
     @ColumnInfo(name = "minimal_pair_id", index = true)
     val minimalPairId: Int? = null,
 

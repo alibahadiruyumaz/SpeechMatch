@@ -8,6 +8,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -104,6 +106,21 @@ fun PlacementScreen(
             // Durum 3: Aktif Sınav Soruları (Interactive Test State)
             val currentWord = state.testWords.getOrNull(state.currentWordIndex)
 
+            // --- YENİ: KULAKLIK UYARISI EKLENDİ ---
+            if (!state.isHeadsetConnected) {
+                Row(
+                    modifier = Modifier
+                        .padding(bottom = 24.dp)
+                        .background(cardBgColor.copy(alpha = 0.8f), RoundedCornerShape(12.dp))
+                        .padding(horizontal = 16.dp, vertical = 10.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(imageVector = Icons.Default.Info, contentDescription = "Bilgi", tint = secondaryTextColor, modifier = Modifier.size(18.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text("Yankıyı önlemek için kulaklık takmanız önerilir.", color = secondaryTextColor, fontSize = 13.sp, fontWeight = FontWeight.Medium)
+                }
+            }
+
             Text("Seviye Belirleme Sınavı", color = secondaryTextColor, fontSize = 18.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.sp)
             Text(
                 text = "Soru ${state.currentWordIndex + 1} / ${state.testWords.size}",
@@ -125,7 +142,7 @@ fun PlacementScreen(
                     ) {
                         Text(text = "OKUNACAK KELİME", color = secondaryTextColor, fontSize = 12.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
                         Text(text = currentWord.text, fontSize = 42.sp, fontWeight = FontWeight.ExtraBold, color = accentColor, modifier = Modifier.padding(top = 16.dp))
-                        Text(text = "/ ${currentWord.targetPhoneme} /", color = primaryTextColor, fontSize = 22.sp, modifier = Modifier.padding(top = 8.dp))
+                        // NOT: "targetPhoneme" kopyası sınav güvenilirliği için buradan tamamen kaldırıldı.
                     }
                 }
             }

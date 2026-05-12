@@ -26,5 +26,8 @@ data class PlacementUiState(
     val isLoading: Boolean = true,
 
     /** İşlem sırasında oluşabilecek (G/Ç hatası vb.) kullanıcı dostu hata mesajı. */
-    val errorMessage: String? = null
+    val errorMessage: String? = null,
+
+    /** Yankı önleme amacıyla kulaklık takılı olup olmadığını belirten donanım durumu bayrağı. */
+    val isHeadsetConnected: Boolean = false
 )

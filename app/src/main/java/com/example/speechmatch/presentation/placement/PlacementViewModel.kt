@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.speechmatch.data.local.entity.UserProfileEntity
 import com.example.speechmatch.data.local.entity.VocabularyEntity
+import com.example.speechmatch.domain.repository.HeadsetStateObserver
 import com.example.speechmatch.domain.repository.SpeechMatchRepository
 import com.example.speechmatch.domain.repository.VoiceToTextParser
 import com.example.speechmatch.domain.usecase.EvaluatePronunciationUseCase
@@ -15,15 +16,17 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * Seviye belirleme sınavının (Placement Test) iş mantığını, ses analizini
- * ve nihai CEFR seviye teşhisini yöneten ViewModel.
+ * Seviye belirleme sınavının (Placement Test) iş mantığını, ses analizini,
+ * donanım durumlarını (kulaklık) ve nihai CEFR seviye teşhisini yöneten ViewModel.
  */
 @HiltViewModel
 class PlacementViewModel @Inject constructor(
     private val repository: SpeechMatchRepository,
     private val evaluateUseCase: EvaluatePronunciationUseCase,
     /** Çevrimdışı ses tanıma motoru (STT) sözleşmesi. */
-    val voiceParser: VoiceToTextParser
+    val voiceParser: VoiceToTextParser,
+    /** Kulaklık takılıp çıkarılma durumunu dinleyen donanım gözlemcisi. */
+    private val headsetObserver: HeadsetStateObserver
 ) : ViewModel() {
 
     /** Sınav ekranının anlık durum (UI State) akışı. */
@@ -38,6 +41,14 @@ class PlacementViewModel @Inject constructor(
 
     init {
         loadTestWords()
+
+        // Kulaklık gözlemcisini başlat ve State'i güncelle
+        headsetObserver.startObserving()
+        viewModelScope.launch {
+            headsetObserver.isHeadsetConnected.collect { isConnected ->
+                _state.update { it.copy(isHeadsetConnected = isConnected) }
+            }
+        }
     }
 
     /** * Veritabanından her CEFR seviyesi için rastgele örnek kelimeler seçerek
@@ -75,6 +86,7 @@ class PlacementViewModel @Inject constructor(
             val result = evaluateUseCase(currentWord, sanitizedText)
             scoresPerLevel.getOrPut(currentWord.cefrLevel) { mutableListOf() }.add(result.qualityScore)
 
+            // UI Tutarlılığı: Bir sonraki kelimeye geçmeden önce ekrandaki metni temizler.
             voiceParser.reset()
 
             if (_state.value.currentWordIndex < _state.value.testWords.size - 1) {
@@ -117,5 +129,11 @@ class PlacementViewModel @Inject constructor(
             repository.upsertProfile(updatedProfile)
             _state.update { it.copy(isTestFinished = true, calculatedLevel = finalLevel) }
         }
+    }
+
+    /** ViewModel yok edildiğinde donanım gözlemcisini kapatır. */
+    override fun onCleared() {
+        super.onCleared()
+        headsetObserver.stopObserving()
     }
 }

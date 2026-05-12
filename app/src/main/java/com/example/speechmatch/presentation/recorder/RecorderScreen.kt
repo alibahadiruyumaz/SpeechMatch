@@ -34,8 +34,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
 /**
  * Kullanıcının günlük telaffuz antrenmanlarını yaptığı ve performans raporlarını görüntülediği ana çalışma ekranı.
- * * Bu ekran; gerçek zamanlı ses analizi, donanımsal kulaklık takibi, SM-2 algoritma geri bildirimleri
- * ve dairesel başarı grafikleri içeren kapsamlı bir analiz raporu sunar.
+ * * Bu ekran; gerçek zamanlı ses analizi, donanımsal kulaklık takibi, SM-2 algoritma geri bildirimleri,
+ * dairesel başarı grafikleri ve pedagojik (easyRead) okunuş rehberleri sunar.
  * * @param viewModel Antrenman sürecini, ses motorunu ve SM-2 ilerleme kayıtlarını yöneten [RecorderViewModel].
  */
 @Composable
@@ -228,7 +228,21 @@ fun RecorderScreen(
                                 Icon(imageVector = Icons.Default.PlayArrow, contentDescription = "Dinle", tint = accentColor, modifier = Modifier.size(36.dp))
                             }
                         }
-                        Text(text = "/ ${currentWord.targetPhoneme} /", color = primaryTextColor, fontSize = 22.sp, modifier = Modifier.padding(top = 8.dp))
+
+                        // Sadece eğitim ekranında görünen Okunuş Rehberi (easyRead)
+                        Surface(
+                            color = accentColor.copy(alpha = 0.1f),
+                            shape = RoundedCornerShape(8.dp),
+                            modifier = Modifier.padding(top = 12.dp)
+                        ) {
+                            Text(
+                                text = "[ ${currentWord.easyRead} ]",
+                                color = accentColor,
+                                fontSize = 22.sp,
+                                fontWeight = FontWeight.Bold,
+                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
+                            )
+                        }
                     }
                 }
             } else {

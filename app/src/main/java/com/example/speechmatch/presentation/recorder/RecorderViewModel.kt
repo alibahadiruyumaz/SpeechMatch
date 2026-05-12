@@ -73,6 +73,11 @@ class RecorderViewModel @Inject constructor(
         initialValue = RecorderUiState()
     )
 
+    /** * YENİ: Bu oturumda (session) daha önce sorulan kelimelerin ID'lerini tutar.
+     * Böylece aynı kelimenin arka arkaya iki kez sorulması engellenir.
+     */
+    private val askedWordIds = mutableSetOf<Int>()
+
     init {
         voiceParser.reset()
         headsetObserver.startObserving()
@@ -100,6 +105,7 @@ class RecorderViewModel @Inject constructor(
                         id = 0,
                         text = jsonObject.getString("text"),
                         targetPhoneme = jsonObject.getString("targetPhoneme"),
+                        easyRead = jsonObject.getString("easyRead"),
                         cefrLevel = jsonObject.getString("cefrLevel"),
                         minimalPairId = jsonObject.getInt("minimalPairId"),
                         isArchived = false
@@ -118,11 +124,24 @@ class RecorderViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 delay(300) // UI geçişleri için kısa bekleme
+
+                // YENİ: Veritabanından kelimeleri çek ve daha önce (bu oturumda) sorulmuş olanları filtrele.
                 val wordsToReview = repository.getWordsToReview(System.currentTimeMillis())
+                    .filter { it.id !in askedWordIds }
 
                 if (wordsToReview.isNotEmpty()) {
+                    // Havuzdan rastgele bir kelime seç
+                    val nextWord = wordsToReview.random()
+
+                    // Seçilen kelimenin ID'sini "Sorulanlar" listesine ekle
+                    askedWordIds.add(nextWord.id)
+
                     _viewState.update {
-                        it.copy(activeWord = wordsToReview.random(), errorMessage = null, evaluationResult = null)
+                        it.copy(
+                            activeWord = nextWord,
+                            errorMessage = null,
+                            evaluationResult = null
+                        )
                     }
                 } else {
                     _viewState.update { it.copy(activeWord = null, evaluationResult = null, errorMessage = "BITTI") }

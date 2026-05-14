@@ -7,44 +7,39 @@ import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.compose.ui.graphics.Color
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.speechmatch.presentation.placement.LevelIntroScreen
 import com.example.speechmatch.presentation.placement.PlacementScreen
 import com.example.speechmatch.presentation.placement.WelcomeScreen
+import com.example.speechmatch.presentation.profile.ProfileSelectionScreen
 import com.example.speechmatch.presentation.recorder.RecorderScreen
-import com.example.speechmatch.presentation.splash.SplashViewModel
+import com.example.speechmatch.presentation.recorder.RecorderViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * Uygulamanın tek aktivite (Single Activity Architecture) giriş noktası.
- * * Android 12+ Splash Screen desteği, Hilt bağımlılık enjeksiyonu ve
- * Jetpack Compose navigasyon yapısını barındırır.
+ * Tüm Çoklu Profil (Multi-User) navigasyon grafiğini barındırır.
  */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Modern Android Splash Screen API kurulumu
         installSplashScreen()
         super.onCreate(savedInstanceState)
         setContent {
-            // Sistem temasına (Dark/Light) duyarlı küresel arka plan yapılandırması
             val isDark = isSystemInDarkTheme()
             val systemBgColor = if (isDark) Color(0xFF0B1120) else Color(0xFFF1F5F9)
 
@@ -61,96 +56,104 @@ class MainActivity : ComponentActivity() {
 }
 
 /**
- * Uygulamanın tüm navigasyon (rota) yönetimini, ekran geçiş animasyonlarını
- * ve başlangıç hedefi (Start Destination) karar mekanizmasını yöneten ana bileşen.
- * * @param splashViewModel Uygulamanın hangi ekrandan (Sınav veya Antrenman)
- * başlayacağına karar veren [SplashViewModel].
+ * Uygulamanın tüm rota yönetimini ve ekran geçişlerini yöneten ana bileşen.
+ * SplashViewModel kaldırılmış, başlangıç noktası ProfileSelection yapılmıştır.
  */
 @Composable
-fun AppRouter(
-    splashViewModel: SplashViewModel = hiltViewModel()
-) {
+fun AppRouter() {
     val navController = rememberNavController()
-    val startDestination by splashViewModel.startDestination.collectAsState()
-    val isDark = isSystemInDarkTheme()
-    val systemBgColor = if (isDark) Color(0xFF0B1120) else Color(0xFFF1F5F9)
-    val accentColor = if (isDark) Color(0xFFD0FF9A) else Color(0xFF2563EB)
-
-    // Navigasyon geçişleri için standart süre (500ms)
     val animationDuration = 500
 
-    if (startDestination == null) {
-        // Durum 1: Başlangıç rotası hesaplanırken (Veritabanı kontrolü/Seeding) gösterilen yükleme alanı.
-        Box(
-            modifier = Modifier.fillMaxSize().background(systemBgColor),
-            contentAlignment = Alignment.Center
-        ) {
-            CircularProgressIndicator(color = accentColor)
+    NavHost(
+        navController = navController,
+        startDestination = "profile_selection", // BAŞLANGIÇ NOKTASI ARTIK BURASI
+        enterTransition = {
+            slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left, tween(animationDuration)) + fadeIn(tween(animationDuration))
+        },
+        exitTransition = {
+            slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left, tween(animationDuration)) + fadeOut(tween(animationDuration))
+        },
+        popEnterTransition = {
+            slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right, tween(animationDuration)) + fadeIn(tween(animationDuration))
+        },
+        popExitTransition = {
+            slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right, tween(animationDuration)) + fadeOut(tween(animationDuration))
         }
-    } else {
-        // Durum 2: Navigasyon Grafiği (NavGraph) Tanımlaması
-        NavHost(
-            navController = navController,
-            startDestination = startDestination!!,
-            // Ekranlar arası kayma ve solma (Slide & Fade) animasyonlarının merkezi tanımı
-            enterTransition = {
-                slideIntoContainer(
-                    towards = AnimatedContentTransitionScope.SlideDirection.Left,
-                    animationSpec = tween(animationDuration)
-                ) + fadeIn(animationSpec = tween(animationDuration))
-            },
-            exitTransition = {
-                slideOutOfContainer(
-                    towards = AnimatedContentTransitionScope.SlideDirection.Left,
-                    animationSpec = tween(animationDuration)
-                ) + fadeOut(animationSpec = tween(animationDuration))
-            },
-            popEnterTransition = {
-                slideIntoContainer(
-                    towards = AnimatedContentTransitionScope.SlideDirection.Right,
-                    animationSpec = tween(animationDuration)
-                ) + fadeIn(animationSpec = tween(animationDuration))
-            },
-            popExitTransition = {
-                slideOutOfContainer(
-                    towards = AnimatedContentTransitionScope.SlideDirection.Right,
-                    animationSpec = tween(animationDuration)
-                ) + fadeOut(animationSpec = tween(animationDuration))
-            }
-        ) {
-            // ROTA: Seviye belirleme öncesi karşılama ekranı.
-            composable("placement") {
-                WelcomeScreen(onStartTest = { navController.navigate("actual_test") })
-            }
+    ) {
 
-            // ROTA: Aktif ses analizinin yapıldığı seviye tespit sınavı.
-            composable("actual_test") {
-                PlacementScreen(
-                    onTestFinished = { calculatedLevel ->
-                        navController.navigate("level_intro/$calculatedLevel") {
-                            // Sınav ekranını geri yığınından temizler (Back-stack management)
-                            popUpTo("actual_test") { inclusive = true }
-                        }
-                    }
-                )
-            }
-
-            // ROTA: Tespit edilen seviyenin kullanıcıya açıklandığı ara ekran.
-            composable("level_intro/{level}") { backStackEntry ->
-                val calculatedLevel = backStackEntry.arguments?.getString("level") ?: "A1"
-
-                LevelIntroScreen(level = calculatedLevel) {
-                    navController.navigate("recorder") {
-                        // Eğitim başladığında tüm sınav sürecini yığından atar.
-                        popUpTo("placement") { inclusive = true }
+        // ROTA 1: Netflix Tarzı Profil Seçim Ekranı
+        composable("profile_selection") {
+            ProfileSelectionScreen(
+                onProfileSelected = { profile ->
+                    // Eğer kullanıcının baselineScore'u 0 ise bu yeni bir hesaptır -> SINAVA GİDER
+                    if (profile.baselineScore <= 0.0) {
+                        navController.navigate("placement/${profile.userId}")
+                    } else {
+                        // Eğer puanı varsa zaten sınava girmiştir -> KENDİ KELİMELERİYLE DERSE GİDER
+                        navController.navigate("recorder/${profile.userId}")
                     }
                 }
+            )
+        }
+
+        // ROTA 2: Seviye belirleme öncesi karşılama ekranı (Kullanıcı ID'si ile)
+        composable(
+            route = "placement/{userId}",
+            arguments = listOf(navArgument("userId") { type = NavType.IntType })
+        ) { backStackEntry ->
+            val userId = backStackEntry.arguments?.getInt("userId") ?: 1
+            WelcomeScreen(onStartTest = { navController.navigate("actual_test/$userId") })
+        }
+
+        // ROTA 3: Aktif ses analizinin yapıldığı seviye tespit sınavı (Kullanıcı ID'si ile)
+        composable(
+            route = "actual_test/{userId}",
+            arguments = listOf(navArgument("userId") { type = NavType.IntType })
+        ) { backStackEntry ->
+            val userId = backStackEntry.arguments?.getInt("userId") ?: 1
+            PlacementScreen(
+                onTestFinished = { calculatedLevel ->
+                    navController.navigate("level_intro/$calculatedLevel/$userId") {
+                        popUpTo("actual_test/$userId") { inclusive = true }
+                    }
+                }
+            )
+        }
+
+        // ROTA 4: Tespit edilen seviyenin açıklandığı ara ekran
+        composable(
+            route = "level_intro/{level}/{userId}",
+            arguments = listOf(
+                navArgument("level") { type = NavType.StringType },
+                navArgument("userId") { type = NavType.IntType }
+            )
+        ) { backStackEntry ->
+            val calculatedLevel = backStackEntry.arguments?.getString("level") ?: "A1"
+            val userId = backStackEntry.arguments?.getInt("userId") ?: 1
+
+            LevelIntroScreen(level = calculatedLevel) {
+                navController.navigate("recorder/$userId") {
+                    // Sınav bittikten sonra geri tuşuna basarsa direk Profil Seçim ekranına düşsün
+                    popUpTo("profile_selection") { inclusive = false }
+                }
+            }
+        }
+
+        // ROTA 5: Antrenman ve Algoritma Ekranı (Recorder)
+        composable(
+            route = "recorder/{userId}",
+            arguments = listOf(navArgument("userId") { type = NavType.IntType })
+        ) { backStackEntry ->
+            val userId = backStackEntry.arguments?.getInt("userId") ?: 1
+
+            val viewModel: RecorderViewModel = hiltViewModel()
+
+            // Seçili olan Kullanıcı Kimliğini ViewModel'e şırınga ediyoruz!
+            LaunchedEffect(userId) {
+                viewModel.setUserId(userId)
             }
 
-            // ROTA: SM-2 algoritmasının ve günlük antrenmanların yapıldığı ana ekran.
-            composable("recorder") {
-                RecorderScreen()
-            }
+            RecorderScreen(viewModel = viewModel)
         }
     }
 }

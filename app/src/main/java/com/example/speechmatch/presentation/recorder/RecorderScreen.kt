@@ -68,7 +68,7 @@ fun RecorderScreen(
     var showInfoSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-    /** Otomatik Değerlendirme Döngüsü */
+    /** Otomatik Değerlendirme Döngüsü: Kullanıcı konuşmayı bitirdiğinde analiz tetiklenir. */
     LaunchedEffect(state.isSpeaking) {
         if (!state.isSpeaking && state.spokenText.isNotBlank() && state.evaluationResult == null) {
             viewModel.evaluateSpeech(state.spokenText)
@@ -92,14 +92,15 @@ fun RecorderScreen(
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            val totalScore = state.sessionResults.sumOf { it.score }
-            val maxPossibleScore = state.sessionResults.size * 5
-            val progressPercentage = if (maxPossibleScore > 0) totalScore.toFloat() / maxPossibleScore else 0f
+            // Yeni Yüzdelik Matematiği ile Grafik Oranları Hesaplanır
+            val totalPercentage = state.sessionResults.sumOf { it.percentage }
+            val maxPossiblePercentage = state.sessionResults.size * 100
+            val progressPercentage = if (maxPossiblePercentage > 0) totalPercentage.toFloat() / maxPossiblePercentage else 0f
             val displayPercentage = (progressPercentage * 100).toInt()
 
             Text("🎯 Analiz Raporu", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = primaryTextColor, modifier = Modifier.padding(top = 16.dp))
 
-            /** Başarı Oranı Donut Grafiği */
+            /** Başarı Oranı Donut Grafiği: Toplam oturum performansını yüzdelik olarak görselleştirir. */
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier.padding(vertical = 16.dp).size(130.dp)
@@ -124,10 +125,10 @@ fun RecorderScreen(
                 }
             }
 
-            /** Mini İstatistik Satırı */
+            /** Mini İstatistik Satırı (Toplam Kelime, Kusursuzlar ve En Zorlanılan) */
             val totalWordsCount = state.sessionResults.size
-            val perfectWordsCount = state.sessionResults.count { it.score == 5 }
-            val worstWord = state.sessionResults.minByOrNull { it.score }?.targetWord ?: "-"
+            val perfectWordsCount = state.sessionResults.count { it.percentage >= 90 } // %90 ve üzeri kusursuz sayılır
+            val worstWord = state.sessionResults.minByOrNull { it.percentage }?.targetWord ?: "-"
 
             Row(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 8.dp),
@@ -149,10 +150,10 @@ fun RecorderScreen(
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            /** Akıllı Sıralama */
-            val sortedResults = state.sessionResults.sortedBy { it.score }
+            /** Akıllı Sıralama: Yüzdelik başarıya göre sıralanır (En düşük puana sahip hatalı kelimeler en üstte çıkar) */
+            val sortedResults = state.sessionResults.sortedBy { it.percentage }
 
-            /** Detaylı hata analizi listesi */
+            /** Oturumdaki kelimelerin detaylı hata analizini listeleyen bölüm. */
             LazyColumn(modifier = Modifier.weight(1f).fillMaxWidth()) {
                 items(sortedResults.size) { index ->
                     val result = sortedResults[index]
@@ -164,7 +165,7 @@ fun RecorderScreen(
                     ) {
                         Column(modifier = Modifier.padding(16.dp)) {
 
-                            // Hedef kelime ve Play butonu
+                            // Hedef kelime ve Play (Dinle) butonu aynı satırda
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
                                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -172,9 +173,11 @@ fun RecorderScreen(
                             ) {
                                 Column(modifier = Modifier.weight(1f)) {
                                     Text("Hedef: ${result.targetWord}", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = primaryTextColor)
-                                    Text("${result.score} / 5", fontWeight = FontWeight.ExtraBold, color = if(result.score >= 4) successColor else errorColor)
+                                    // Puan yerine Yüzdelik gösterim eklendi
+                                    Text("% ${result.percentage} Başarı", fontWeight = FontWeight.ExtraBold, color = if(result.percentage >= 75) successColor else errorColor)
                                 }
 
+                                // Rapor üzerinden doğrusunu dinleme butonu
                                 IconButton(onClick = { viewModel.playWord(result.targetWord) }) {
                                     Icon(
                                         imageVector = Icons.Default.PlayArrow,
@@ -188,7 +191,7 @@ fun RecorderScreen(
                             Spacer(modifier = Modifier.height(4.dp))
                             Text("Söylediğin:", fontSize = 14.sp, color = secondaryTextColor)
 
-                            /** Karşılaştırmalı Metin İşaretleme */
+                            /** Karşılaştırmalı Metin İşaretleme (Diffing): Yanlış söylenen karakterleri anında kırmızı vurgular. */
                             val annotatedString = buildAnnotatedString {
                                 val target = result.targetWord.lowercase()
                                 val spoken = result.spokenWord.lowercase()
@@ -246,7 +249,7 @@ fun RecorderScreen(
                 Text(text = state.error!!, color = errorColor, fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.padding(bottom = 16.dp))
             }
 
-            /** Yankı (Echo) Uyarısı */
+            /** Yankı (Echo) Uyarısı: Kulaklık takılı değilse kullanıcıyı bilgilendirir. */
             val currentWord = state.activeWord
             if (!state.isHeadsetConnected && currentWord != null) {
                 Row(
@@ -266,7 +269,7 @@ fun RecorderScreen(
                     elevation = CardDefaults.cardElevation(defaultElevation = cardElevation),
                     colors = CardDefaults.cardColors(containerColor = cardBgColor)
                 ) {
-                    // KARTI SARMALAYAN KUTU: Info ikonunu sağ üste sabitlemek için
+                    // KARTI SARMALAYAN KUTU: Info ikonunu sağ üste sabitlemek için kullanılır
                     Box(modifier = Modifier.fillMaxWidth()) {
 
                         Column(
@@ -275,7 +278,7 @@ fun RecorderScreen(
                         ) {
                             Text(text = "HEDEF KELİME", color = secondaryTextColor, fontSize = 12.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
 
-                            /** Dinamik Font Boyutu Hesaplama */
+                            /** Kelime uzunluğuna göre dinamik font boyutu hesaplama */
                             val wordLength = currentWord.text.length
                             val dynamicFontSize = when {
                                 wordLength > 10 -> 28.sp
@@ -312,7 +315,7 @@ fun RecorderScreen(
                                 }
                             }
 
-                            // EasyRead Okunuş Rehberi
+                            // Sadece eğitim ekranında görünen Okunuş Rehberi (easyRead)
                             Surface(
                                 color = accentColor.copy(alpha = 0.1f),
                                 shape = RoundedCornerShape(8.dp),
@@ -328,7 +331,7 @@ fun RecorderScreen(
                             }
                         }
 
-                        // Info Butonu
+                        // Kartın sağ üst köşesindeki "i" (Info) Butonu
                         IconButton(
                             onClick = { showInfoSheet = true },
                             modifier = Modifier.align(Alignment.TopEnd).padding(8.dp)
@@ -368,10 +371,10 @@ fun RecorderScreen(
 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                /** Akustik Değerlendirme Sonucu */
+                /** Akustik Değerlendirme Sonucu: Arayüzde artık Yüzdelik Oran gösterilir. */
                 state.evaluationResult?.let { result ->
                     val resultColor = if (result.isPerfect) successColor else errorColor
-                    Text(text = "Akustik Kalite Skoru: ${result.qualityScore} / 5", color = resultColor, fontSize = 22.sp, fontWeight = FontWeight.Bold)
+                    Text(text = "Doğruluk Oranı: %${result.accuracyPercentage}", color = resultColor, fontSize = 22.sp, fontWeight = FontWeight.Bold)
 
                     Row(
                         modifier = Modifier.fillMaxWidth().padding(top = 32.dp),
@@ -492,7 +495,7 @@ fun RecorderScreen(
                     }
                 }
 
-                // Pedagojik Uyarı
+                // Pedagojik Uyarı Bölümü
                 Row(
                     modifier = Modifier
                         .background(accentColor.copy(alpha = 0.1f), RoundedCornerShape(12.dp))

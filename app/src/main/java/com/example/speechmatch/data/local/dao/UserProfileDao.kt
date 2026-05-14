@@ -1,20 +1,27 @@
 package com.example.speechmatch.data.local.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.speechmatch.data.local.entity.UserProfileEntity
 
-/** Kullanıcı profili ve teşhis verilerini (fonem hataları, seviye vb.) yöneten DAO. */
+/** Kullanıcı profillerini ve teşhis verilerini yöneten DAO. */
 @Dao
 interface UserProfileDao {
 
-    /** Tekil kullanıcı profilini veritabanına ekler veya mevcutsa günceller (UPSERT). */
+    /** Yeni profil ekler veya mevcutsa günceller (UPSERT). */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsertProfile(profile: UserProfileEntity)
+    suspend fun upsertProfile(profile: UserProfileEntity): Long
 
-    /** Sistemdeki aktif kullanıcı profilini ve algoritma için gerekli teşhis verilerini getirir. */
-    @Query("SELECT * FROM User_Profile WHERE user_id = 1")
-    suspend fun getUserProfile(): UserProfileEntity?
+    /** Netflix ekranı (Kim İzliyor?) için sistemdeki TÜM profilleri liste halinde getirir. */
+    @Query("SELECT * FROM User_Profile")
+    suspend fun getAllProfiles(): List<UserProfileEntity>
+
+    /** İstenilen spesifik bir kullanıcı profilini id'sine göre getirir. */
+    @Query("SELECT * FROM User_Profile WHERE user_id = :userId")
+    suspend fun getUserProfile(userId: Int): UserProfileEntity?
+    @Delete
+    suspend fun deleteProfile(profile: UserProfileEntity)
 }

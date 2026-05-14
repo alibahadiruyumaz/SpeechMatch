@@ -42,6 +42,11 @@ class RecorderViewModel @Inject constructor(
     private val tts: SpeechMatchTTS
 ) : ViewModel() {
 
+    /** * AKTİF KULLANICI KİMLİĞİ (YENİ)
+     * İleride Profil Seçim (Netflix) ekranından gelecek ID buraya atanacak.
+     */
+    private var currentUserId: Int = 1
+
     /** ViewModel içi içsel durum yönetimi (View State). */
     private val _viewState = MutableStateFlow(RecorderViewState())
 
@@ -83,11 +88,18 @@ class RecorderViewModel @Inject constructor(
         seedDatabaseFromJson()
     }
 
+    /** Navigasyon ile dışarıdan kullanıcı ID'si atamak için kullanılır . */
+    fun setUserId(userId: Int) {
+        currentUserId = userId
+        loadNextWordFromDatabase()
+    }
+
     /** Veritabanı boşsa JSON üzerinden ön yükleme (Seed) yapar. */
     private fun seedDatabaseFromJson() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                if (repository.getAllActiveWords().isNotEmpty()) {
+                // Şimdilik sadece herhangi bir kullanıcının (örn: 1) kelimesi var mı diye bakar
+                if (repository.getAllActiveWords(currentUserId).isNotEmpty()) {
                     loadNextWordFromDatabase()
                     return@launch
                 }
@@ -105,7 +117,7 @@ class RecorderViewModel @Inject constructor(
                         easyRead = jsonObject.getString("easyRead"),
                         cefrLevel = jsonObject.getString("cefrLevel"),
                         minimalPairId = jsonObject.getInt("minimalPairId"),
-                        isArchived = false
+                        isArchived = false // Not: Arşivleme artık ReviewLog üzerinden yönetiliyor.
                     )
                     repository.insertWord(entity)
                 }
@@ -116,15 +128,15 @@ class RecorderViewModel @Inject constructor(
         }
     }
 
-    /** * SM-2 zamanlamasına ve KULLANICININ CEFR SEVİYESİNE göre uygun kelimeleri filtreler ve yükler.
+    /** * SM-2 zamanlamasına ve AKTİF KULLANICININ CEFR SEVİYESİNE göre uygun kelimeleri filtreler ve yükler.
      */
     private fun loadNextWordFromDatabase() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 delay(300) // UI geçişleri için kısa bekleme
 
-                // 1. Kullanıcının seviyesini al
-                val userProfile = repository.getUserProfile()
+                // 1. Aktif Kullanıcının seviyesini al
+                val userProfile = repository.getUserProfile(currentUserId)
                 val userLevel = userProfile?.currentLevel ?: "A1"
 
                 // 2. Seviye hiyerarşisi oluştur (Örn: B1 ise A1, A2, B1 kelimelerini görebilsin)
@@ -132,8 +144,8 @@ class RecorderViewModel @Inject constructor(
                 val levelIndex = cefrLevels.indexOf(userLevel).takeIf { it >= 0 } ?: 0
                 val allowedLevels = cefrLevels.take(levelIndex + 1)
 
-                // 3. Veritabanından kelimeleri çek ve FİLTRELE
-                val wordsToReview = repository.getWordsToReview(System.currentTimeMillis())
+                // 3. Veritabanından kelimeleri KULLANICIYA ÖZEL çek ve FİLTRELE
+                val wordsToReview = repository.getWordsToReview(System.currentTimeMillis(), currentUserId)
                     .filter { it.id !in askedWordIds } // Oturumda sorulanları ele
                     .filter { it.cefrLevel in allowedLevels } // SADECE KENDİ SEVİYESİNDEKİLERİ GETİR
 
@@ -178,7 +190,7 @@ class RecorderViewModel @Inject constructor(
         voiceParser.stopListening()
     }
 
-    /** * Kullanıcının telaffuzunu analiz eder, rapora ekler ve SM-2 veritabanını GÜNCELLER.
+    /** * Kullanıcının telaffuzunu analiz eder, rapora ekler ve KULLANICIYA ÖZEL SM-2 veritabanını GÜNCELLER.
      */
     fun evaluateSpeech(finalSpokenText: String) {
         val targetEntity = state.value.activeWord ?: return
@@ -195,15 +207,15 @@ class RecorderViewModel @Inject constructor(
 
         viewModelScope.launch {
             try {
-                // Akustik Analiz (Levenshtein Puanlaması)
-                val result = evaluatePronunciationUseCase(targetEntity, sanitizedText)
+                // Akustik Analiz (Yüzdelik Levenshtein Puanlaması) - Kullanıcı ID'si ile çağrılır
+                val result = evaluatePronunciationUseCase(targetEntity, sanitizedText, currentUserId)
 
                 // SM-2 Tarihlerini Güncelleme ve Veritabanına Kaydetme (IO Thread içinde yapılır)
                 withContext(Dispatchers.IO) {
-                    val existingLog = repository.getReviewLogForWord(targetEntity.id)
+                    val existingLog = repository.getReviewLogForWord(targetEntity.id, currentUserId)
 
                     val sm2Result = updateSm2UseCase(
-                        qualityScore = result.qualityScore,
+                        qualityScore = result.qualityScore, // SM-2 arka planda çevrilmiş 5'lik sistemi kullanır
                         previousEaseFactor = existingLog?.easeFactor ?: 2.5,
                         previousInterval = existingLog?.intervalDays ?: 0,
                         consecutiveCorrect = 0
@@ -211,6 +223,7 @@ class RecorderViewModel @Inject constructor(
 
                     val newLog = ReviewLogEntity(
                         logId = existingLog?.logId ?: 0,
+                        userId = currentUserId, //  Log bu kullanıcıya mühürlendi
                         vocabId = targetEntity.id,
                         lastAccuracyScore = result.qualityScore,
                         easeFactor = sm2Result.easeFactor,
@@ -219,18 +232,18 @@ class RecorderViewModel @Inject constructor(
                     )
                     repository.insertOrUpdateReviewLog(newLog)
 
-                    // --- EKSİK OLAN KISIM: 180 GÜN KURALI VE TERFİ MANTIĞI EKLENDİ ---
+                    // --- 180 GÜN KURALI VE TERFİ MANTIĞI (Kullanıcıya Özel) ---
                     if (sm2Result.intervalDays >= 180) {
-                        // 1. Kelimeyi Kalıcı Hafızaya Geçtiği İçin Arşivle
-                        repository.archiveWord(targetEntity.id)
+                        // 1. Kelimeyi Kalıcı Hafızaya Geçtiği İçin Arşivle (Sadece aktif kullanıcı için)
+                        repository.archiveWord(targetEntity.id, currentUserId)
 
                         // 2. Kullanıcının Seviyesini Kontrol Et
-                        val userProfile = repository.getUserProfile()
+                        val userProfile = repository.getUserProfile(currentUserId)
                         if (userProfile != null) {
                             val currentLevel = userProfile.currentLevel
 
                             // 3. Bu seviyeden kaç kelime arşivlendiğini say (20 Kelime Barajı)
-                            val archivedCount = repository.getArchivedWordCountByLevel(currentLevel)
+                            val archivedCount = repository.getArchivedWordCountByLevel(currentLevel, currentUserId)
 
                             if (archivedCount >= 20) {
                                 val cefrLevels = listOf("A1", "A2", "B1", "B2", "C1", "C2")
@@ -245,7 +258,7 @@ class RecorderViewModel @Inject constructor(
                             }
                         }
                     }
-                    // -----------------------------------------------------------------
+                    // ----------------------------------------
                 }
 
                 // UI State'ini (Arayüzü) Güncelleme
@@ -257,7 +270,8 @@ class RecorderViewModel @Inject constructor(
                         sessionResults = filteredResults + SessionWordResult(
                             targetWord = targetEntity.text,
                             spokenWord = sanitizedText,
-                            score = result.qualityScore
+                            qualityScore = result.qualityScore,
+                            percentage = result.accuracyPercentage // UI için net yüzdelik oran eklendi
                         )
                     )
                 }
@@ -292,7 +306,9 @@ class RecorderViewModel @Inject constructor(
 data class SessionWordResult(
     val targetWord: String,
     val spokenWord: String,
-    val score: Int
+    val qualityScore: Int,
+    /** UI (Arayüz) raporlarında gösterilecek %0 ile %100 arası net doğruluk yüzdesi. */
+    val percentage: Int
 )
 
 /** Kullanıcı arayüzüne (UI) sunulan, tüm veri kaynaklarının birleştiği nihai durum paketi. */

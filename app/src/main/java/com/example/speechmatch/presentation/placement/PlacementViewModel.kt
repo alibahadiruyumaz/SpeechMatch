@@ -1,5 +1,6 @@
 package com.example.speechmatch.presentation.placement
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.speechmatch.data.local.entity.UserProfileEntity
@@ -16,8 +17,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * Seviye belirleme sınavının (Placement Test) iş mantığını, ses analizini,
- * donanım durumlarını (kulaklık) ve nihai CEFR seviye teşhisini yöneten ViewModel.
+ * Seviye belirleme sınavının (Placement Test) iş mantığını yöneten ViewModel.
+ * Çoklu Profil (Multi-User) desteği ile güncellenmiştir.
  */
 @HiltViewModel
 class PlacementViewModel @Inject constructor(
@@ -26,8 +27,13 @@ class PlacementViewModel @Inject constructor(
     /** Çevrimdışı ses tanıma motoru (STT) sözleşmesi. */
     val voiceParser: VoiceToTextParser,
     /** Kulaklık takılıp çıkarılma durumunu dinleyen donanım gözlemcisi. */
-    private val headsetObserver: HeadsetStateObserver
+    private val headsetObserver: HeadsetStateObserver,
+    /** Navigasyon argümanlarını (Örn: userId) yakalamak için kullanılır. */
+    savedStateHandle: SavedStateHandle
 ) : ViewModel() {
+
+    /** Navigasyondan gelen Aktif Kullanıcı Kimliği. Gelmezse güvenlik için 1 atanır. */
+    private val currentUserId: Int = savedStateHandle.get<Int>("userId") ?: 1
 
     /** Sınav ekranının anlık durum (UI State) akışı. */
     private val _state = MutableStateFlow(PlacementUiState())
@@ -56,7 +62,8 @@ class PlacementViewModel @Inject constructor(
      */
     private fun loadTestWords() {
         viewModelScope.launch {
-            val allWords = repository.getAllActiveWords()
+            // Kelimeleri çekerken artık aktif kullanıcının userId'sini gönderiyoruz
+            val allWords = repository.getAllActiveWords(currentUserId)
             val testSet = allWords.groupBy { it.cefrLevel }
                 .map { it.value.shuffled().take(2) }
                 .flatten()
@@ -83,7 +90,8 @@ class PlacementViewModel @Inject constructor(
         if (sanitizedText.isBlank()) return
 
         viewModelScope.launch {
-            val result = evaluateUseCase(currentWord, sanitizedText)
+            // Analiz yapılırken hangi kullanıcının analiz edildiği (currentUserId) UseCase'e bildirilir
+            val result = evaluateUseCase(currentWord, sanitizedText, currentUserId)
             scoresPerLevel.getOrPut(currentWord.cefrLevel) { mutableListOf() }.add(result.qualityScore)
 
             // UI Tutarlılığı: Bir sonraki kelimeye geçmeden önce ekrandaki metni temizler.
@@ -99,7 +107,6 @@ class PlacementViewModel @Inject constructor(
 
     /** * Toplanan skorların ortalamasını alarak kullanıcının dil seviyesini (CEFR)
      * teşhis eder ve kullanıcı profilini veritabanında günceller.
-     * Teşhis Kriteri: Seviye ortalaması 3.5 ve üzeri olan en yüksek seviye atanır.
      */
     private fun calculateFinalLevelAndFinish() {
         val levels = listOf("A1", "A2", "B1", "B2", "C1", "C2")
@@ -115,18 +122,22 @@ class PlacementViewModel @Inject constructor(
         }
 
         viewModelScope.launch {
-            val existingProfile = repository.getUserProfile()
-            val updatedProfile = if (existingProfile != null) {
-                existingProfile.copy(currentLevel = finalLevel)
-            } else {
-                UserProfileEntity(
-                    userId = 1,
+            // Aktif kullanıcı profili çekilir
+            val existingProfile = repository.getUserProfile(currentUserId)
+
+            if (existingProfile != null) {
+                // Güvenlik: Tüm skorların genel ortalaması hesaplanır (NaN ise 1.0 atanır)
+                val totalAvg = scoresPerLevel.values.flatten().average().takeIf { !it.isNaN() } ?: 1.0
+
+                // KRİTİK GÜNCELLEME: baselineScore sıfırdan büyük bir sayıya güncellenir ki
+                // kullanıcı tekrar giriş yaptığında Router onu sınav yerine antrenmana yönlendirsin!
+                val updatedProfile = existingProfile.copy(
                     currentLevel = finalLevel,
-                    baselineScore = 0.0,
-                    chronicErrorPhonemes = ""
+                    baselineScore = totalAvg
                 )
+                repository.upsertProfile(updatedProfile)
             }
-            repository.upsertProfile(updatedProfile)
+
             _state.update { it.copy(isTestFinished = true, calculatedLevel = finalLevel) }
         }
     }

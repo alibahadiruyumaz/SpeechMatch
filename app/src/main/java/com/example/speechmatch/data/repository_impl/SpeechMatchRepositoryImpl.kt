@@ -20,14 +20,14 @@ class SpeechMatchRepositoryImpl @Inject constructor(
 
     // --- VOCABULARY İŞLEMLERİ ---
 
-    /** Yeni bir kelimeyi veritabanına kaydeder. */
+    /** Yeni bir kelimeyi ortak havuza kaydeder. */
     override suspend fun insertWord(word: VocabularyEntity): Long {
         return vocabularyDao.insertWord(word)
     }
 
-    /** Arşivlenmemiş (aktif) tüm kelimeleri getirir. */
-    override suspend fun getAllActiveWords(): List<VocabularyEntity> {
-        return vocabularyDao.getAllActiveWords()
+    /** Belirtilen kullanıcı için arşivlenmemiş (aktif) tüm kelimeleri getirir. */
+    override suspend fun getAllActiveWords(userId: Int): List<VocabularyEntity> {
+        return vocabularyDao.getAllActiveWords(userId)
     }
 
     /** Belirtilen kimliğe sahip kelimeyi getirir. */
@@ -35,27 +35,34 @@ class SpeechMatchRepositoryImpl @Inject constructor(
         return vocabularyDao.getWordWithMinimalPair(targetId)
     }
 
-    /** SM-2 barajını geçen kelimeyi arşivler. */
-    override suspend fun archiveWord(id: Int) {
-        vocabularyDao.archiveWord(id)
+    /** 180 gün barajını geçen kelimeyi SADECE İLGİLİ KULLANICI İÇİN arşivler. */
+    override suspend fun archiveWord(vocabId: Int, userId: Int) {
+        vocabularyDao.archiveWord(vocabId, userId)
     }
 
-    /** Kullanıcının seviyesine uygun, henüz çalışılmamış veya tekrar vakti gelmiş kelimeleri getirir. */
-    override suspend fun getWordsToReview(currentTimeMillis: Long): List<VocabularyEntity> {
-        return vocabularyDao.getWordsToReview(currentTimeMillis)
+    /** Kullanıcının seviyesine uygun, henüz çalışılmamış veya tekrar vakti gelmiş kelimeleri o kullanıcıya özel getirir. */
+    override suspend fun getWordsToReview(currentTimeMillis: Long, userId: Int): List<VocabularyEntity> {
+        return vocabularyDao.getWordsToReview(currentTimeMillis, userId)
     }
+
+    /** Kullanıcının belirli bir seviyede arşivlediği (öğrendiği) toplam kelime sayısını döndürür. */
+    override suspend fun getArchivedWordCountByLevel(level: String, userId: Int): Int {
+        return vocabularyDao.getArchivedWordCountByLevel(level, userId)
+    }
+
 
     // --- SM-2 REVIEW LOG İŞLEMLERİ ---
 
-    /** Belirli bir kelimenin mevcut SM-2 ilerlemesini ve geçmişini getirir. */
-    override suspend fun getReviewLogForWord(vocabId: Int): ReviewLogEntity? {
-        return reviewLogDao.getLogForWord(vocabId)
+    /** Belirli bir kelimenin, ilgili kullanıcıya ait mevcut SM-2 ilerlemesini ve geçmişini getirir. */
+    override suspend fun getReviewLogForWord(vocabId: Int, userId: Int): ReviewLogEntity? {
+        return reviewLogDao.getLogForWord(vocabId, userId)
     }
 
-    /** Kelimeye ait SM-2 tekrar günlüğünü veritabanına ekler veya günceller (UPSERT). */
+    /** Kelimeye ve kullanıcıya ait SM-2 tekrar günlüğünü veritabanına ekler veya günceller (UPSERT). */
     override suspend fun insertOrUpdateReviewLog(reviewLog: ReviewLogEntity) {
         reviewLogDao.upsertLog(reviewLog)
     }
+
 
     // --- USER PROFILE İŞLEMLERİ ---
 
@@ -64,11 +71,17 @@ class SpeechMatchRepositoryImpl @Inject constructor(
         userProfileDao.upsertProfile(profile)
     }
 
-    /** Sistemdeki aktif kullanıcı profilini getirir. */
-    override suspend fun getUserProfile(): UserProfileEntity? {
-        return userProfileDao.getUserProfile()
+    /** Sistemdeki belirli bir ID'ye sahip kullanıcı profilini getirir. */
+    override suspend fun getUserProfile(userId: Int): UserProfileEntity? {
+        return userProfileDao.getUserProfile(userId)
     }
-    override suspend fun getArchivedWordCountByLevel(level: String): Int {
-        return vocabularyDao.getArchivedWordCountByLevel(level)
+
+    /** Çoklu profil (Netflix) ekranı için sistemdeki tüm kullanıcıları getirir. */
+    override suspend fun getAllProfiles(): List<UserProfileEntity> {
+        return userProfileDao.getAllProfiles()
+    }
+
+    override suspend fun deleteProfile(profile: UserProfileEntity) {
+        userProfileDao.deleteProfile(profile)
     }
 }

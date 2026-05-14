@@ -31,7 +31,7 @@ Projede **Clean Architecture (Temiz Mimari)** ve **MVVM** tasarım desenleri sı
 5. **Otomatik Seviye Atlama (Promotion Engine):** Kullanıcı, mevcut CEFR seviyesindeki (örn. B1) **20 farklı kelimeyi** başarıyla arşivlediğinde, sistem kullanıcıyı otomatik olarak bir üst seviyeye (örn. B2) terfi ettirir.
 6. **Dinamik Pedagojik Uyarılar:** Kelimenin fonetik yapısı analiz edilerek (Schwa sesi, TH/SH telaffuzu, sessiz harfler vb.) kullanıcıya gerçek zamanlı "Özel İpuçları" sunulur.
 7. **Adaptif Tipografi:** Uzun kelimelerin (örn. "Nevertheless") kullanıcı arayüzünü bozmasını engellemek için kelime uzunluğuna bağlı dinamik font boyutlandırma algoritması kullanılır.
-8. **Dinamik CEFR Müfredatı:** Python ve Datamuse API ile üretilmiş 945 kelimelik devasa İngilizce fonetik veri seti (A1-C2), uygulama ilk açıldığında asenkron olarak tohumlanır.
+8. **Dinamik CEFR Müfredatı:** Python ve Datamuse API ile üretilmiş 1300 kelimelik devasa İngilizce fonetik veri seti (A1-C2), uygulama ilk açıldığında asenkron olarak tohumlanır.
 9. **Harf Harf Hata Analizi (Diffing):** `AnnotatedString` mimarisi kullanılarak eksik veya hatalı harfler ekranda anında kırmızı ile vurgulanarak görsel geri bildirim sağlanır.
 
 ## 📈 Geliştirme Süreci (Sprint Log)

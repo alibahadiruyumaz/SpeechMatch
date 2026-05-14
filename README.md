@@ -39,7 +39,7 @@ Projede **Clean Architecture (Temiz Mimari)** ve **MVVM** tasarım desenleri sı
 * ✅ **Sprint 1-3:** Room Database, DAO'lar, Dagger-Hilt ve SM-2/Levenshtein çekirdek algoritmalarının inşası.
 * ✅ **Sprint 4-5:** Çevrimdışı SpeechRecognizer motoru, Headset güvenlik ajanı ve TTS entegrasyonu.
 * ✅ **Sprint 6-7:** ViewModel katmanı, StateFlow entegrasyonu ve Jetpack Compose ile reaktif UI tasarımı.
-* ✅ **Sprint 8-9:** 945 kelimelik JSON veri havuzunun entegrasyonu ve akıllı Seviye Belirleme Sınavı (Placement Engine).
+* ✅ **Sprint 8-9:** 1300 kelimelik JSON veri havuzunun entegrasyonu ve akıllı Seviye Belirleme Sınavı (Placement Engine).
 * ✅ **Sprint 10-11:** Navigasyon haritası, Oturum Yönetimi, karne ekranı (Donut Chart) ve Zengin Metin (AnnotatedString) geri bildirim sistemi.
 * ✅ **Sprint 12-13:** Ses motoru Singleton optimizasyonu, Dark/Light Mode uyumu ve "Derse Dön" kaza önleme mekaniği.
 * ✅ **Sprint 14:** 180 Gün Mastery Kontrolü, Otomatik Terfi Sistemi ve Dinamik Font Ölçekleme.

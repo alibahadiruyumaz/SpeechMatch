@@ -1,6 +1,3 @@
-Harika bir dokunuş! Eski "1300 kelime" ibarelerini yeni ve devasa havuzumuz olan **4057 kelime** ile güncelledim. Ayrıca projeye ne kadar bilimsel ve pedagojik yaklaştığını jüriye tam anlamıyla yansıtmak için **"📊 Veritabanı ve Pedagojik Dağılım"** adında yepyeni bir bölüm ekleyerek o şık tabloyu da README'nin kalbine yerleştirdim.
-
-İşte GitHub'a (ve sunumuna) doğrudan koyabileceğin o kusursuz, son ve en güncel README.md dosyan:
 
 ---
 

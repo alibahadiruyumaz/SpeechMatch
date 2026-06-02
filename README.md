@@ -1,9 +1,24 @@
-
 ---
 
 # SpeechMatch 🎙️🧠
 
 SpeechMatch, kullanıcıların İngilizce telaffuzlarını %100 çevrimdışı (Edge Computing) analiz eden, Levenshtein Mesafe algoritması ile SuperMemo-2 (SM-2) aralıklı tekrar hafıza modelini birleştiren otonom ve akıllı bir dil öğrenme asistanıdır.
+
+---
+
+### 🚀 Uygulamayı Hemen İndir ve Test Et
+
+Uygulamanın Final derlemesini Android cihazınıza kurmak için aşağıdaki QR kodu telefonunuzun kamerasına okutabilir veya indirme linkine tıklayabilirsiniz.
+
+**[📱 APK Dosyasını İndir (v1.0.0)](https://github.com/alibahadiruyumaz/SpeechMatch/releases/download/v1.0.0/SpeechMatch.apk)**
+
+<br>
+
+<img src="assets/release_v1_qr.png" width="250" height="250" alt="SpeechMatch QR Code">
+
+---
+
+---
 
 ## 🚀 Proje Vizyonu ve Mimari
 
@@ -31,15 +46,29 @@ Projede **Clean Architecture (Temiz Mimari)** ve **MVVM** tasarım desenleri sı
 5. **Otomatik Seviye Atlama (Promotion Engine):** Kullanıcı, mevcut CEFR seviyesindeki (örn. B1) **20 farklı kelimeyi** başarıyla arşivlediğinde, sistem kullanıcıyı otomatik olarak bir üst seviyeye (örn. B2) terfi ettirir.
 6. **Dinamik Pedagojik Uyarılar:** Kelimenin fonetik yapısı analiz edilerek (Schwa sesi, TH/SH telaffuzu, sessiz harfler vb.) kullanıcıya gerçek zamanlı "Özel İpuçları" sunulur.
 7. **Adaptif Tipografi:** Uzun kelimelerin (örn. "Nevertheless") kullanıcı arayüzünü bozmasını engellemek için kelime uzunluğuna bağlı dinamik font boyutlandırma algoritması kullanılır.
-8. **Dinamik CEFR Müfredatı:** Python ve Datamuse API ile üretilmiş 1300 kelimelik devasa İngilizce fonetik veri seti (A1-C2), uygulama ilk açıldığında asenkron olarak tohumlanır.
+8. **Dinamik CEFR Müfredatı:** Python ve Datamuse API ile üretilmiş **4057 kelimelik devasa İngilizce fonetik veri seti** (A1-C2), uygulama ilk açıldığında asenkron olarak tohumlanır.
 9. **Harf Harf Hata Analizi (Diffing):** `AnnotatedString` mimarisi kullanılarak eksik veya hatalı harfler ekranda anında kırmızı ile vurgulanarak görsel geri bildirim sağlanır.
+
+## 📊 Veritabanı ve Pedagojik Dağılım
+
+Uygulamanın kelime havuzu, Python veri madenciliği araçları ve Datamuse API kullanılarak İngilizce kelimelerin "milyonda bir kullanım sıklığına" (frekans) göre filtrelenmesiyle oluşturulmuştur. Bu dağılım, **Zipf Yasası'na** ve doğal dil öğrenme pedagojisine birebir uyumludur:
+
+| CEFR Seviyesi | Kelime Sayısı | Seviye Açıklaması |
+| --- | --- | --- |
+| **A1** | 214 | Başlangıç (Beginner) - *Çok Yüksek Frekans* |
+| **A2** | 248 | Temel (Elementary) |
+| **B1** | 595 | Orta (Intermediate) |
+| **B2** | 1000 | Orta Üstü (Upper-Intermediate) |
+| **C1** | 1000 | İleri (Advanced) |
+| **C2** | 1000 | Uzmanlık / Ana Dil (Proficiency) - *Düşük Frekans/Akademik* |
+| **TOPLAM** | **4057** | **Aktif Kelime Havuzu** |
 
 ## 📈 Geliştirme Süreci (Sprint Log)
 
 * ✅ **Sprint 1-3:** Room Database, DAO'lar, Dagger-Hilt ve SM-2/Levenshtein çekirdek algoritmalarının inşası.
 * ✅ **Sprint 4-5:** Çevrimdışı SpeechRecognizer motoru, Headset güvenlik ajanı ve TTS entegrasyonu.
 * ✅ **Sprint 6-7:** ViewModel katmanı, StateFlow entegrasyonu ve Jetpack Compose ile reaktif UI tasarımı.
-* ✅ **Sprint 8-9:** 1300 kelimelik JSON veri havuzunun entegrasyonu ve akıllı Seviye Belirleme Sınavı (Placement Engine).
+* ✅ **Sprint 8-9:** **4057 kelimelik JSON veri havuzunun** entegrasyonu ve akıllı Seviye Belirleme Sınavı (Placement Engine).
 * ✅ **Sprint 10-11:** Navigasyon haritası, Oturum Yönetimi, karne ekranı (Donut Chart) ve Zengin Metin (AnnotatedString) geri bildirim sistemi.
 * ✅ **Sprint 12-13:** Ses motoru Singleton optimizasyonu, Dark/Light Mode uyumu ve "Derse Dön" kaza önleme mekaniği.
 * ✅ **Sprint 14:** 180 Gün Mastery Kontrolü, Otomatik Terfi Sistemi ve Dinamik Font Ölçekleme.
@@ -48,5 +77,3 @@ Projede **Clean Architecture (Temiz Mimari)** ve **MVVM** tasarım desenleri sı
 ---
 
 *Bu proje Ali Bahadır UYUMAZ tarafından geliştirilmiştir.*
-
----

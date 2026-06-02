@@ -4,13 +4,19 @@
 
 SpeechMatch, kullanıcıların İngilizce telaffuzlarını %100 çevrimdışı (Edge Computing) analiz eden, Levenshtein Mesafe algoritması ile SuperMemo-2 (SM-2) aralıklı tekrar hafıza modelini birleştiren otonom ve akıllı bir dil öğrenme asistanıdır.
 
-## 📥 Kurulum (İndir)
+---
 
-**[SpeechMatch.apk İndir (v1.0.0)](https://github.com/alibahadiruyumaz/SpeechMatch/releases/download/v1.0.0/SpeechMatch.apk)**
+### 🚀 Uygulamayı Hemen İndir ve Test Et
 
-Mobil cihazınızdan hızlıca kurmak için aşağıdaki QR kodu okutabilirsiniz:
+Uygulamanın 10. Hafta (Final) derlemesini Android cihazınıza kurmak için aşağıdaki QR kodu telefonunuzun kamerasına okutabilir veya indirme linkine tıklayabilirsiniz.
 
-![SpeechMatch APK QR Kodu](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/alibahadiruyumaz/SpeechMatch/releases/download/v1.0.0/SpeechMatch.apk)
+**[📱 APK Dosyasını İndir (v1.0.0)](https://github.com/alibahadiruyumaz/SpeechMatch/releases/download/v1.0.0/SpeechMatch.apk)**
+
+<br>
+
+<img src="https_github_com_alibahadiruyumaz_SpeechMatch_releases_download_v1_0_0_SpeechMatch_apk_.png" width="250" height="250" alt="SpeechMatch QR Code">
+
+---
 
 ---
 

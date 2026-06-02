@@ -8,13 +8,13 @@ SpeechMatch, kullanıcıların İngilizce telaffuzlarını %100 çevrimdışı (
 
 ### 🚀 Uygulamayı Hemen İndir ve Test Et
 
-Uygulamanın 10. Hafta (Final) derlemesini Android cihazınıza kurmak için aşağıdaki QR kodu telefonunuzun kamerasına okutabilir veya indirme linkine tıklayabilirsiniz.
+Uygulamanın Final derlemesini Android cihazınıza kurmak için aşağıdaki QR kodu telefonunuzun kamerasına okutabilir veya indirme linkine tıklayabilirsiniz.
 
 **[📱 APK Dosyasını İndir (v1.0.0)](https://github.com/alibahadiruyumaz/SpeechMatch/releases/download/v1.0.0/SpeechMatch.apk)**
 
 <br>
 
-<img src="https_github_com_alibahadiruyumaz_SpeechMatch_releases_download_v1_0_0_SpeechMatch_apk_.png" width="250" height="250" alt="SpeechMatch QR Code">
+<img src="assets/release_v1_qr.png" width="250" height="250" alt="SpeechMatch QR Code">
 
 ---
 
